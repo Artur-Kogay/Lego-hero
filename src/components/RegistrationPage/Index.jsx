@@ -148,11 +148,7 @@ function RegistrationPage() {
                                             sx={{
                                                 color: "rgba(255, 255, 255, 0.6)",
                                                 "&.Mui-checked": {
-                                                    
-    backgroundImage: "linear-gradient(267.53deg, #359AD2 -0.27%, #982EEB 100%)",
-    backgroundClip: "text",
-    textFillColor: "transparent"
-
+                                                    color: "rgba(255, 255, 255, 0.6)"
                                                 },
                                             }}
                                         />
