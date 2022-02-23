@@ -4,7 +4,7 @@ import MainLayout from '../../components/MainLayout/index'
 const Help = () => {
     return (
         <MainLayout>
-            <h1>help</h1>
+            
         </MainLayout>
     );
 };

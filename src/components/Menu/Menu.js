@@ -24,7 +24,7 @@ export default function Menu (){
     ]
     return(
         <div className={`${cls.Menu} main-menu`}>
-            <motion.div className={cls.logo} animate={showFullMenu ? {marginLeft:110} : {marginLeft:30}}><img src={logo} style={showFullMenu ? {width:92.4, height:59,marginBottom:26} : {width:64, height:41,marginBottom:44}}/></motion.div>
+            <motion.div className={cls.logo} animate={showFullMenu ? {marginLeft:110} : {marginLeft:30}}><img src={logo} style={showFullMenu ? {width:92.4, height:59,marginBottom:32} : {width:64, height:41,marginBottom:50}}/></motion.div>
             <motion.div onMouseEnter={()=>setShowFullMenu(true)} onMouseLeave={()=>setShowFullMenu(false)} className={cls.navbar} animate={showFullMenu ? {width:255}:{width:64}}>
                 <div className={cls.navbarAccount}>
                     <div><img src={account} style={showFullMenu ? {marginLeft:24} : {marginLeft:11}}/></div>

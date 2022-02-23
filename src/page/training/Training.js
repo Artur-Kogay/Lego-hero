@@ -4,7 +4,7 @@ import MainLayout from '../../components/MainLayout';
 const Training = () => {
     return (
         <MainLayout>
-            Training
+            
         </MainLayout>
     );
 };

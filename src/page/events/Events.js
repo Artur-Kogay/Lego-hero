@@ -1,10 +1,11 @@
 import React from 'react';
 import MainLayout from '../../components/MainLayout';
+import Event from '../../components/Event/Event';
 
 const Events = () => {
     return (
         <MainLayout>
-          events  
+            <Event/>
         </MainLayout>
     );
 };

@@ -1,0 +1,23 @@
+@media(min-width:1200px){
+    .event{
+        .h1{
+            font-style: normal;
+            font-weight: 900;
+            font-size: 64px;
+            line-height: 78px;
+            color: #FFFFFF;
+            margin: 0;
+            margin-bottom: 50px;
+        }
+        .eventsList{
+            display: flex;
+            flex-wrap: wrap;
+            div{
+                width: 314px;
+                height: 404px;
+                margin-right: 24px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

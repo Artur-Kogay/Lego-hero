@@ -4,7 +4,7 @@ import MainLayout from '../../components/MainLayout';
 const Profile = () => {
     return (
         <MainLayout>
-            profile
+            
         </MainLayout>
     );
 };
