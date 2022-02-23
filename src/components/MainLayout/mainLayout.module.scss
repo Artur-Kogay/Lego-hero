@@ -1,23 +1,22 @@
-body{
-    margin: 0;
-    .Main {
-        display: grid;
-        grid-template: 
-        minmax(calc(100vh - 69px), auto) 69px 
-        / min-content auto;
-        grid-gap: 30px;
-        grid-template-areas: 'menu children' 'footer footer';
-        background: #1A191F;
-        .child {
-            grid-area: children;
-            margin-top: 115px;
-            margin-right: 28px;
-        }
-        
-        .menu{
+.Main {
+    display: grid;
+    grid-template: 
+    minmax(calc(100vh - 69px), auto) 69px 
+    / min-content auto;
+    grid-gap: 30px;
+    grid-template-areas: 'menu children' 'footer footer';
+    background: #1A191F;
+    .child {
+    grid-area: children;
+    margin-top: 115px;
+    margin-right: 28px;
+    }   
+    .menu{
             grid-area: menu;
         }
-        
+        .child{
+            grid-area: children;
+        }
         .footer{
             grid-area: footer;
             font-style: normal;
@@ -29,4 +28,3 @@ body{
             text-align: center ;
         }
     }
-}

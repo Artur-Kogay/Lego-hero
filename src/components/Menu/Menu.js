@@ -16,11 +16,11 @@ import {motion} from 'framer-motion'
 export default function Menu (){
     const [showFullMenu, setShowFullMenu] = useState(false)
     const Navs =[
-        {id:1,text:"Главная",img:home},
-        {id:2,text:"Личный кабинет",img:shop},
-        {id:3,text:"Мероприятия",img:ticket},
-        {id:4,text:"Моё обучение",img:timer},
-        {id:5,text:"Помощь",img:help}
+        {id:1,text:"Главная",img:home,link:"/"},
+        {id:2,text:"Личный кабинет",img:shop,link:"/profile"},
+        {id:3,text:"Мероприятия",img:ticket,link:"/events"},
+        {id:4,text:"Моё обучение",img:timer,link:"/training"},
+        {id:5,text:"Помощь",img:help,link:"/help"}
     ]
     return(
         <div className={`${cls.Menu} main-menu`}>
@@ -35,7 +35,7 @@ export default function Menu (){
                 </div>
                 <nav className={cls.navLinks}>
                     {Navs.map(nav=>(
-                        <NavLink key={nav.id} to="/cabinet" className={cls.navLink}>
+                        <NavLink key={nav.id} to={nav.link} className={cls.navLink}>
                             <div className={cls.linkIcon}><img src={nav.img}/></div>
                             <p>{showFullMenu ? nav.text : ""}</p>
                         </NavLink>
