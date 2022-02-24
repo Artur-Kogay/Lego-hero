@@ -1,0 +1,15 @@
+.accordion {
+    background: black !important;
+    color: #FFFFFF !important;
+    padding: 15px !important;
+    border-radius: 10px !important;
+
+    &__summary {
+        display: flex;
+        grid-gap: 22px;
+        margin-left: 5px;
+        .info{
+            margin-top: 20px;
+        }
+    }
+}
