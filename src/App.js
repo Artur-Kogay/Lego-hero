@@ -1,4 +1,3 @@
-import MainLayout from "./components/MainLayout";
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import "../src/styles/global.scss"
 import Events from "./page/events/Events";

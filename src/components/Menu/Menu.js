@@ -10,7 +10,7 @@ import timer from '../../img/timer.svg'
 import help from '../../img/help.svg'
 import exit from '../../img/exit.svg'
 import {motion} from 'framer-motion'
-
+import { useMediaQuery } from "@mui/material";
 
 
 export default function Menu (){
@@ -22,10 +22,11 @@ export default function Menu (){
         {id:4,text:"Моё обучение",img:timer,link:"/training"},
         {id:5,text:"Помощь",img:help,link:"/help"}
     ]
+    const isMob = useMediaQuery("(max-width:768px)")
     return(
         <div className={`${cls.Menu} main-menu`}>
             <motion.div className={cls.logo} animate={showFullMenu ? {marginLeft:110} : {marginLeft:30}}><img src={logo} style={showFullMenu ? {width:92.4, height:59,marginBottom:32} : {width:64, height:41,marginBottom:50}}/></motion.div>
-            <motion.div onMouseEnter={()=>setShowFullMenu(true)} onMouseLeave={()=>setShowFullMenu(false)} className={cls.navbar} animate={showFullMenu ? {width:255}:{width:64}}>
+            <motion.div onMouseEnter={()=>setShowFullMenu(true)} onMouseLeave={()=>setShowFullMenu(false)} className={`${cls.navbar} ${isMob ? `${cls.navbarMob}` : ""}`} animate={showFullMenu ? {width:255}:{width:64}}>
                 <div className={cls.navbarAccount}>
                     <div><img src={account} style={showFullMenu ? {marginLeft:24} : {marginLeft:11}}/></div>
                     <div className={cls.navbarText}>
