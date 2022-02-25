@@ -93,3 +93,42 @@ padding: 15px 32px;
 color: #aeafaf;
     }
 }
+
+@media (max-width: 1740px){
+    .profile_detail{
+        width:700px !important;
+    }
+    // .profile_cashh{
+    //     width: 70px;
+    // }
+}
+
+@media (max-width: 1600px){
+    .profile_detail{
+        width:600px !important;
+    }
+    .profile_cashh{
+        width: 320px !important;
+    }
+}
+@media (max-width: 1400px){
+    .profile_cashh{
+        width: 300px !important;
+    }
+}
+@media (max-width: 1340px){
+    .profile_detail{
+        width:530px !important;
+    }
+}
+
+@media (max-width: 1270px){
+    .profile_detail{
+        width:75% !important;
+     
+    }
+    .profile_cashh{
+        margin-top: 39px;
+        width: 100% !important;
+    }
+}
