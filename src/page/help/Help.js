@@ -59,51 +59,41 @@ const Help = () => {
         </div>
         <div className={styles.inputs__container}>
           <div className={styles.litle__inputs}>
-            <InputHelpPage
-              title="Ваше имя"
-              text="Введите имя"
-              Icon={UserIcon}
-            />
+            <InputHelpPage title="Ваше имя" text="имя" Icon={UserIcon} />
             <InputHelpPage
               title="Ваше фамилие"
-              text="Введите фамилие"
+              text="фамилия"
               Icon={UserIcon}
             />
-            <InputHelpPage title="Ваш город" text="Введите город" />
-            <InputHelpPage
-              title="Ваш email"
-              text="Введите email"
-              Icon={MessageIcon}
-            />
+            <InputHelpPage title="Ваш город" text="город" />
+            <InputHelpPage title="Ваш email" text="email" Icon={MessageIcon} />
             <InputHelpPage
               title="Ваш номер телефона"
-              text="Введите номер телефона"
+              text="номер телефона"
               Icon={PhoneIcon}
             />
-            <InputHelpPage
-              title="Ваш вопрос"
-              text="Введите свой вопрос"
-              display={false}
-            />
+            <div className={styles.table__quastion}>
+              <InputHelpPage title="Ваш вопрос" text="Ваш вопрос" />
+            </div>
           </div>
           <div className={styles.input__question}>
             <p className={styles.title}>Ваш вопрос</p>
             <textarea className={styles.textarea} placeholder="Ваш вопрос" />
-            <div className={styles.submit}>
-              <button className={styles.button}>Отправить</button>
-              <FormControlLabel
-                control={<CustomizedCheckbox />}
-                label={
-                  <p className={styles.label}>
-                    {" "}
-                    Я согласен на обработку{" "}
-                    <a href="#" className={styles.label__link}>
-                      персональных данных
-                    </a>{" "}
-                  </p>
-                }
-              />
-            </div>
+          </div>
+          <div className={styles.submit}>
+            <button className={styles.button}>Отправить</button>
+            <FormControlLabel
+              control={<CustomizedCheckbox />}
+              label={
+                <p className={styles.label}>
+                  {" "}
+                  Я согласен на обработку{" "}
+                  <a href="#" className={styles.label__link}>
+                    персональных данных
+                  </a>{" "}
+                </p>
+              }
+            />
           </div>
         </div>
         <div className={styles.injener__accordion}>
@@ -139,7 +129,7 @@ const Help = () => {
               </FormControl>
             </div>
           </HelpAccordion>
-          </div>
+        </div>
       </div>
     </MainLayout>
   );

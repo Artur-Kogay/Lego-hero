@@ -14,5 +14,8 @@
     }
     .child{
         padding: 20px 30px;
+        @media (max-width: 940px){
+            padding: 20px 0px;
+        }
     }
 }
