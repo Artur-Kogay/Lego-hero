@@ -1,8 +1,10 @@
 .container {
     padding-right: 10%;
+
     @media (max-width: 940px) {
         padding-right: 0px;
     }
+
     .title {
         font-family: "DIN Pro";
         font-style: normal;
@@ -10,7 +12,8 @@
         font-size: 64px;
         color: white;
         margin-bottom: 51px;
-        @media(max-width: 940px){
+
+        @media(max-width: 940px) {
             font-size: 32px;
             margin-bottom: 15px;
         }
@@ -29,12 +32,18 @@
                 display: flex;
                 grid-gap: 50px;
                 flex-wrap: wrap;
-                @media (max-width: 940px){
+
+                @media (max-width: 940px) {
                     display: grid;
                     grid-template: 1fr 1fr / 1.4fr 1fr;
                     grid-column-gap: 90px;
                     grid-row-gap: 30px;
-                    
+
+                }
+
+                @media (max-width: 530px) {
+                    grid-template: auto / 1fr;
+
                 }
             }
         }
@@ -42,31 +51,46 @@
 
     .inputs__container {
         margin: 72px 6% 0px 6%;
-        @media (max-width: 940px){
+
+        @media (max-width: 940px) {
             margin: 32px 6% 0px 6%;
         }
+        @media (max-width: 530px) {
+            margin: 32px 0 0 0;
+        }
+        
+
         .litle__inputs {
             display: grid;
             grid-template: auto / 1fr 1fr 1fr;
             grid-column-gap: 26px;
             grid-row-gap: 40px;
-            @media (max-width: 940px){
-            grid-template: auto / 1fr 1fr;
-            grid-row-gap: 35px;
+
+            @media (max-width: 940px) {
+                grid-template: auto / 1fr 1fr;
+                grid-row-gap: 35px;
             }
-            
+
+            @media (max-width: 530px) {
+                grid-template: auto / 1fr;
+                grid-row-gap: 35px;
+            }
+
         }
-        .litle__inputs .table__quastion{
-            @media (min-width: 940px){
+
+        .litle__inputs .table__quastion {
+            @media (min-width: 940px) {
                 display: none;
             }
         }
 
         .input__question {
             margin-top: 64px;
-            @media (max-width: 940px){
+
+            @media (max-width: 940px) {
                 display: none;
             }
+
             .title {
                 font-family: "Gilroy";
                 font-style: normal;
@@ -97,15 +121,20 @@
                 outline: 2px solid #4A90E2;
             }
 
-            
+
         }
+
         .submit {
             margin-top: 41px;
             display: flex;
             align-items: center;
 
+            @media (max-width: 530px) {
+                flex-direction: column;
+            }
+
             .button {
-                margin-right: 7%;
+                margin: 0 7% 0 0;
                 height: 45px;
                 color: white;
                 width: 341px;
@@ -113,6 +142,11 @@
                 background: linear-gradient(267.53deg, #982EEB -0.27%, #359AD2 100%), #C7252B;
                 border-radius: 10px;
                 cursor: pointer;
+                @media (max-width: 530px) {
+                    width: 306px;
+                    order: 2;
+                    margin: 31px 0px 0px 0;
+                }
             }
 
             .label {
@@ -131,7 +165,8 @@
 
     .injener__accordion {
         margin: 128px 0px 125px 0px;
-        @media(max-width: 940px){
+
+        @media(max-width: 940px) {
             margin: 50px 0px 70px 0px;
         }
     }

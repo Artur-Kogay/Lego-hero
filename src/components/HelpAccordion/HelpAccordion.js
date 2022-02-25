@@ -15,6 +15,7 @@ function HelpAccordion({ img, icon, title, backgroundColor, children }) {
         <AccordionSummary
           expandIcon={
             <ExpandMoreIcon
+            className={styles.more__btn}
               sx={{ color: "white", fontSize: 55, minHeight: "134px" }}
             />
           }
@@ -29,7 +30,7 @@ function HelpAccordion({ img, icon, title, backgroundColor, children }) {
               </Typography>
               <Typography
                 component="h2"
-                sx={{ fontFamily: "DIN Pro", fontSize: "36px" }}
+                className={styles.title}
               >
                 {title}
               </Typography>

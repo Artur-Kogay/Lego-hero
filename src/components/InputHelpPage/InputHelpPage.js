@@ -3,7 +3,6 @@ import React from "react";
 import style from "./InputHelpPage.module.scss";
 
 function InputHelpPage({multilane = false,display = "block", title, Icon = null, text }) {
-  console.log(Icon);
   return (
     <div style={!display ? {display: "none"} : {display: "inherit"}} className={style.container}>
       <p className={style.title}>{title}</p>
