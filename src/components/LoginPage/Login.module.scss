@@ -1,0 +1,49 @@
+.LoginBlock {
+    width: 350px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    padding-top: 20px;
+    form{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+.FormInput {
+    margin-top: 48px;
+}
+
+.lll{
+    color: rgba(255, 255, 255, 0.3) !important;
+    text-decoration-color: rgba(255, 255, 255, 0.0)!important;
+    margin-right: 8px !important;
+    transition: all 0.12s linear;
+}
+.lll:hover{
+    color: rgba(255, 255, 255, 0.6) !important;
+    text-decoration-color: rgba(255, 255, 255, 0.3)!important;
+}
+.ButtonContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin-top: 83px;
+}
+@media screen and (max-width: 520px) {
+    .ButtonContainer{
+        flex-direction: column;
+        button{
+            width: 350px;
+        }
+    }
+    .lll{
+        display: block;
+        margin-bottom: 4px !important;
+        margin-top: 4px;
+    }
+    
+}

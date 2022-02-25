@@ -1,4 +1,3 @@
-import TextField from "@mui/material/TextField";
 import { InputBase } from "@mui/material";
 import React from "react";
 import { makeStyles } from "@mui/styles";
@@ -6,12 +5,13 @@ import "./style.css";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        width: "420px",
+        width: "350px",
         border: "1px solid rgba(255, 255, 255, 0.6)",
         boxSizing: "border-box",
         borderRadius: "5px",
         fontSize: 16,
         padding: 16,
+
     },
     label: {
         fontSize: "12px",
@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: "4px",
         marginBottom: "8px",
     },
+
 }));
 
 const Input = ({ ...props }) => {

@@ -1,27 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 .registration_block {
-    width: 420px;
+    width: 350px;
     display: flex;
     align-items: center;
     flex-direction: column;
     max-width: 500px;
     margin: 0 auto;
     padding-top: 20px;
-    form{
+    form {
         display: flex;
         align-items: center;
         flex-direction: column;
-        .ButtonContainer{
+        .ButtonContainer {
             display: flex;
             justify-content: space-between;
             gap: 24px;
-        }        
+            margin-top: 14px;
+        }
     }
     .form_inputs {
         display: flex;
         flex-direction: column;
         gap: 18px;
-
     }
     .text_danger {
         color: #ff0015;
@@ -29,19 +29,65 @@
         font-size: 14px;
         font-weight: light;
     }
-    .FormControl{
-        width: 98%;
-        .RadioGroup{
+    .FormControl {
+        width: 344px;
+        .RadioGroup {
             display: flex;
             flex-wrap: nowrap;
-            max-width: 420px;
+            max-width: 344px;
             justify-content: space-between;
-            .FormControlLabel{
-                span{
-                    font-size: 12px;
+            .FormControlLabel {
+                span {
+                    font-size: 11px;
+                    margin-left: -2px;
                 }
+            }
+        }
+    }
+    .FormGroup {
+        display: flex;
+        flex-direction: row;
+        width: 105%;
+        margin-left: 25%;
+        margin-top: 46px;
+        .FormControl {
+            margin-right: 0 !important;
+            width: fit-content;
+            p {
+                font-size: 12px;
+                line-height: 18px;
+                display: flex;
+                align-items: center;
+                letter-spacing: -0.5px;
+                color: rgba(255, 255, 255, 0.5);
+                max-width: 194px;
+                margin-left: 0px;
             }
         }
     }
 }
 
+.MuiRadio-colorPrimary{
+    background-color: linear-gradient(267.53deg, #359AD2 -0.27%, #982EEB 100%);;
+}
+
+@media screen and (max-width: 520px) {
+    .ButtonContainer{
+        flex-direction: column;
+        button{
+            width: 350px;
+        }
+    }
+    .FormGroup{
+        margin-top: 10px !important;
+        width: max-content;
+        margin-left: 7% !important;
+        .FormControl{
+            p{
+                max-width: 300px !important;
+                margin-bottom: 0 !important;
+            }
+        }
+    }
+    
+}

@@ -21,6 +21,7 @@ import classes from "./Registration.module.scss";
 
 import FormGroup from "@mui/material/FormGroup";
 import Checkbox from "@mui/material/Checkbox";
+import './style.css'
 
 const initialValues = {
     username: "",
@@ -94,8 +95,9 @@ function RegistrationPage() {
                                     <TextField
                                         color="secondary"
                                         style={{
-                                            width: 420,
+                                            width: 350,
                                             marginTop: 18,
+                                            height: 50
                                         }}
                                         {...params}
                                     />
@@ -125,19 +127,50 @@ function RegistrationPage() {
                             >
                                 <FormControlLabel
                                     value="judge"
-                                    control={<Radio />}
+                                    control={
+                                        <Radio
+                                            sx={{
+                                                color: "rgba(255, 255, 255, 0.6)",
+                                                scale: "0.8",
+                                                "&.Mui-checked": {
+                                                    color: "#3237de",
+                                                },
+                                            }}
+                                        />
+                                    }
                                     label="Судья"
                                     className={classes.FormControlLabel}
                                 />
                                 <FormControlLabel
                                     value="volunteer"
-                                    control={<Radio />}
+                                    control={
+                                        <Radio
+                                            sx={{
+                                                color: "rgba(255, 255, 255, 0.6)",
+                                                scale: "0.8",
+                                                "&.Mui-checked": {
+                                                    color: "#3237de",
+                                                    
+                                                },
+                                            }}
+                                        />
+                                    }
                                     label="Волонтер"
                                     className={classes.FormControlLabel}
                                 />
                                 <FormControlLabel
                                     value="instructor"
-                                    control={<Radio />}
+                                    control={
+                                        <Radio
+                                            sx={{
+                                                color: "rgba(255, 255, 255, 0.6)",
+                                                scale: "0.8",
+                                                "&.Mui-checked": {
+                                                    color: "#3237de",
+                                                },
+                                            }}
+                                        />
+                                    }
                                     label="Инструктор"
                                     className={classes.FormControlLabel}
                                 />
@@ -147,8 +180,9 @@ function RegistrationPage() {
                                         <Radio
                                             sx={{
                                                 color: "rgba(255, 255, 255, 0.6)",
+                                                scale: "0.8",
                                                 "&.Mui-checked": {
-                                                    color: "rgba(255, 255, 255, 0.6)"
+                                                    color: "#3237de",
                                                 },
                                             }}
                                         />
@@ -202,14 +236,42 @@ function RegistrationPage() {
                             </p>
                         )}
 
-                        <FormGroup>
+                        <FormGroup className={classes.FormGroup}>
                             <FormControlLabel
-                                control={<Checkbox />}
-                                label="Я согласен на обработку персональных данных"
+                                className={classes.FormControl}
+                                control={
+                                    <Checkbox
+                                        style={{
+                                            color: "#3237de",
+                                            transform: "scale(1.3)",
+                                            marginBottom: 20
+                                        }}
+                                    />
+                                }
+                                label={
+                                    <p className={classes.CheckBoxLabel}>
+                                        Я согласен на обработку  персональных
+                                        данных
+                                    </p>
+                                }
                             />
                             <FormControlLabel
-                                control={<Checkbox />}
-                                label="Я хочу получать рассылку и новости о акциях и новинках компании"
+                                className={classes.FormControl}
+                                control={
+                                    <Checkbox
+                                        style={{
+                                            color: "#3237de",
+                                            transform: "scale(1.3)",
+                                            marginBottom: 20,
+                                        }}
+                                    />
+                                }
+                                label={
+                                    <p className={classes.CheckBoxLabel}>
+                                        Я хочу получать рассылку и новости о
+                                        акциях и новинках компании
+                                    </p>
+                                }
                             />
                         </FormGroup>
                         <div className={classes.ButtonContainer}>
