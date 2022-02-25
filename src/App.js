@@ -5,14 +5,14 @@ import Events from "./page/events/Events";
 import Help from "./page/help/Help";
 import Profile from "./page/profile/Profile";
 import Training from "./page/training/Training";
-import mainPage from "./page/mainPage/mainPage";
+import MainPage from "./page/mainPage/MainPage";
 
 
 function App() {
   return (
     <BrowserRouter>
         <Switch>
-          <Route path="/" component={mainPage} exact/> 
+          <Route path="/" component={MainPage} exact/> 
           <Route path="/profile" component={Profile} exact/> 
           <Route path="/events" component={Events} exact/> 
           <Route path="/training" component={Training} exact/> 
