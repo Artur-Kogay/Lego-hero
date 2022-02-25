@@ -1,9 +1,7 @@
 .Main {
     background: #1A191F;
     .child {
-    grid-area: "children";
-    margin-right: 28px;
-    margin-top: 105px;
+        grid-area: "children";
     }   
     .main-menu{
         grid-area: "menu";
@@ -26,4 +24,35 @@
     / min-content auto;
     grid-gap: 30px;
     grid-template-areas: 'menu children' 'footer footer';
+    .MenuMob{
+        padding-top: 24px;
+    }
+    .MenuDesktop{
+        padding-top: 25px;
+    }
+    .child{
+        
+        margin-top: 105px;
+    }
+}
+.MainMob{
+    .MenuMob{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding-top: 25px;
+        height: 43px;
+        margin-bottom: 16px;
+    }
+    
+}
+
+
+.burgerBtnDesktop{
+    display: none;
+}
+.burgerBtnMob{
+    width: 15px;
+    height: 11px;
+    margin-right: 41px;
 }

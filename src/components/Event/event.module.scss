@@ -1,6 +1,7 @@
 
 @media(max-width:1200px){
     .event{
+        font-family: "dinpro";
         .h1{
             font-style: normal;
             font-weight: 900;
@@ -155,8 +156,9 @@
         }
     }
 }
-@media(max-width:768px){
+@media(max-width:767.9px){
     .event{
+        font-family: "dinpro";
         .h1{
             font-style: normal;
             font-weight: 900;
@@ -165,10 +167,12 @@
             color: #FFFFFF;
             margin: 0;
             margin-bottom: 25px;
+            margin-left: 30px;
         }
         .eventsList{
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
             .eventItem{
                 width: 343px;
                 height: 340px;

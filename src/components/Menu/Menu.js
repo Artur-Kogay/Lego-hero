@@ -22,10 +22,10 @@ export default function Menu (){
         {id:4,text:"Моё обучение",img:timer,link:"/training"},
         {id:5,text:"Помощь",img:help,link:"/help"}
     ]
-    const isMob = useMediaQuery("(max-width:768px)")
+    const isMob = useMediaQuery("(max-width:767.9px)")
     return(
         <div className={`${cls.Menu} main-menu`}>
-            <motion.div className={cls.logo} animate={showFullMenu ? {marginLeft:110} : {marginLeft:30}}><img src={logo} style={showFullMenu ? {width:92.4, height:59,marginBottom:32} : {width:64, height:41,marginBottom:50}}/></motion.div>
+            <motion.div className={cls.logo} animate={(showFullMenu && !isMob) ? {marginLeft:110} : {marginLeft:30}}><img src={logo} style={showFullMenu ? {width:92.4, height:59,marginBottom:32} : {width:64, height:41,marginBottom:50}}/></motion.div>
             <motion.div onMouseEnter={()=>setShowFullMenu(true)} onMouseLeave={()=>setShowFullMenu(false)} className={`${cls.navbar} ${isMob ? `${cls.navbarMob}` : ""}`} animate={showFullMenu ? {width:255}:{width:64}}>
                 <div className={cls.navbarAccount}>
                     <div><img src={account} style={showFullMenu ? {marginLeft:24} : {marginLeft:11}}/></div>
