@@ -1,0 +1,32 @@
+.LinkSelf{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    text-decoration-line: underline !important;
+    color: rgba(255, 255, 255, 0.3) !important;
+    text-decoration-color: rgba(255, 255, 255, 0.3) !important;
+    margin-right: 8px;
+}
+.linkblock {
+    position: absolute;
+    margin-top: 8px;
+}
+.forgotpassword {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.2px;
+    text-decoration-line: underline;
+    color: #ffffff !important;
+    margin-top: 33px !important;
+    text-decoration-color: rgba(255, 255, 255, 0.3) !important;
+    transition: all 0.12s linear;
+}
+
+.forgotpassword:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px;
+    border-radius: 6px;
+    margin-top: 28px !important;
+}

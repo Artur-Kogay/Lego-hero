@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Gilory';
+    src: url(../public/Gilroy-Regular.ttf);
+}
+
+body {
+    font-family: Gilory !important;
+    background-color: #1A191F;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
