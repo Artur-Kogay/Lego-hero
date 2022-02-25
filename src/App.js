@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import "../src/styles/global.scss"
 import Events from "./page/events/Events";
@@ -6,6 +5,13 @@ import Help from "./page/help/Help";
 import Profile from "./page/profile/Profile";
 import Training from "./page/training/Training";
 import mainPage from "./page/mainPage/mainPage";
+
+import Login from './page/AuthPages/LoginPage'
+import ResetPage from './page/AuthPages/PasswordResetPage'
+import RegisterPage from './page/AuthPages/RegisterPage';
+import Welcome from './page/AuthPages/Welcome';
+
+import './App.css'
 
 
 function App() {
@@ -17,45 +23,29 @@ function App() {
           <Route path="/events" component={Events} exact/> 
           <Route path="/training" component={Training} exact/> 
           <Route path="/help" component={Help} exact/> 
-        </Switch>
-     
-    </BrowserRouter>
-=======
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import RegistrationPage from './components/RegistrationPage/Index'
-import LoginPage from './components/LoginPage/Index'
-import PasswordResetPage from './components/PasswordResetPage/Index'
-import WelcomePage from './components/WelcomePage/Index'
-import './App.css'
-function App() {
-  return (
-    <>
-      <Router>
-        <Switch>
-        <Route
+          <Route
             exact
             path="/welcome"
-            component={WelcomePage}
+            component={Welcome}
           />
           <Route
             exact
             path="/register"
-            component={RegistrationPage}
+            component={RegisterPage}
           />
           <Route
             exact
             path="/login"
-            component={LoginPage}
+            component={Login}
           />
           <Route
             exact
             path="/password-reset"
-            component={PasswordResetPage}
+            component={ResetPage}
           />
         </Switch>
-      </Router>
-    </>
->>>>>>> origin/abror
+     
+    </BrowserRouter>
   );
 }
 
