@@ -1,10 +1,10 @@
 import React from 'react';
-import MainLayout from '../../components/MainLayout/index'
+import MainLayout from '../../components/MainLayout/MainLayout'
 
 const Help = () => {
     return (
         <MainLayout>
-            <h1>help</h1>
+            
         </MainLayout>
     );
 };

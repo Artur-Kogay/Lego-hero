@@ -13,7 +13,7 @@
 
     .title{
         color: white;
-        font-family: DIN Pro;
+        font-family: 'DINPro';
         font-style: normal;
         font-weight: 900;
         font-size: 64px;
@@ -34,7 +34,7 @@
     .profile_cash{
         width: 100%;
         height: 100%;
-        background-image: url("../../img/lox.png");
+        background-image: url("../../static/img/lox.png");
         background-size: cover;
         // mix-blend-mode: luminosity;
         border-radius: 10px;
@@ -78,10 +78,10 @@
         letter-spacing: 0.2px;
     }
     .profile_detail h5{
-        margin-bottom: 39px;  
+        margin-bottom: 39px;
     }
     .min_block:last-child{
-        margin-bottom: 0px;  
+        margin-bottom: 0px;
     }
     .btn_profie{
         background: #1A191F;

@@ -1,10 +1,10 @@
 .Menu{
-    min-width: 160px;
+    font-family: "Gilroy";
     .logo{
-        margin-top: 24px;
         overflow: hidden;
-        position: relative;  
+        position: relative;
     }
+
     overflow: hidden;
     .navbar{
         width: 100%;
@@ -75,7 +75,7 @@
                         opacity: 0.6;
                         position: absolute;
                         left: 44px;
-                        width: 100px;
+                        width: 110px;
                     }
                 }
         }
@@ -114,4 +114,6 @@
         }
     }
 }
-
+.navbarMob{
+    display: none;
+}

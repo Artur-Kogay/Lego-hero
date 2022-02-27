@@ -1,7 +1,7 @@
 import React from 'react';
-import MainLayout from '../../components/MainLayout';
+import MainLayout from '../../components/MainLayout/MainLayout';
 import cl from "./profile.module.scss"
-import account from '../../img/loll.png'
+import account from '../../static/img/loll.png'
 
 const Profile = () => {
     return (
@@ -50,7 +50,7 @@ const Profile = () => {
                            Изменить
                         </button>
                     </div>
-                    
+
                 </div>
 
                 <div className={cl.profile_cashh}>
