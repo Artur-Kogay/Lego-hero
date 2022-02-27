@@ -1,7 +1,9 @@
+import StudyPage from './page/study/StudyPage'
+import "./App.css"
 function App() {
   return (
     <>
-      hero league
+      <StudyPage/>
     </>
   );
 }
