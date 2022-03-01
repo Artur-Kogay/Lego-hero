@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
-import MainLayout from "../../components/MainLayout";
+import MainLayout from "../../components/MainLayout/MainLayout";
 import {useMediaQuery} from "@mui/material";
 import cl from "./profile.module.scss";
-import account from "../../img/loll.png";
-import fotka from "../../img/lolll.png";
+import account from "../../static/img/loll.png";
+import fotka from "../../static/img/lolll.png";
+// import Learn from "../../page/mainPage/Learn"
 
 const Profile = () => {
   const isLaptopMax = useMediaQuery("(max-width:768px)");
@@ -90,6 +91,7 @@ const Profile = () => {
 
         <hr style={{ marginTop: "57px" }} />
       </div>
+      {/*<Learn/>*/}
     </MainLayout>
   );
 };

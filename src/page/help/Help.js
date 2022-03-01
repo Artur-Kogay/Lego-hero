@@ -2,13 +2,13 @@ import React from "react";
 import HelpAccordion from "../../components/HelpAccordion/HelpAccordion";
 import MainLayout from "../../components/MainLayout/MainLayout";
 import styles from "./help.module.scss";
-import humanIcon from "../../img/contactHuman.svg";
-import injenerIcon from "../../img/contactEngineer.svg";
+import humanIcon from "../../static/img/contactHuman.svg";
+import injenerIcon from "../../static/img/contactEngineer.svg";
 import Radio from "../../components/RadioButton/RadioButton";
 import { FormControl, FormControlLabel, RadioGroup } from "@mui/material";
-import { ReactComponent as UserIcon } from "../../img/userIcon.svg";
-import { ReactComponent as PhoneIcon } from "../../img/phoneIcon.svg";
-import { ReactComponent as MessageIcon } from "../../img/MessageIcon.svg";
+import { ReactComponent as UserIcon } from "../../static/img/userIcon.svg";
+import { ReactComponent as PhoneIcon } from "../../static/img/phoneIcon.svg";
+import { ReactComponent as MessageIcon } from "../../static/img/MessageIcon.svg";
 import InputHelpPage from "../../components/InputHelpPage/InputHelpPage";
 import CustomizedCheckbox from "../../components/HelpCheckbox/HelpCheckbox";
 const radios = [

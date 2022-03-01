@@ -1,12 +1,9 @@
 .profile {
-  max-width: 1600px;
-  // margin-top: 97px;
   .prof_block {
     width: 100%;
     margin-top: 40px;
     display: flex;
     flex-wrap: wrap;
-    // justify-content: space-between;
   }
 
   .title {
@@ -39,9 +36,7 @@
     height: 100%;
     // mix-blend-mode: luminosity;
     border-radius: 10px;
-    background: url("../../img/lox.png");
-    background-size: cover;
-    background-size: center;
+    background: url("../../static/img/lox.png") center / cover;
     opacity: 20;
   }
   .profile_cashh {
@@ -50,8 +45,6 @@
     // margin-top: 39px;
     min-height: 267px;
     max-width: 98%;
-    background: #fff;
-
     flex: max(400px, 100%/10 - 20px); /* and this */
     background: #7469a3;
   }
