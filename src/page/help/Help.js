@@ -1,6 +1,6 @@
 import React from "react";
 import HelpAccordion from "../../components/HelpAccordion/HelpAccordion";
-import MainLayout from "../../components/MainLayout/index";
+import MainLayout from "../../components/MainLayout/MainLayout";
 import styles from "./help.module.scss";
 import humanIcon from "../../img/contactHuman.svg";
 import injenerIcon from "../../img/contactEngineer.svg";
