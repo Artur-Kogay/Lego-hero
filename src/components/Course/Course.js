@@ -47,7 +47,7 @@ const Course = () => {
             <img className={cls.secondImg} src={second}/>
             <div className={cls.thirdBlock}>
                 <h3 className={cls.causes}>ЧТО БУДЕТ, ЕСЛИ ТЫ ПРИДЕШЬ К НАМ?</h3>
-                <div>
+                <div className={cls.infoAbout}>
                     <div>
                         <h4>ДЛЯ ТЕБЯ</h4>
                         <div><div/> <p>Участие в организации популярного спортивного проекта; </p></div>
