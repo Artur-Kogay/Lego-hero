@@ -5,7 +5,7 @@ import Help from "./page/help/Help";
 import Profile from "./page/profile/Profile";
 import Training from "./page/training/Training";
 import mainPage from "./page/mainPage/mainPage";
-
+import Courses from './page/Courses/Courses'
 import Login from './page/AuthPages/LoginPage'
 import ResetPage from './page/AuthPages/PasswordResetPage'
 import RegisterPage from './page/AuthPages/RegisterPage';
@@ -23,6 +23,8 @@ function App() {
           <Route path="/events" component={Events} exact/> 
           <Route path="/training" component={Training} exact/> 
           <Route path="/help" component={Help} exact/> 
+          <Route path="/courses" component={Courses} exact/> 
+
           <Route
             exact
             path="/welcome"

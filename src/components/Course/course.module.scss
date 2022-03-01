@@ -1,0 +1,182 @@
+.course{
+    .direction{
+        color: rgba(255, 255, 255, 0.4);
+        font-family: 'gilroy';
+        font-style: normal;
+        font-weight: normal;
+    }
+    .pageName{
+        font-family: 'dinpro';
+        font-style: normal;
+        font-weight: 900;
+        color: #FFFFFF;
+    }
+    .firstBlock{
+        .greetings{
+            font-family: 'gilroy';
+            font-style: normal;
+            font-weight: bold;
+            background: linear-gradient(267.53deg, #ED1C24 -0.27%, #8820B9 100%),
+            linear-gradient(0deg, #FFFFFF, #FFFFFF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .aboutVolonter{
+            div{
+                h4{
+                    font-family: 'gilroy';
+                    font-style: normal;
+                    font-weight: bold;
+                    color: #FFFFFF;
+                }
+                p{
+                    font-family: 'gilroy';
+                    font-style: normal;
+                    font-weight: normal;
+                    color: #FFFFFF;
+                }
+            }
+            
+        }
+        .btnVolonter{
+            font-family: 'gilroy';
+            font-style: normal;
+            font-weight: 500;
+            color: #FFFFFF;
+            background: linear-gradient(267.53deg, #ED1C24 -0.27%, #8820B9 100%), linear-gradient(267.53deg, #982EEB -0.27%, #359AD2 100%), #C7252B;
+            border-radius: 30px;
+            border: none;
+            cursor: pointer;
+        }
+    }
+    .secondBlock{
+        .goals{
+            font-family: "dinpro";
+            font-style: normal;
+            font-weight: 900;
+            text-transform: uppercase;
+            background: linear-gradient(267.53deg, #ED1C24 -0.27%, #8820B9 100%),
+            linear-gradient(0deg, #FFFFFF, #FFFFFF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+        }
+        .volonterGoals{
+            div{
+                div{
+                    display: flex;
+                    div{
+                        background: #E46368;
+                        border-radius: 100%;
+                    }
+                    p{
+                        font-family: "gilroy";
+                        font-style: normal;
+                        font-weight: normal;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+
+    }
+    .thirdBlock{
+        .causes{
+            font-family: "dinpro";
+            font-style: normal;
+            font-weight: 900;
+            text-transform: uppercase;
+            background: linear-gradient(267.53deg, #ED1C24 -0.27%, #8820B9 100%),
+            linear-gradient(0deg, #FFFFFF, #FFFFFF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
+@media(min-width:1200px){
+    .course{
+        .direction{
+            font-size: 10px;
+            line-height: 12px;
+        }
+        .pageName{
+            font-size: 36px;
+            line-height: 44px;
+            margin-bottom: 80px;
+        }
+        .firstBlock{
+            .greetings{
+                font-size: 70px;
+                line-height: 87px;
+                margin-bottom: 15px;
+            }
+            .aboutVolonter{
+                display: flex;
+                grid-column-gap: 64px;
+                div{
+                    margin-bottom: 31px;
+                    h4{
+                        font-size: 18px;
+                        line-height: 22px;
+                        margin: 0;
+                    }
+                    p{
+                        font-size: 16px;
+                        line-height: 20px;
+                    }
+                }
+                
+            }
+            .btnVolonter{
+                font-size: 12px;
+                line-height: 15px;
+                padding: 9px 33px;
+            }
+        }
+        .firstImg{
+            width: 1115px;
+            height: 400px;
+            margin:  52px 0;
+        }
+        .secondBlock{
+           .goals{
+                font-size: 36px;
+                line-height: 44px;
+           }
+            .volonterGoals{
+               display: flex;
+               grid-row-gap: 15px;
+               grid-column-gap: 30px;
+                div{
+                    div{
+                        display: flex;
+                        align-items: center;
+                        div{
+                            width: 6px;
+                            height: 6px;
+                            margin-right: 14px;
+                        }
+                        p{
+                            font-size: 14px;
+                            line-height: 20px;
+                            
+                        }
+                    }
+                }
+           }
+        }
+        .secondImg{
+            width: 1115px;
+            height: 400px;
+            margin-top: 130px;
+        }
+        .thirdBlock{
+            .causes{
+                font-size: 36px;
+                line-height: 44px;
+            }
+        }
+    }
+
+
+}
