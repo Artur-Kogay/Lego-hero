@@ -16,13 +16,8 @@
       background: no-repeat url(../../static/img/hhhh.svg), #7469a3;
       background-size: cover;
       box-sizing: border-box;
-      display: grid;
-      grid-template: 1fr / 3fr 1fr;
       grid-gap: 30px;
       padding: 30px;
-      @media (max-width: 768px) {
-        grid-template: 2fr 150px / 1fr;
-      }
 
       &_left {
         width: 100%;
@@ -90,19 +85,6 @@
           cursor: pointer;
         }
       }
-
-      &_right {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        img {
-          width: 100%;
-          height: 100%;
-        }
-      }
     }
 
     .cont {
@@ -142,6 +124,11 @@
       font-size: 64px;
       line-height: 78px;
       margin-bottom: 40px;
+
+      @media(max-width: 768px) {
+        font-size: 32px;
+        line-height: 39px;
+      }
     }
 
     .inner {
@@ -169,18 +156,32 @@
             font-weight: 900;
             font-size: 48px;
             line-height: 58px;
+
+            @media(max-width: 768px) {
+              font-size: 24px;
+              line-height: 29px;
+            }
+
           }
 
           h5 {
             font-weight: 900;
             font-size: 24px;
             line-height: 29px;
+            @media(max-width: 768px) {
+              font-size: 14px;
+              line-height: 17px;
+            }
           }
 
           p {
             font-weight: normal;
             font-size: 14px;
             line-height: 18px;
+            @media(max-width: 768px) {
+              font-size: 8px;
+              line-height: 12px;
+            }
           }
         }
       }

@@ -23,14 +23,20 @@ const Navs = [
 export default function Menu() {
   const [showFullMenu, setShowFullMenu] = useState(false)
   const isMob = useMediaQuery("(max-width:767.9px)")
+  const isLaptop = useMediaQuery("(max-width: 1200px)")
 
   return (
     <div className={`${cls.Menu} main-menu`}>
       <motion.div className={cls.logo} animate={(showFullMenu && !isMob) ? {marginLeft: 110} : isMob ? {marginLeft: 0} : {marginLeft: 30}}><img
         src={logo}
-        style={showFullMenu ? {width: 92.4, height: 59, marginBottom: 32} : {width: 64, height: 41, marginBottom: 50}}/>
+        style={
+          showFullMenu ?
+          {width: 92.4, height: 59, marginBottom: 32} :
+            {width: 64, height: 41, marginBottom: 50}
+        }
+      />
       </motion.div>
-      <motion.div onMouseEnter={() => setShowFullMenu(true)} onMouseLeave={() => setShowFullMenu(false)}
+      <motion.div onMouseEnter={() => !isLaptop && setShowFullMenu(true)} onMouseLeave={() => setShowFullMenu(false)}
                   className={`${cls.navbar} ${isMob ? `${cls.navbarMob}` : ""}`}
                   animate={showFullMenu ? {width: 255} : {width: 64}}>
         <div className={cls.navbarAccount}>

@@ -12,7 +12,6 @@ import Welcome from './page/AuthPages/Welcome';
 
 import './App.css'
 
-
 function App() {
   return (
     <BrowserRouter>
