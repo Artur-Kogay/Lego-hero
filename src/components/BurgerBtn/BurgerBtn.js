@@ -7,7 +7,6 @@ import ticket from '../../static/img/ticket.svg'
 import timer from '../../static/img/timer.svg'
 import help from '../../static/img/help.svg'
 import exit from '../../static/img/exit.svg'
-import account from '../../static/img/account.png'
 import {motion} from 'framer-motion'
 import {    NavLink     } from 'react-router-dom'
 

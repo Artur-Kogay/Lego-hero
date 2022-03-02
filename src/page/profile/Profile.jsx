@@ -4,7 +4,7 @@ import {useMediaQuery} from "@mui/material";
 import cl from "./profile.module.scss";
 import account from "../../static/img/loll.png";
 import fotka from "../../static/img/lolll.png";
-// import Learn from "../../page/mainPage/Learn"
+import Learn from "../../components/Learn/Learn"
 
 const Profile = () => {
   const isLaptopMax = useMediaQuery("(max-width:768px)");
@@ -91,7 +91,7 @@ const Profile = () => {
 
         <hr style={{ marginTop: "57px" }} />
       </div>
-      {/*<Learn/>*/}
+      <Learn/>
     </MainLayout>
   );
 };

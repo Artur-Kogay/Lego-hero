@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
-import cl from "./MainPage.module.scss";
-import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+import React  from "react";
+import cl from "./learn.module.scss";
+import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
 const Learn = () => {
-  const [percentage, setPers] = useState(90);
-  const [progress, setProgress] = useState(85);
+  const percentage = 90;
+  const progress = 85;
   return (
     <div className={cl.learn_content}>
       <h1>ОБУЧЕНИЕ</h1>

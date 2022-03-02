@@ -2,8 +2,6 @@ import stuffAva from "../../static/img/heroPhotoPng.png";
 import mask from "../../static/img/Mask Group.png";
 import styles from "./stuff.module.scss";
 import {useMediaQuery} from "@mui/material";
-import {useCallback} from 'react'
-import {useTheme} from "@mui/material/styles";
 import {Swiper, SwiperSlide} from "swiper/react";
 
 // Import Swiper styles
@@ -68,7 +66,6 @@ const stuffs = [
 export default function Stuff() {
   const isLaptop = useMediaQuery("(max-width: 1200px)");
   const isMobile = useMediaQuery("(max-width: 768px)")
-  const theme = useTheme();
 
   return (
     <div className={styles.main}>

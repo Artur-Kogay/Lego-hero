@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React from "react";
 import Menu from '../Menu/Menu'
 import cls from './mainLayout.module.scss'
 import { useMediaQuery } from "@mui/material";

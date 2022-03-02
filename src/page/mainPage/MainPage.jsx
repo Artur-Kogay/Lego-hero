@@ -1,14 +1,11 @@
 import MainLayout from "../../components/MainLayout/MainLayout";
 import sty from "./MainPage.module.scss";
 import React, {useState} from "react";
-import cart from "../../static/img/cart.svg";
 import {useTheme} from "@mui/material/styles";
-import Box from "@mui/material/Box";
 import MobileStepper from "@mui/material/MobileStepper";
-import Paper from "@mui/material/Paper";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
-import Learn from "./Learn";
+import Learn from "../../components/Learn/Learn";
 import Stuff from "../../components/Stuff/Stuff";
 
 const MainPage = () => {
@@ -23,9 +20,6 @@ const MainPage = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
-  const handleStepChange = (step) => {
-    setActiveStep(step);
-  };
   return (
     <MainLayout>
       <div className={sty.main_container}>
@@ -84,6 +78,7 @@ const MainPage = () => {
             </div>
           </div>
         </div>
+
         <Learn/>
 
         <Stuff/>
