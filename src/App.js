@@ -9,7 +9,7 @@ import Login from './page/AuthPages/LoginPage'
 import ResetPage from './page/AuthPages/PasswordResetPage'
 import RegisterPage from './page/AuthPages/RegisterPage';
 import Welcome from './page/AuthPages/Welcome';
-
+import './styles/global.scss'
 import './App.css'
 
 function App() {

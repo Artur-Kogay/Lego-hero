@@ -1,3 +1,2 @@
-body {
-  font-family: 'Gilroy' !important;
-}
+@import "../src/styles/fonts/gilroy/gilroy.css";
+@import "../src/styles/fonts/dinpro/dinpro.css";
