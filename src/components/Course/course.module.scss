@@ -1,0 +1,819 @@
+.course{
+    .direction{
+        color: rgba(255, 255, 255, 0.4);
+        font-family: 'gilroy';
+        font-style: normal;
+        font-weight: normal;
+    }
+    .pageName{
+        font-family: 'dinpro';
+        font-style: normal;
+        font-weight: 900;
+        color: #FFFFFF;
+    }
+    h4{
+        font-family: 'gilroy';
+        font-style: normal;
+        font-weight: bold;
+        color: #FFFFFF;
+    }
+    p{
+        font-family: 'gilroy';
+        font-style: normal;
+        font-weight: normal;
+        color: #FFFFFF;
+    }
+    .firstBlock{
+        .btnVolonter{
+            font-family: 'gilroy';
+            font-style: normal;
+            font-weight: 500;
+            color: #FFFFFF;
+            background: linear-gradient(267.53deg, #ED1C24 -0.27%, #8820B9 100%), linear-gradient(267.53deg, #982EEB -0.27%, #359AD2 100%), #C7252B;
+            border-radius: 30px;
+            border: none;
+            cursor: pointer;
+        }
+    }
+    .secondBlock{
+        .volonterGoals{
+            div{
+                div{
+                    display: flex;
+                    div{
+                        background: #E46368;
+                        border-radius: 100%;
+                    }
+                }
+            }
+        }
+
+    }
+    .thirdBlock{
+        .infoAbout{
+            display: flex;
+            grid-row-gap: 18px;
+            grid-column-gap: 30px;
+            div{
+                div{
+                    display: flex;
+                    div{
+                        background: #E46368;
+                        border-radius: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .fourthBlock{
+        .blocks{
+            div{
+                .count{
+                    font-family: "gilroy";
+                    font-style: normal;
+                    font-weight: bold;
+                    color: #FFFFFF;
+                }
+                .attentionTitle{
+                    font-family: "gilroy";
+                    font-style: normal;
+                    font-weight: bold;
+                    color: #FFFFFF;
+                }
+                .attentionDesc{
+                    font-family: "gilroy";
+                    font-style: normal;
+                    font-weight: normal;
+                    color: rgba(255, 255, 255, 0.3);
+                }
+            }
+        }
+    }
+    .fifthBlock{
+        .duties{
+            div{
+                div{
+                    display: flex;
+                    align-items: center;
+                    div{
+                        background: #E46368;
+                        border-radius: 100%;
+                        
+                    }
+                }
+            }
+        }
+    }
+    .sixthBlock{
+        .aboutBonus{
+            div{
+                div{
+                    display: flex;
+                    align-items: center;
+                    div{
+                        background: #E46368;
+                        border-radius: 100%;
+                        
+                    }
+                }
+            }
+        }
+    }
+    .seventhBlock{
+        .volonterPhotos{
+            div{
+                background: #302E3A;
+                border-radius: 5px;
+            }
+        }
+    }
+    .eighthBlock{
+        .aboutFunc{
+            .func{
+                div{
+                    div{
+                        background: #E46368;
+                        border-radius: 100%;
+                    }}
+                }
+            }
+    }
+    .loyalty,.important,.remember,.causes,.goals,.greetings,.volunteerDevelopment,.functions,.structure,.thanksgiving{
+        font-family: "dinpro";
+        font-style: normal;
+        font-weight: 900;
+        text-transform: uppercase;
+        background: linear-gradient(267.53deg, #ED1C24 -0.27%, #8820B9 100%),
+        linear-gradient(0deg, #FFFFFF, #FFFFFF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+@media(min-width:1200px) {
+    .course{
+        width: 1115px;
+        h4{
+            font-size: 18px;
+            line-height: 22px;
+        }
+        p{
+            font-size: 14px;
+            line-height: 20px;
+        }
+        .direction{
+            font-size: 10px;
+            line-height: 12px;
+        }
+        .pageName{
+            font-size: 36px;
+            line-height: 44px;
+            margin-bottom: 80px;
+        }
+        .firstBlock{
+            .greetings{
+                font-size: 70px;
+                line-height: 87px;
+                margin-bottom: 15px;
+            }
+            .aboutVolonter{
+                display: flex;
+                grid-column-gap: 64px;
+                div{
+                    margin-bottom: 31px;
+                    h4{
+                        margin: 0;
+                    }
+                }
+                
+            }
+            .btnVolonter{
+                font-size: 12px;
+                line-height: 15px;
+                padding: 9px 33px;
+            }
+        }
+        .firstImg{
+            width: 1115px;
+            height: 400px;
+            margin:  52px 0;
+        }
+        .secondBlock{
+            
+            .volonterGoals{
+                display: flex;
+                grid-row-gap: 15px;
+                grid-column-gap: 30px;
+                div{
+                    div{
+                        width: 540px;
+                        display: flex;
+                        align-items: center;
+                        div{
+                            width: 6px;
+                            height: 6px;
+                            margin-right: 14px;
+                        }
+                    }
+                }
+            }
+        }
+        .secondImg{
+            width: 1115px;
+            height: 400px;
+            margin-top: 130px;
+        }
+        .thirdBlock{
+            .infoAbout{
+                display: flex;
+                grid-row-gap: 18px;
+                grid-column-gap: 30px;
+                div{
+                    div{
+                        display: flex;
+                        align-items: center;
+                        div{
+                            width: 6px;
+                            height: 6px;
+                            margin-right: 14px;
+                        }
+                    }
+                }
+            }
+        }
+        .fourthBlock{
+            
+            .blocks{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-column-gap: 30px;
+                div{
+                    width: 350px;
+                    
+                    .count{
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
+                    .attentionTitle{
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
+                    .attentionDesc{
+                        font-size: 14px;
+                        line-height: 16px;
+                    }
+                }
+            }
+        }
+        .thirdImg{
+            width: 1115px;
+            height: 400px;
+            margin-top: 90px;
+        }
+        .fifthBlock{
+            .duties{
+                display: flex;
+                grid-column-gap: 12px;
+                div{
+                    grid-row-gap: 20px;
+                    div{
+                        width: 560px;
+                        display: flex;
+                        div{
+                            width: 6px;
+                            height: 6px;
+                            margin-right: 14px;
+                        }
+                    }
+                }
+                
+            }
+        }
+        .sixthBlock{
+            .aboutBonus{
+                div{
+                    grid-row-gap: 20px;
+                    div{
+                        display: flex;
+                        div{
+                            width: 6px;
+                            height: 6px;
+                            margin-right: 14px;
+                        }
+                    }
+                }
+                
+            }
+        }
+        .seventhBlock{
+            .volonterPhotos{
+                display: flex;
+                justify-content: space-between;
+                width: 1115px;
+                div{
+                    height: 240px;
+                    width: 161px;
+                    padding-top: 16px;
+                    text-align: center;
+                }
+            }
+        }
+        .eighthBlock{
+            .aboutFunc{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-column-gap: 30px;
+                .func{
+                    div{
+                        display: flex;
+                        align-items: center;
+                        div{
+                            width: 6px;
+                            height: 6px;
+                            margin-right: 14px;
+                        }
+                    }
+                }
+            }
+        }
+        .ninthBlock{
+            .directors{
+                display: flex;
+                grid-column-gap: 24px;
+                div{
+                    width: 203px;
+                    .underline{
+                        width: 203px;
+                        height: 1px;
+                        background: #343243;
+                    }
+                }
+            }
+        }
+        .tenthBlock{
+            .thanksgiving{
+                font-size: 60px;
+                line-height: 70px;
+            }
+            p{
+                font-size: 18px;
+                line-height: 20px;
+                margin-bottom: 30px;
+            }
+        }
+        .line{
+            width: 350px;
+            height: 1px;
+            background: #666666;
+        }
+        .goals,.important,.remember,.causes,.loyalty,.volunteerDevelopment,.functions,.structure{
+            font-size: 36px;
+            line-height: 44px;
+        }
+    }
+}
+
+@media(max-width:1200px) {
+    .course{
+        width: 652px;
+        h4{
+            font-size: 15px;
+            line-height: 18px;
+        }
+        p{
+            font-size: 14px;
+            line-height: 20px;
+        }
+        .direction{
+            font-size: 10px;
+            line-height: 12px;
+        }
+        .pageName{
+            font-size: 32px;
+            line-height: 39px;
+            margin-bottom: 25px;
+        }
+        .firstBlock{
+            .greetings{
+                font-size: 32px;
+                line-height: 39px;
+                margin-top: 0;
+                margin-bottom: 15px;
+            }
+            .aboutVolonter{
+                display: flex;
+                grid-column-gap: 109px;
+                div{
+                    margin-bottom: 24px;
+                    h4{
+                        margin: 0;
+                    }
+                }
+                
+            }
+            .btnVolonter{
+                font-size: 12px;
+                line-height: 15px;
+                padding: 9px 33px;
+            }
+        }
+        .secondBlock{       
+            .volonterGoals{
+                grid-row-gap: 15px;
+                margin-top: 30px;
+                div{
+                    div{
+                        display: flex;
+                        align-items: center;
+                        div{
+                            width: 6px;
+                            height: 6px;
+                            margin-right: 14px;
+                        }
+                    }
+                }
+            }
+        }
+        .thirdBlock{
+            
+            .infoAbout{
+                display: flex;
+                grid-row-gap: 12px;
+                grid-column-gap: 63px;
+                div{
+                    div{
+                        display: flex;
+                        align-items: center;
+                        div{
+                            width: 6px;
+                            height: 6px;
+                            margin-right: 14px;
+                        }
+                    }
+                }
+            }
+        }
+        .fourthBlock{
+            
+            .blocks{
+                display: grid;
+                grid-template-columns: 1fr 1fr ;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-column-gap: 45px;
+                div{
+                    width: 300px;
+                    .count{
+                        font-size: 16px;
+                        line-height: 19px;
+                    }
+                    .attentionTitle{
+                        font-size: 15px;
+                        line-height: 20px;
+                    }
+                    .attentionDesc{
+                        font-size: 14px;
+                        line-height: 16px;
+                    }
+                }
+            }
+        }
+        
+        .fifthBlock{
+            
+            .duties{
+                display: flex;
+                grid-column-gap: 60px;
+                div{
+                    grid-row-gap: 12px;
+                    div{
+                        display: flex;
+                        div{
+                            width: 6px;
+                            height: 6px;
+                            margin-right: 14px;
+                        }
+                    }
+                }
+                
+            }
+        }
+        .sixthBlock{
+            .aboutBonus{
+                div{
+                    grid-row-gap: 14px;
+                    div{
+                        display: flex;
+                        div{
+                            width: 6px;
+                            height: 6px;
+                            margin-right: 14px;
+                        }
+                    }
+                }
+                
+            }
+        }
+        .seventhBlock{
+            .volonterPhotos{
+                display: flex;
+                flex-wrap: wrap;
+                grid-gap: 13px;
+                div{
+                    height: 200px;
+                    width: 151px;
+                    padding-top: 16px;
+                    text-align: center;
+                    img{
+                        width: 151px;
+                    }
+                }
+            }
+        }
+        .eighthBlock{
+            .aboutFunc{
+                display: grid;
+                grid-template-columns: 1fr 1fr ;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+                grid-column-gap: 45px;
+                .func{
+                    div{
+                        display: flex;
+                        align-items: center;
+                        div{
+                            width: 6px;
+                            height: 6px;
+                            margin-right: 14px;
+                        }
+                    }
+                }
+            }
+        }
+        .ninthBlock{
+            .directors{
+                display: flex;
+                grid-gap: 20px;
+                flex-wrap: wrap;
+                div{
+                    width: 203px;
+                    .underline{
+                        width: 203px;
+                        height: 1px;
+                        background: #343243;
+                    }
+                }
+            }
+        }
+        .tenthBlock{
+            .thanksgiving{
+                font-size: 32px;
+                line-height: 39px;
+            }
+            p{
+                font-size: 18px;
+                line-height: 20px;
+                margin-bottom: 30px;
+            }
+        }
+        .thirdImg,.secondImg,.firstImg{
+            width: 652px;
+            height: 350px;
+            margin-top: 50px;
+            object-fit: contain;
+        }
+        .fourthImg{
+            width: 652px;
+            height: 350px;
+            object-fit: contain;
+        }
+        .line{
+            width: 300px;
+            height: 1px;
+            background: #666666;
+        }
+        .goals,.important,.remember,.causes,.loyalty,.volunteerDevelopment,.functions,.structure{
+            font-size: 32px;
+            line-height: 39px;
+            margin: 50px 0 30px 0;
+        }
+    }
+}
+@media(max-width:767.9px) {
+    .course{
+        width: 345px;
+        margin: 0 auto;
+        h4{
+            font-size: 15px;
+            line-height: 18px;
+        }
+        p{
+            font-size: 14px;
+            line-height: 20px;
+        }
+        .direction{
+            font-size: 10px;
+            line-height: 12px;
+        }
+        .pageName{
+            font-size: 32px;
+            line-height: 39px;
+            margin-bottom: 25px;
+        }
+        .firstBlock{
+            .greetings{
+                margin-top: 0;
+                margin-bottom: 30px;
+            }
+            .aboutVolonter{
+                display: flex;
+                flex-wrap: wrap;
+                grid-row-gap: 10px;
+                div{
+                    h4{
+                        margin: 0;
+                    }
+                }
+                
+            }
+            .btnVolonter{
+                font-size: 12px;
+                line-height: 15px;
+                padding: 9px 33px;
+            }
+        }
+        .secondBlock{       
+            .volonterGoals{
+                grid-row-gap: 15px;
+                div{
+                    div{
+                        display: flex;
+                        align-items: center;
+                        div{
+                            width: 6px;
+                            height: 6px;
+                            margin-right: 14px;
+                        }
+                    }
+                }
+            }
+        }
+        .thirdBlock{ 
+            .infoAbout{
+                display: flex;
+                flex-wrap: wrap;
+                grid-row-gap: 12px;
+                div{
+                    div{
+                        display: flex;
+                        align-items: center;
+                        div{
+                            width: 6px;
+                            height: 6px;
+                            margin-right: 14px;
+                        }
+                    }
+                }
+            }
+        }
+        .fourthBlock{ 
+            .blocks{
+                display: grid;
+                grid-template-columns: 1fr;
+                div{
+                    width: 300px;
+                    .count{
+                        font-size: 16px;
+                        line-height: 19px;
+                    }
+                    .attentionTitle{
+                        font-size: 15px;
+                        line-height: 20px;
+                    }
+                    .attentionDesc{
+                        font-size: 14px;
+                        line-height: 16px;
+                    }
+                }
+            }
+        }
+        .fifthBlock{
+            
+            .duties{
+                display: flex;
+                flex-wrap: wrap;
+                grid-column-gap: 60px;
+                div{
+                    div{
+                        display: flex;
+                        div{
+                            width: 6px;
+                            height: 6px;
+                            margin-right: 14px;
+                        }
+                    }
+                }
+                
+            }
+        }
+        .sixthBlock{
+            .aboutBonus{
+                div{
+                    grid-row-gap: 14px;
+                    div{
+                        display: flex;
+                        div{
+                            width: 6px;
+                            height: 6px;
+                            margin-right: 14px;
+                        }
+                    }
+                }
+                
+            }
+        }
+        .seventhBlock{
+            .volonterPhotos{
+                display: flex;
+                flex-wrap: wrap;
+                grid-gap: 16px;
+                div{
+                    height: 200px;
+                    width: 161px;
+                    padding-top: 16px;
+                    text-align: center;
+                    img{
+                        width: 161px;
+                    }
+                }
+            }
+        }
+        .eighthBlock{
+            .aboutFunc{
+                display: grid;
+                grid-template-columns: 1fr ;
+                .func{
+                    div{
+                        display: flex;
+                        align-items: center;
+                        div{
+                            width: 6px;
+                            height: 6px;
+                            margin-right: 14px;
+                        }
+                    }
+                }
+            }
+        }
+        .ninthBlock{
+            .directors{
+                display: flex;
+                grid-gap: 16px;
+                flex-wrap: wrap;
+                div{
+                    width: 163px;
+                    img{
+                        width: 163px;
+                    }
+                    .underline{
+                        width: 163px;
+                        height: 1px;
+                        background: #343243;
+                    }
+                }
+            }
+        }
+        .tenthBlock{
+            .thanksgiving{
+                font-size: 20px;
+                line-height: 28px;
+            }
+            p{
+                font-size: 16px;
+                line-height: 19px;
+                margin-bottom: 30px;
+            }
+        }
+
+        .thirdImg,.secondImg,.firstImg{
+            width: 345px;
+            height: 240px;
+            margin-top: 50px;
+            object-fit: contain;
+        }
+        .fourthImg{
+            width: 345px;
+            height: 240px;
+            object-fit: contain;
+        }
+        .line{
+            width: 300px;
+            height: 1px;
+            background: #666666;
+        }
+        .goals,.important,.remember,.causes,.loyalty,.volunteerDevelopment,.functions,.structure{
+            font-size: 32px;
+            line-height: 39px;
+            margin: 50px 0 30px 0;
+        }
+    }
+}
