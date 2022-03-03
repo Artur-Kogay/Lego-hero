@@ -152,6 +152,7 @@
 @media(min-width:1200px) {
     .course{
         width: 1115px;
+        
         h4{
             font-size: 18px;
             line-height: 22px;
@@ -168,6 +169,7 @@
             font-size: 36px;
             line-height: 44px;
             margin-bottom: 80px;
+            
         }
         .firstBlock{
             .greetings{
@@ -220,7 +222,8 @@
         .secondImg{
             width: 1115px;
             height: 400px;
-            margin-top: 130px;
+            margin-top: 130px ;
+            margin-bottom: 50px;
         }
         .thirdBlock{
             .infoAbout{
@@ -319,19 +322,24 @@
             }
         }
         .eighthBlock{
+            
             .aboutFunc{
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
                 grid-template-rows: 1fr 1fr 1fr;
                 grid-column-gap: 30px;
-                .func{
-                    div{
-                        display: flex;
-                        align-items: center;
+                
+                .aboutFunc{
+                    .func{
+                        
                         div{
-                            width: 6px;
-                            height: 6px;
-                            margin-right: 14px;
+                            display: flex;
+                            align-items: center;
+                            div{
+                                width: 6px;
+                                height: 6px;
+                                margin-right: 14px;
+                            }
                         }
                     }
                 }
@@ -366,10 +374,12 @@
             width: 350px;
             height: 1px;
             background: #666666;
+            margin: 18px 0;
         }
         .goals,.important,.remember,.causes,.loyalty,.volunteerDevelopment,.functions,.structure{
             font-size: 36px;
             line-height: 44px;
+            margin: 50px 0 ;
         }
     }
 }

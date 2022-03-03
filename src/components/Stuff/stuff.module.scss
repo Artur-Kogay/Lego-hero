@@ -6,14 +6,21 @@
   background: #27262F;
   margin-top: 8vw;
   padding: 20px;
-  margin-bottom: 200px;
+  
 
   @media (max-width: 1200px) {
     padding: 0;
   }
-
+  
   @media (max-width: 1200px) and (min-width: 768px) {
     width: calc(100vw - 194px);
+    margin-bottom: 300px;
+  }
+  @media(max-width:767.9px){
+    margin-bottom: 280px;
+  }
+  @media(min-width:1200px){
+    margin-bottom: 485px;
   }
 
   .title {
