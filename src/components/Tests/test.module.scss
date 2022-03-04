@@ -1,0 +1,210 @@
+.Test{
+    @media(min-width:1200px){
+        width: 1115px;
+    }
+    @media(max-width:1200px){
+        width: 650px;
+    }
+    @media(max-width:767.9px){
+        width: 340px;
+    }
+    .direction{
+        font-style: normal;
+        font-weight: normal;
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 10px;
+        line-height: 12px;
+    }
+    .pageName{
+        font-style: normal;
+        font-weight: 900;
+        color: #FFFFFF;
+        @media(min-width:1200px){
+            font-size: 36px;
+            line-height: 44px;
+            margin: 24px 0 80px 0;
+        }
+        @media(max-width:1200px) {
+            font-size: 32px;
+            line-height: 39px;
+            margin-bottom: 20px;
+        }
+        @media(max-width:767.9px){
+            font-size: 32px;
+            line-height: 39px;
+            margin-bottom: 25px;
+        }
+    }
+    .pageDesc{
+        font-style: normal;
+        font-weight: bold;
+        background: linear-gradient(267.53deg, #ED1C24 -0.27%, #8820B9 100%),
+        linear-gradient(0deg, #FFFFFF, #FFFFFF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        @media(min-width:1200px){
+            font-size: 70px;
+            line-height: 87px;
+            margin-bottom: 46px;
+        }
+        @media(max-width:1200px) {
+            font-size: 32px;
+            line-height: 39px;
+            margin-bottom: 35px;
+        }
+        @media(max-width:767.9px){
+            font-size: 32px;
+            line-height: 39px;
+            margin-bottom: 35px;
+        }
+    }
+    .testBlock{
+        @media(min-width:1200px){
+            margin-bottom: 100px;
+        }
+        @media(max-width:1200px) {
+            margin-bottom: 40px;
+        }
+        @media(max-width:767.9px){
+            margin-bottom: 40px;
+        }
+    }
+    .testQues{
+        @media(min-width:1200px){
+            margin-left: 30px;
+        }
+        @media(max-width:1200px) {
+            margin-left: 0;
+        }
+        @media(max-width:767.9px){
+            margin-left: 0;
+        }
+    }
+    .Img{
+        @media(min-width:1200px){
+            width: 350px;
+            height: 233px;
+        }
+        @media(max-width:1200px) {
+            display: none;
+        }
+        @media(max-width:767.9px){
+            display: none;
+        }
+    }
+    
+    .count{
+        font-style: normal;
+        font-weight: bold;
+        color: #FFFFFF;
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .line{
+        width: 80px;
+        height: 1px;
+        background: #666666;
+        margin: 16px 0 ;
+    }
+    .question{
+        font-style: normal;
+        font-weight: bold;
+        color: #FFFFFF;
+        align-items: center;
+        margin: 0;
+        @media(min-width:1200px){
+            font-size: 26px;
+            line-height: 31px;
+            display: flex;
+        }
+        @media(max-width:1200px) {
+            font-size: 24px;
+            line-height: 28px;
+        }
+        @media(max-width:767.9px){
+            font-size: 22px;
+            line-height: 26px;
+        }
+    }
+    .attention{
+        font-style: normal;
+        font-weight: 500;
+        color: #B5B5B5;
+        margin: 0;
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .quesStart{
+        font-style: normal;
+        font-weight: normal;
+        color: #FFFFFF;
+        margin: 0;
+        @media(min-width:1200px){
+            font-size: 18px;
+            line-height: 21px;
+            margin-bottom: 22px;
+        }
+        @media(max-width:1200px) {
+            font-size: 18px;
+            line-height: 21px;
+        }
+        @media(max-width:767.9px){
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+    .answer{
+        font-style: normal;
+        font-weight: normal;
+        color: #FFFFFF;
+        @media(min-width:1200px){
+            font-size: 16px;
+            line-height: 19px;
+        }
+        @media(max-width:1200px) {
+            font-size: 16px;
+            line-height: 19px;  
+        }
+        @media(max-width:767.9px){
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+    .MuiFormControlLabel-root{
+        .css-vqmohf-MuiButtonBase-root-MuiRadio-root{
+            color: #fff;
+        }
+    }
+    .answer{
+        color: #FFFFFF;
+    }
+    .radio{
+        color: #fff !important;
+    }
+    .checkbox{
+        color: white !important;
+    }
+    
+    .btn{
+        border: 1px solid #FFFFFF;
+        box-sizing: border-box;
+        border-radius: 4px;
+        background: none;
+        font-style: normal;
+        font-weight: 500;
+        color: #F2F3F6;
+        width: 285px;
+        height: 46px;
+        font-size: 14px;
+        line-height: 16px;
+        @media(min-width:1200px){
+            margin-left: 380px;
+        }
+        @media(max-width:1200px) {
+            margin-left: 0;
+        }
+        @media(max-width:767.9px){
+            margin-left: 0;
+        }
+    }
+}

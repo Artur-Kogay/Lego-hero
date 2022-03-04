@@ -41,7 +41,9 @@ function LoginPage() {
             onSubmit={(values) => handleSubmit(values)}
             >
                 {({ values, errors, touched, handleChange }) => (
+                    
                     <Form className={classes.form_inputs}>
+                        
                         <div>
                         <Input
                             label="Ваш e-mail"
@@ -50,6 +52,7 @@ function LoginPage() {
                             value={values.username}
                             onChange={handleChange}
                         />
+                        
                         {errors.last_name && touched.last_name && (
                             <p className={classes.text_danger}>
                                 {errors.last_name}

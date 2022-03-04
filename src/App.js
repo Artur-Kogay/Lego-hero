@@ -9,12 +9,15 @@ import Login from './page/AuthPages/LoginPage'
 import ResetPage from './page/AuthPages/PasswordResetPage'
 import RegisterPage from './page/AuthPages/RegisterPage';
 import Welcome from './page/AuthPages/Welcome';
+import Tests from './page/tests/Test'
+import { StylesProvider } from '@mui/styles';
 import './styles/global.scss'
 import './App.css'
 
 function App() {
   return (
-    <BrowserRouter>
+    <StylesProvider>
+      <BrowserRouter>
         <Switch>
           <Route path="/" component={MainPage} exact/> 
           <Route path="/profile" component={Profile} exact/> 
@@ -22,6 +25,7 @@ function App() {
           <Route path="/training" component={Training} exact/> 
           <Route path="/help" component={Help} exact/> 
           <Route path="/courses" component={Courses} exact/> 
+          <Route path="/tests" component={Tests} exact/> 
 
           <Route
             exact
@@ -44,8 +48,8 @@ function App() {
             component={ResetPage}
           />
         </Switch>
-
-    </BrowserRouter>
+      </BrowserRouter>
+    </StylesProvider>
   );
 }
 
