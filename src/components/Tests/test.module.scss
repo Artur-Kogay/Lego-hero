@@ -11,12 +11,14 @@
     .direction{
         font-style: normal;
         font-weight: normal;
+        font-family: "Gilroy-regular";
         color: rgba(255, 255, 255, 0.4);
         font-size: 10px;
         line-height: 12px;
     }
     .pageName{
         font-style: normal;
+        font-family: 'DIN Pro';
         font-weight: 900;
         color: #FFFFFF;
         @media(min-width:1200px){
@@ -36,6 +38,7 @@
         }
     }
     .pageDesc{
+        font-family: "Gilroy-semibold";
         font-style: normal;
         font-weight: bold;
         background: linear-gradient(267.53deg, #ED1C24 -0.27%, #8820B9 100%),
@@ -94,6 +97,7 @@
     }
     
     .count{
+        font-family: "Gilroy-semibold";
         font-style: normal;
         font-weight: bold;
         color: #FFFFFF;
@@ -108,6 +112,7 @@
     }
     .question{
         font-style: normal;
+        font-family: 'DIN Pro';
         font-weight: bold;
         color: #FFFFFF;
         align-items: center;
@@ -127,6 +132,7 @@
         }
     }
     .attention{
+        font-family: 'DIN Pro';
         font-style: normal;
         font-weight: 500;
         color: #B5B5B5;
@@ -156,6 +162,7 @@
     .answer{
         font-style: normal;
         font-weight: normal;
+        font-family: "Gilroy-regular";
         color: #FFFFFF;
         @media(min-width:1200px){
             font-size: 16px;
@@ -191,6 +198,7 @@
         border-radius: 4px;
         background: none;
         font-style: normal;
+        font-family: "Gilroy-Medium";
         font-weight: 500;
         color: #F2F3F6;
         width: 285px;

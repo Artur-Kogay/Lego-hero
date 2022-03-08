@@ -82,7 +82,7 @@ const Help = () => {
           </div>
           <div className={styles.submit}>
             <button className={styles.button}>Отправить</button>
-            <FormControlLabel
+            <FormControlLabel className={styles.labelCheck}
               control={<CustomizedCheckbox />}
               label={
                 <p className={styles.label}>

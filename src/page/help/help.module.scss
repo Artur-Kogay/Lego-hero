@@ -21,7 +21,7 @@
 
   .contact__block {
     .summary__title {
-      font-family: "Gilroy";
+      font-family: "Gilroy-semibold";
       font-style: normal;
       font-weight: bold;
       font-size: 12px;
@@ -92,7 +92,7 @@
       }
 
       .title {
-        font-family: "Gilroy";
+        font-family: "Gilroy-regular";
         font-style: normal;
         font-weight: normal;
         font-size: 16px;
@@ -110,7 +110,7 @@
         background: none;
         color: white;
         resize: none;
-        font-family: Gilroy;
+        font-family: "Gilroy-regular";
         font-style: normal;
         font-weight: normal;
         font-size: 16px;
@@ -120,6 +120,51 @@
       .textarea:focus {
         outline: 2px solid #4A90E2;
       }
+    }
+    .submit{
+      margin-top: 41px;
+      margin-bottom: 100px;
+      @media (max-width: 940px) {
+        margin-bottom:60px ;
+      }
+      @media (max-width: 530px) {
+        margin-bottom:46px ;
+      }
+      .button{
+        background: linear-gradient(267.53deg, #982EEB -0.27%, #359AD2 100%), #C7252B;
+        border-radius: 10px;
+        width: 341px;
+        height: 45px;
+        color: #FFFFFF;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        border: none;
+        @media (max-width: 940px) {
+          width: 286px;
+        }
+        @media (max-width: 530px) {
+          width: 306px;
+        }
+      }
+      .labelCheck{
+        margin-left: 64px;
+        @media (max-width: 940px) {
+         margin-left: 25px;
+        }
+        @media (max-width: 530px) {
+          margin-left: 0;
+        }
+        .label,.label__link{
+          font-style: normal;
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 18px;
+          color: rgba(255, 255, 255, 0.5);
+        }
+      }
+      
     }
   }
 }

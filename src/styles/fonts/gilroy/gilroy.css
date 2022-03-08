@@ -1,6 +1,26 @@
 @font-face {
-  font-family: "Gilroy";
+  font-family: "Gilroy-regular";
   src: url("./Gilroy-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Gilroy-black";
+  src: url("./Gilroy-Black.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Gilroy-light";
+  src: url("./Gilroy-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: url("./Gilroy-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Gilroy-semibold";
+  src: url("./Gilroy-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Gilroy-UltraLight";
+  src: url("./Gilroy-UltraLight.ttf") format("truetype");
 }
 
 

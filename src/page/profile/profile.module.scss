@@ -8,7 +8,7 @@
 
   .title {
     color: white;
-    font-family: DIN Pro;
+    font-family: "DIN Pro";
     font-style: normal;
     font-weight: 900;
     font-size: 64px;
@@ -62,7 +62,7 @@
     padding-top: 27px;
   }
   .profile_detail p {
-    font-family: Gilroy;
+    font-family: "Gilroy-regular";
     font-style: normal;
     font-weight: normal;
     font-size: 10px;
@@ -70,7 +70,7 @@
     letter-spacing: 0.2px;
   }
   .profile_detail h5 {
-    font-family: Gilroy;
+    font-family: "Gilroy-semibold";
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
@@ -104,7 +104,7 @@
   //     width: 179px;
   //   }
   .cart_title h5 {
-    font-family: DIN Pro;
+    font-family: "DIN Pro";
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
@@ -120,7 +120,7 @@
     color: #ffffff;
   }
   .cart_title {
-    font-family: Gilroy;
+    font-family: "Gilroy-regular";
     font-style: normal;
     font-weight: normal;
     font-size: 10px;
@@ -145,7 +145,7 @@
 
 @media (max-width: 1800px) {
   .cart_title h5 {
-    font-family: DIN Pro;
+    font-family: "DIN Pro";
     font-style: normal;
     font-weight: bold;
     font-size: 32px;

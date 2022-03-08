@@ -1,31 +1,32 @@
 .course{
     .direction{
         color: rgba(255, 255, 255, 0.4);
-        font-family: 'gilroy';
+        font-family: "Gilroy-regular";
         font-style: normal;
         font-weight: normal;
     }
     .pageName{
-        font-family: 'dinpro';
+        // font-family: 'Gilroy-black';
         font-style: normal;
+        font-family: "DIN Pro";
         font-weight: 900;
         color: #FFFFFF;
     }
     h4{
-        font-family: 'gilroy';
+        font-family: "Gilroy-semibold";
         font-style: normal;
         font-weight: bold;
         color: #FFFFFF;
     }
     p{
-        font-family: 'gilroy';
+        font-family: "Gilroy-regular";
         font-style: normal;
         font-weight: normal;
         color: #FFFFFF;
     }
     .firstBlock{
         .btnVolonter{
-            font-family: 'gilroy';
+            font-family: "Gilroy-Medium";
             font-style: normal;
             font-weight: 500;
             color: #FFFFFF;
@@ -69,19 +70,19 @@
         .blocks{
             div{
                 .count{
-                    font-family: "gilroy";
+                    font-family: "Gilroy-semibold";
                     font-style: normal;
                     font-weight: bold;
                     color: #FFFFFF;
                 }
                 .attentionTitle{
-                    font-family: "gilroy";
+                    font-family: "Gilroy-semibold";
                     font-style: normal;
                     font-weight: bold;
                     color: #FFFFFF;
                 }
                 .attentionDesc{
-                    font-family: "gilroy";
+                    font-family: "Gilroy-regular";
                     font-style: normal;
                     font-weight: normal;
                     color: rgba(255, 255, 255, 0.3);
@@ -139,9 +140,9 @@
             }
     }
     .loyalty,.important,.remember,.causes,.goals,.greetings,.volunteerDevelopment,.functions,.structure,.thanksgiving{
-        font-family: "dinpro";
+        font-family: "DIN Pro";
+        font-weight: bold;
         font-style: normal;
-        font-weight: 900;
         text-transform: uppercase;
         background: linear-gradient(267.53deg, #ED1C24 -0.27%, #8820B9 100%),
         linear-gradient(0deg, #FFFFFF, #FFFFFF);
