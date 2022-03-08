@@ -60,10 +60,15 @@
                 line-height: 18px;
                 display: flex;
                 align-items: center;
+                font-family: "Gilroy-regular";
                 letter-spacing: -0.5px;
                 color: rgba(255, 255, 255, 0.5);
                 max-width: 194px;
                 margin-left: 0px;
+            }
+            .FormControlLabel{
+                font-family: "Gilroy-regular";
+                font-weight: normal;
             }
         }
     }
@@ -89,6 +94,7 @@
                 max-width: 300px !important;
                 margin-bottom: 0 !important;
             }
+            
         }
     }
     

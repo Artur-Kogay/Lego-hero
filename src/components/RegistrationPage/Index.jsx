@@ -250,7 +250,7 @@ function RegistrationPage() {
                                 }
                                 label={
                                     <p className={classes.CheckBoxLabel}>
-                                        Я согласен на обработку  персональных
+                                        Я согласен на обработку персональных
                                         данных
                                     </p>
                                 }

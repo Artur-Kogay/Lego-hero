@@ -6,7 +6,7 @@ import './PrimaryButton.module.css'
 const style = {
   background: "linear-gradient(267.53deg, #359ad2 -0.27%, #982eeb 100%)",
   borderRadius: "5px",
-  fontFamily: 'Gilroy',
+  fontFamily: 'Gilroy-medium',
   fontStyle: "normal",
   fontWeight: "500",
   fontSize: "12px",

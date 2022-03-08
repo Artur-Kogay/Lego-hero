@@ -1,3 +1,7 @@
+.learn{
+    margin: 0;
+    padding: 0;
+}
 .accordion{  
     border-radius: 4px;
     .accordSum{
@@ -100,9 +104,13 @@
     }
 }
 @media(min-width:1200px){
+    .study{
+        width: 85vw;
+    }
     .StudyAccord{
         margin-top: 110px;
         .accordion{  
+            
             .accordSum{
                 height: 88px;
                 .top{

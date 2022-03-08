@@ -1,6 +1,7 @@
 .LinkSelf{
     font-style: normal;
     font-weight: normal;
+    font-family:  "Gilroy-regular";
     font-size: 12px;
     text-decoration-line: underline !important;
     color: rgba(255, 255, 255, 0.3) !important;
@@ -12,6 +13,7 @@
     margin-top: 8px;
 }
 .forgotpassword {
+    font-family: "Gilroy-Medium";
     font-style: normal;
     font-weight: 500;
     font-size: 12px;

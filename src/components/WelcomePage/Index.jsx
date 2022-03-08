@@ -6,7 +6,7 @@ import SecondaryButton from "../_components/SecondaryButton/Index";
 function WelcomePage() {
     return (
         <div className={cls.WelcomeBlock}>
-            <Title>Новый герой</Title>
+            <Title >Новый герой</Title>
             <Title>Зарегистрирован!</Title>
             <div className={cls.SubText}>
                 <p>Спасибо тебе за регистрацию на нашей площадке</p>

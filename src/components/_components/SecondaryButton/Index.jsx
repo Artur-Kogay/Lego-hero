@@ -5,7 +5,7 @@ import './SecondaryButton.module.css'
 const style = {
   background: "transparent",
   borderRadius: "5px",
-  fontFamily: 'Gilroy',
+  fontFamily: 'Gilroy-medium',
   fontStyle: "normal",
   fontWeight: "500",
   fontSize: "12px",

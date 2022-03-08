@@ -75,7 +75,7 @@ function LoginPage() {
                         <div className="linkblock"><span className="LinkSelf"><Link className={classes.lll} href="#" >Отправить СМС повторно.</Link> Отправить СМС повторном можно будет через 144 сек.</span></div>
                         </div>
                         <div className={classes.ButtonContainer}>
-                            <PrimaryButton>Войти</PrimaryButton>
+                            <PrimaryButton >Войти</PrimaryButton>
                             <SecondaryButton>Зарегистрироваться</SecondaryButton>
                         </div>
                         <Link href="#" className="forgotpassword">Забыли пароль?</Link>

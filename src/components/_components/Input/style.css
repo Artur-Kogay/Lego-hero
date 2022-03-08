@@ -6,3 +6,7 @@ input {
 .makeStyles-root-1{
     padding: 8px 16px !important;
 }
+span{
+    font-family: "Gilroy-regular";
+    font-weight: normal;
+}

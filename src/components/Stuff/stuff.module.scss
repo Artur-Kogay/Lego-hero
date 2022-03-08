@@ -122,7 +122,8 @@
         }
 
         .stuffSkillDesc {
-          font-family: "DIN Pro";
+          font-family: "Gilroy-regular";
+          font-weight: normal;
           font-size: 12px;
           line-height: 14px;
           color: rgba(255, 255, 255, 0.5);
@@ -145,7 +146,8 @@
             display: grid;
             grid-template: 1fr / 10px 1fr;
             grid-gap: 10px;
-
+            font-family: "Gilroy-regular";
+            font-weight: normal;
             .circle {
               width: 8px;
               height: 8px;

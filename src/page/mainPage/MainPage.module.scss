@@ -8,7 +8,15 @@
     height: auto;
     border-bottom: 2px solid white;
     padding-bottom: 90px;
-
+    @media(min-width:1200px){
+      margin-bottom: 80px;
+    }
+    @media(max-width:1200px){
+      margin-bottom: 31px;
+    }
+    @media(max-width:767.9px){
+      margin-bottom: 50px;
+    }
     .slider {
       border-radius: 4px;
       width: 100%;
@@ -18,6 +26,15 @@
       box-sizing: border-box;
       grid-gap: 30px;
       padding: 30px;
+      display: flex;
+      @media(max-width:960px){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .cardImg{
+        background: none;
+      }
 
       &_left {
         width: 100%;
@@ -35,6 +52,7 @@
           line-height: 17px;
           color: #ffffff;
           margin-bottom: 80px;
+          font-family: "Gilroy-regular";
 
           @media (max-width: 758px) {
             margin-bottom: 7px;
@@ -47,7 +65,7 @@
           color: #ffffff;
           font-family: 'DIN Pro';
           font-style: normal;
-          font-weight: 400;
+          font-weight: bold;
           font-size: 4vw;
 
           @media (max-width: 758px) {
@@ -58,6 +76,7 @@
         }
 
         p {
+          font-family: "Gilroy-regular";
           font-style: normal;
           font-weight: normal;
           font-size: 14px;

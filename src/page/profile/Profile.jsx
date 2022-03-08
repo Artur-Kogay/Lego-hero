@@ -7,8 +7,11 @@ import fotka from "../../static/img/lolll.png";
 import Learn from "../../components/Learn/Learn"
 
 const Profile = () => {
-  const isLaptopMax = useMediaQuery("(max-width:768px)");
-  const isLaptopMin = useMediaQuery("(min-width: 468px)")
+  const isLaptopMax = useMediaQuery("(max-width: 1700px)");
+  const isLaptopMin = useMediaQuery("(min-width: 1200px)");
+  const isTabletMin = useMediaQuery("(min-width:768px)");
+  const isTabletMax = useMediaQuery("(max-width:1200px)");
+  const isMobileMax = useMediaQuery("(max-width: 700px)");
 
   useEffect(() => {}, []);
 
@@ -17,44 +20,60 @@ const Profile = () => {
       <div className={cl.profile}>
         <div className={cl.titleWrapper}>
           <h2 className={cl.title}>ЛИЧНЫЙ КАБИНЕТ</h2>
-          {(isLaptopMax && isLaptopMin) && <button className={cl.btn_profie}>Изменить</button>}
+          {(isTabletMax && isTabletMin) && <button className={cl.btn_profie}>Изменить</button>}
         </div>
         <div className={cl.prof_block}>
           <div className={cl.photo}>
             <img className={cl.pho} src={account} alt="lol" />
           </div>
-
+          {(isMobileMax) && 
+          <div className={cl.ok}>
+            <div className={cl.min_block}>
+              <p>Ваше имя и фамилия</p>
+              <h5>Александр Иванов</h5>
+            </div>
+            <div className={cl.min_block}>
+              <p>Тип профиля</p>
+              <h5>Начальный</h5>
+            </div>
+          </div>}
           <div className={cl.profile_detail}>
-            <div className={cl.ok}>
-              <div className={cl.min_block}>
-                <p>Ваше имя и фамилия</p>
-                <h5>Александр Иванов</h5>
+            <div className={cl.oks}>
+              {(isTabletMin) &&
+                <div className={cl.ok}>
+                  <div className={cl.min_block}>
+                    <p>Ваше имя и фамилия</p>
+                    <h5>Александр Иванов</h5>
+                  </div>
+                  <div className={cl.min_block}>
+                    <p>Тип профиля</p>
+                    <h5>Начальный</h5>
+                  </div>
+                </div>
+              }
+              <div className={cl.ok}>
+                <div className={cl.min_block}>
+                  <p>Город</p>
+                  <h5>Липецк</h5>
+                </div>
+                <div className={cl.min_block}>
+                  <p>E-mail</p>
+                  <h5>ivanov@yandex.ru</h5>
+                </div>
               </div>
-              <div className={cl.min_block}>
-                <p>Дата рождения</p>
-                <h5>9 мая 1990</h5>
-              </div>
-              <div className={cl.min_block}>
-                <p>Телефон</p>
-                <h5>+7 985 778 88 77</h5>
-              </div>
-            </div>
 
-            <div className="ok">
-              <div className={cl.min_block}>
-                <p>Город</p>
-                <h5>Липецк</h5>
-              </div>
-              <div className={cl.min_block}>
-                <p>Тип профиля</p>
-                <h5>Начальный</h5>
-              </div>
-              <div className={cl.min_block}>
-                <p>E-mail</p>
-                <h5>ivanov@yandex.ru</h5>
+              <div className="ok">
+                <div className={cl.min_block}>
+                  <p>Дата рождения</p>
+                  <h5>9 мая 1990</h5>
+                </div>
+                <div className={cl.min_block}>
+                  <p>Телефон</p>
+                  <h5>+7 985 778 88 77</h5>
+                </div>
               </div>
             </div>
-            {!(isLaptopMax && isLaptopMin) && <div>
+            {!(isTabletMax && isTabletMin) && <div>
               <button className={cl.btn_profie}>Изменить</button>
             </div>}
           </div>

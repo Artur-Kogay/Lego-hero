@@ -7,6 +7,7 @@ import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import Learn from "../../components/Learn/Learn";
 import Stuff from "../../components/Stuff/Stuff";
+import card from '../../static/img/bankCard.svg'
 
 const MainPage = () => {
   const theme = useTheme();
@@ -35,6 +36,7 @@ const MainPage = () => {
               </p>
               <button>Узнать подробнее</button>
             </div>
+            <img className={sty.cardImg} src={card}/>
           </div>
           <div className={sty.cont}>
             <MobileStepper

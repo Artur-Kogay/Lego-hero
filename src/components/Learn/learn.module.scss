@@ -1,14 +1,14 @@
 .learn_content {
   width: 100%;
   height: auto;
-  padding-top: 80px;
-
   h1 {
     color: white;
     font-weight: 900;
     font-size: 64px;
     line-height: 78px;
     margin-bottom: 40px;
+    font-family:'DIN Pro';
+    font-weight: 900;
 
     @media(max-width: 768px) {
       font-size: 32px;
@@ -41,7 +41,7 @@
           font-weight: 900;
           font-size: 48px;
           line-height: 58px;
-
+          font-family: "DIN Pro";
           @media(max-width: 768px) {
             font-size: 24px;
             line-height: 29px;
@@ -50,6 +50,7 @@
         }
 
         h5 {
+          font-family: "DIN Pro";
           font-weight: 900;
           font-size: 24px;
           line-height: 29px;
@@ -60,6 +61,7 @@
         }
 
         p {
+          font-family: "Gilroy-regular";
           font-weight: normal;
           font-size: 14px;
           line-height: 18px;

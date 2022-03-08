@@ -5,7 +5,7 @@ import Learn from '../Learn/Learn';
 const Study = () => {
     return (
         <div className={cls.study}>
-            <Learn/>
+            <Learn className={cls.learn}/>
             <StudyAccord />
         </div>
     );
