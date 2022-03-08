@@ -37,9 +37,11 @@
             max-width: 344px;
             justify-content: space-between;
             .FormControlLabel {
+                color: white;
                 span {
                     font-size: 11px;
                     margin-left: -2px;
+                    
                 }
             }
         }
