@@ -1,45 +1,46 @@
-import React, { useEffect } from "react";
-import MainLayout from "../../components/MainLayout/MainLayout";
-import {useMediaQuery} from "@mui/material";
-import cl from "./profile.module.scss";
-import account from "../../static/img/loll.png";
-import fotka from "../../static/img/lolll.png";
-import Learn from "../../components/Learn/Learn"
+import React, { useEffect } from 'react'
+import MainLayout from '../../components/MainLayout/MainLayout'
+import { useMediaQuery } from '@mui/material'
+import cl from './profile.module.scss'
+import account from '../../static/img/loll.png'
+import fotka from '../../static/img/lolll.png'
+import Learn from '../../components/Learn/Learn'
 
 const Profile = () => {
-  const isLaptopMax = useMediaQuery("(max-width: 1700px)");
-  const isLaptopMin = useMediaQuery("(min-width: 1200px)");
-  const isTabletMin = useMediaQuery("(min-width:768px)");
-  const isTabletMax = useMediaQuery("(max-width:1200px)");
-  const isMobileMax = useMediaQuery("(max-width: 700px)");
+  const isTabletMin = useMediaQuery('(min-width:768px)')
+  const isTabletMax = useMediaQuery('(max-width:1200px)')
+  const isMobileMax = useMediaQuery('(max-width: 700px)')
 
-  useEffect(() => {}, []);
+  useEffect(() => {}, [])
 
   return (
     <MainLayout>
       <div className={cl.profile}>
         <div className={cl.titleWrapper}>
           <h2 className={cl.title}>ЛИЧНЫЙ КАБИНЕТ</h2>
-          {(isTabletMax && isTabletMin) && <button className={cl.btn_profie}>Изменить</button>}
+          {isTabletMax && isTabletMin && (
+            <button className={cl.btn_profie}>Изменить</button>
+          )}
         </div>
         <div className={cl.prof_block}>
           <div className={cl.photo}>
             <img className={cl.pho} src={account} alt="lol" />
           </div>
-          {(isMobileMax) && 
-          <div className={cl.ok}>
-            <div className={cl.min_block}>
-              <p>Ваше имя и фамилия</p>
-              <h5>Александр Иванов</h5>
+          {isMobileMax && (
+            <div className={cl.ok}>
+              <div className={cl.min_block}>
+                <p>Ваше имя и фамилия</p>
+                <h5>Александр Иванов</h5>
+              </div>
+              <div className={cl.min_block}>
+                <p>Тип профиля</p>
+                <h5>Начальный</h5>
+              </div>
             </div>
-            <div className={cl.min_block}>
-              <p>Тип профиля</p>
-              <h5>Начальный</h5>
-            </div>
-          </div>}
+          )}
           <div className={cl.profile_detail}>
             <div className={cl.oks}>
-              {(isTabletMin) &&
+              {isTabletMin && (
                 <div className={cl.ok}>
                   <div className={cl.min_block}>
                     <p>Ваше имя и фамилия</p>
@@ -50,7 +51,7 @@ const Profile = () => {
                     <h5>Начальный</h5>
                   </div>
                 </div>
-              }
+              )}
               <div className={cl.ok}>
                 <div className={cl.min_block}>
                   <p>Город</p>
@@ -73,9 +74,11 @@ const Profile = () => {
                 </div>
               </div>
             </div>
-            {!(isTabletMax && isTabletMin) && <div>
-              <button className={cl.btn_profie}>Изменить</button>
-            </div>}
+            {!(isTabletMax && isTabletMin) && (
+              <div>
+                <button className={cl.btn_profie}>Изменить</button>
+              </div>
+            )}
           </div>
 
           <div className={cl.profile_cashh}>
@@ -86,7 +89,7 @@ const Profile = () => {
                     <h5>«Твой кэшбэк»</h5>
                     <p>
                       Получайте повышенный кэшбэк на расходы в категории
-                      спортивные товары!{" "}
+                      спортивные товары!{' '}
                     </p>
                   </div>
 
@@ -95,9 +98,9 @@ const Profile = () => {
                     src={fotka}
                     alt="asd"
                     style={{
-                      width: "170px",
-                      height: "110px",
-                      marginLeft: "20px",
+                      width: '170px',
+                      height: '110px',
+                      marginLeft: '20px',
                     }}
                   />
                 </div>
@@ -108,11 +111,11 @@ const Profile = () => {
           </div>
         </div>
 
-        <hr style={{ marginTop: "57px" }} />
+        <hr style={{ marginTop: '57px' }} />
       </div>
-      <Learn/>
+      <Learn />
     </MainLayout>
-  );
-};
+  )
+}
 
-export default Profile;
+export default Profile

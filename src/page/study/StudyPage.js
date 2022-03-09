@@ -1,12 +1,12 @@
-import React from 'react';
-import Study from '../../components/Study/Study';
+import React from 'react'
+import Study from '../../components/Study/Study'
 
 const StudyPage = () => {
-    return (
-        <div>
-            <Study/>
-        </div>
-    );
-};
+  return (
+    <div>
+      <Study />
+    </div>
+  )
+}
 
-export default StudyPage;
+export default StudyPage

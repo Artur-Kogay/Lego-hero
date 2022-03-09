@@ -1,6 +1,6 @@
-import React from "react";
-import styles from "./Radio.module.scss";
-import { Radio } from "@mui/material";
+import React from 'react'
+import styles from './Radio.module.scss'
+import { Radio } from '@mui/material'
 function RadioButton({ text, onchange, value }) {
   return (
     <div className={styles.container}>
@@ -10,18 +10,18 @@ function RadioButton({ text, onchange, value }) {
         value={value}
         size="small"
         sx={{
-          color: "white",
+          color: 'white',
           '&.Mui-checked span svg:last-of-type': {
-            color: "#32EE72",
+            color: '#32EE72',
           },
           '&.Mui-checked span svg:first-of-type': {
-            color: "white",
-          }
+            color: 'white',
+          },
         }}
       />
       <p className={styles.text}>{text}</p>
     </div>
-  );
+  )
 }
 
-export default RadioButton;
+export default RadioButton

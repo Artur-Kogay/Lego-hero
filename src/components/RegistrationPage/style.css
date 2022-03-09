@@ -1,28 +1,29 @@
-.css-1v4qvbo-MuiFormLabel-root-MuiInputLabel-root{
-    color: rgba(255, 255, 255, 0.6) !important;
+.css-1v4qvbo-MuiFormLabel-root-MuiInputLabel-root {
+  color: rgba(255, 255, 255, 0.6) !important;
 }
-.css-nxo287-MuiInputBase-input-MuiOutlinedInput-input:focus{
-    color: rgba(255, 255, 255, 0.6) ;
-    border-color: aliceblue;
+.css-nxo287-MuiInputBase-input-MuiOutlinedInput-input:focus {
+  color: rgba(255, 255, 255, 0.6);
+  border-color: aliceblue;
 }
-.css-19285mc-MuiFormLabel-root-MuiInputLabel-root.Mui-focused{
-    color: rgba(255, 255, 255, 0.6) !important;
+.css-19285mc-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+  color: rgba(255, 255, 255, 0.6) !important;
 }
-.css-ndxio3-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline{
-    border-color: rgba(255, 255, 255, 0.6) !important;
+.css-ndxio3-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused,
+  .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 255, 255, 0.6) !important;
 }
-.css-19285mc-MuiFormLabel-root-MuiInputLabel-root{
-    color: rgba(255, 255, 255, 0.6) !important;
+.css-19285mc-MuiFormLabel-root-MuiInputLabel-root {
+  color: rgba(255, 255, 255, 0.6) !important;
 }
-.css-1d3z3hw-MuiOutlinedInput-notchedOutline{
-    border-color: rgba(255, 255, 255, 0.6) !important;
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 255, 255, 0.6) !important;
 }
-.css-i4bv87-MuiSvgIcon-root{
-    color: #3237de !important;
+.css-i4bv87-MuiSvgIcon-root {
+  color: #3237de !important;
 }
 
-@media screen and (max-width: 520px){
-    .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root{
-        margin-bottom: 0 !important;
-    }
+@media screen and (max-width: 520px) {
+  .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root {
+    margin-bottom: 0 !important;
+  }
 }

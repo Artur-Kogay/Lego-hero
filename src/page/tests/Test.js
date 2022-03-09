@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react'
 import MainLayout from '../../components/MainLayout/MainLayout'
 import Tests from '../../components/Tests/Tests'
 const Test = () => {
-    return (
-        <MainLayout>
-            <Tests/>
-        </MainLayout>
-    );
-};
+  return (
+    <MainLayout>
+      <Tests />
+    </MainLayout>
+  )
+}
 
-export default Test;
+export default Test

@@ -1,22 +1,22 @@
-import React from "react";
-import HelpAccordion from "../../components/HelpAccordion/HelpAccordion";
-import MainLayout from "../../components/MainLayout/MainLayout";
-import styles from "./help.module.scss";
-import humanIcon from "../../static/img/contactHuman.svg";
-import injenerIcon from "../../static/img/contactEngineer.svg";
-import Radio from "../../components/RadioButton/RadioButton";
-import { FormControl, FormControlLabel, RadioGroup } from "@mui/material";
-import { ReactComponent as UserIcon } from "../../static/img/userIcon.svg";
-import { ReactComponent as PhoneIcon } from "../../static/img/phoneIcon.svg";
-import { ReactComponent as MessageIcon } from "../../static/img/MessageIcon.svg";
-import InputHelpPage from "../../components/InputHelpPage/InputHelpPage";
-import CustomizedCheckbox from "../../components/HelpCheckbox/HelpCheckbox";
+import React from 'react'
+import HelpAccordion from '../../components/HelpAccordion/HelpAccordion'
+import MainLayout from '../../components/MainLayout/MainLayout'
+import styles from './help.module.scss'
+import humanIcon from '../../static/img/contactHuman.svg'
+import injenerIcon from '../../static/img/contactEngineer.svg'
+import Radio from '../../components/RadioButton/RadioButton'
+import { FormControl, FormControlLabel, RadioGroup } from '@mui/material'
+import { ReactComponent as UserIcon } from '../../static/img/userIcon.svg'
+import { ReactComponent as PhoneIcon } from '../../static/img/phoneIcon.svg'
+import { ReactComponent as MessageIcon } from '../../static/img/MessageIcon.svg'
+import InputHelpPage from '../../components/InputHelpPage/InputHelpPage'
+import CustomizedCheckbox from '../../components/HelpCheckbox/HelpCheckbox'
 const radios = [
-  "Запрос информации",
-  "Жалобы и предложения",
-  "Вопросы PR, рекламы, фото и видео",
-  "Другое",
-];
+  'Запрос информации',
+  'Жалобы и предложения',
+  'Вопросы PR, рекламы, фото и видео',
+  'Другое',
+]
 
 const Help = () => {
   return (
@@ -25,11 +25,11 @@ const Help = () => {
         <h1 className={styles.title}>СВЯЗАТЬСЯ С НАМИ</h1>
         <div className={styles.contact__block}>
           <HelpAccordion
-            title={"Вопросы к организаторам"}
+            title={'Вопросы к организаторам'}
             img={humanIcon}
             icon={humanIcon}
             backgroundColor={
-              "linear-gradient(266.95deg, #982EEB -20.2%, #359AD2 132.4%), #151515"
+              'linear-gradient(266.95deg, #982EEB -20.2%, #359AD2 132.4%), #151515'
             }
           >
             <p className={styles.summary__title}>Укажите тему вопроса:</p>
@@ -49,7 +49,7 @@ const Help = () => {
                           label=""
                           control={<Radio text={item} />}
                         />
-                      );
+                      )
                     })}
                   </div>
                 </RadioGroup>
@@ -82,15 +82,16 @@ const Help = () => {
           </div>
           <div className={styles.submit}>
             <button className={styles.button}>Отправить</button>
-            <FormControlLabel className={styles.labelCheck}
+            <FormControlLabel
+              className={styles.labelCheck}
               control={<CustomizedCheckbox />}
               label={
                 <p className={styles.label}>
-                  {" "}
-                  Я согласен на обработку{" "}
+                  {' '}
+                  Я согласен на обработку{' '}
                   <a href="#" className={styles.label__link}>
                     персональных данных
-                  </a>{" "}
+                  </a>{' '}
                 </p>
               }
             />
@@ -98,11 +99,11 @@ const Help = () => {
         </div>
         <div className={styles.injener__accordion}>
           <HelpAccordion
-            title={"Технический вопрос"}
+            title={'Технический вопрос'}
             img={injenerIcon}
             icon={injenerIcon}
             backgroundColor={
-              "linear-gradient(266.95deg, #EB2E72 -20.2%, #D2B035 132.4%), #151515"
+              'linear-gradient(266.95deg, #EB2E72 -20.2%, #D2B035 132.4%), #151515'
             }
           >
             <p className={styles.summary__title}>Укажите тему вопроса:</p>
@@ -122,7 +123,7 @@ const Help = () => {
                           label=""
                           control={<Radio text={item} />}
                         />
-                      );
+                      )
                     })}
                   </div>
                 </RadioGroup>
@@ -132,7 +133,7 @@ const Help = () => {
         </div>
       </div>
     </MainLayout>
-  );
-};
+  )
+}
 
-export default Help;
+export default Help

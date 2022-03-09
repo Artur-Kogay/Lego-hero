@@ -1,20 +1,25 @@
-body{
+body {
+  margin: 0;
+  padding: 0;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     margin: 0;
     padding: 0;
-
-    h1, h2, h3, h4, h5, h6{
-        margin: 0;
-        padding: 0;
-    }
+  }
 }
-.css-i4bv87-MuiSvgIcon-root{
-    color: #fff !important;
+.css-i4bv87-MuiSvgIcon-root {
+  color: #fff !important;
 }
-.CircularProgressbar-text{
-    font-family: "DIN Pro", sans-serif;
-    font-weight: 900;
+.CircularProgressbar-text {
+  font-family: 'DIN Pro', sans-serif, sans-serif;
+  font-weight: 900;
 }
 
 .MuiAccordion-root {
-    background: none !important;
+  background: none !important;
 }

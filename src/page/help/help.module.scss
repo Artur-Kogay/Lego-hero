@@ -2,18 +2,18 @@
   padding-right: 10%;
 
   @media (max-width: 940px) {
-    padding-right: 0px;
+    padding-right: 0;
   }
 
   .title {
-    font-family: "DIN Pro";
+    font-family: 'DIN Pro', sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 64px;
     color: white;
     margin-bottom: 51px;
 
-    @media(max-width: 940px) {
+    @media (max-width: 940px) {
       font-size: 32px;
       margin-bottom: 15px;
     }
@@ -21,7 +21,7 @@
 
   .contact__block {
     .summary__title {
-      font-family: "Gilroy-semibold";
+      font-family: 'Gilroy-semibold', sans-serif;
       font-style: normal;
       font-weight: bold;
       font-size: 12px;
@@ -38,27 +38,24 @@
           grid-template: 1fr 1fr / 1.4fr 1fr;
           grid-column-gap: 90px;
           grid-row-gap: 30px;
-
         }
 
         @media (max-width: 530px) {
           grid-template: auto / 1fr;
-
         }
       }
     }
   }
 
   .inputs__container {
-    margin: 72px 6% 0px 6%;
+    margin: 72px 6% 0 6%;
 
     @media (max-width: 940px) {
-      margin: 32px 6% 0px 6%;
+      margin: 32px 6% 0 6%;
     }
     @media (max-width: 530px) {
       margin: 32px 0 0 0;
     }
-
 
     .litle__inputs {
       display: grid;
@@ -75,7 +72,6 @@
         grid-template: auto / 1fr;
         grid-row-gap: 35px;
       }
-
     }
 
     .litle__inputs .table__quastion {
@@ -92,13 +88,12 @@
       }
 
       .title {
-        font-family: "Gilroy-regular";
+        font-family: 'Gilroy-regular', sans-serif;
         font-style: normal;
         font-weight: normal;
         font-size: 16px;
         color: white;
-        margin: 0px;
-        margin-bottom: 14px;
+        margin: 0 0 14px;
       }
 
       .textarea {
@@ -110,7 +105,7 @@
         background: none;
         color: white;
         resize: none;
-        font-family: "Gilroy-regular";
+        font-family: 'Gilroy-regular', sans-serif;
         font-style: normal;
         font-weight: normal;
         font-size: 16px;
@@ -118,24 +113,25 @@
       }
 
       .textarea:focus {
-        outline: 2px solid #4A90E2;
+        outline: 2px solid #4a90e2;
       }
     }
-    .submit{
+    .submit {
       margin-top: 41px;
       margin-bottom: 100px;
       @media (max-width: 940px) {
-        margin-bottom:60px ;
+        margin-bottom: 60px;
       }
       @media (max-width: 530px) {
-        margin-bottom:46px ;
+        margin-bottom: 46px;
       }
-      .button{
-        background: linear-gradient(267.53deg, #982EEB -0.27%, #359AD2 100%), #C7252B;
+      .button {
+        background: linear-gradient(267.53deg, #982eeb -0.27%, #359ad2 100%),
+          #c7252b;
         border-radius: 10px;
         width: 341px;
         height: 45px;
-        color: #FFFFFF;
+        color: #ffffff;
         font-style: normal;
         font-weight: normal;
         font-size: 14px;
@@ -148,15 +144,16 @@
           width: 306px;
         }
       }
-      .labelCheck{
+      .labelCheck {
         margin-left: 64px;
         @media (max-width: 940px) {
-         margin-left: 25px;
+          margin-left: 25px;
         }
         @media (max-width: 530px) {
           margin-left: 0;
         }
-        .label,.label__link{
+        .label,
+        .label__link {
           font-style: normal;
           font-weight: normal;
           font-size: 12px;
@@ -164,7 +161,6 @@
           color: rgba(255, 255, 255, 0.5);
         }
       }
-      
     }
   }
 }

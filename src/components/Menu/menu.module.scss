@@ -1,119 +1,119 @@
-.Menu{
-    font-family: "Gilroy-regular";
-    .logo{
-        overflow: hidden;
-        position: relative;
-    }
-
+.Menu {
+  font-family: 'Gilroy-regular', sans-serif;
+  .logo {
     overflow: hidden;
-    .navbar{
-        width: 100%;
-        position: relative;
-        margin-left: 30px;
-        .navbarAccount{
-            display: flex;
-            align-items: center;
-            background: #302E3A;
-            border-radius: 10px 10px 0px 0px;
-            height: 74px;
-            img{
-                width: 42px;
-                height: 42px;
-            }
-            .navbarText{
-                margin-left: 8px;
-                position: absolute;
-                left: 74px;
-                .inviteText{
-                    font-style: normal;
-                    font-weight: normal;
-                    font-size: 10px;
-                    line-height: 12px;
-                    color: rgba(255, 255, 255, 0.5);
-                    width: 66px;
-                }
-                .accountName{
-                    font-style: normal;
-                    font-weight: bold;
-                    font-size: 16px;
-                    line-height: 19px;
-                    color: #FFFFFF;
-                    width: 142px;
-                }
-            }
+    position: relative;
+  }
+
+  overflow: hidden;
+  .navbar {
+    width: 100%;
+    position: relative;
+    margin-left: 30px;
+    .navbarAccount {
+      display: flex;
+      align-items: center;
+      background: #302e3a;
+      border-radius: 10px 10px 0 0;
+      height: 74px;
+      img {
+        width: 42px;
+        height: 42px;
+      }
+      .navbarText {
+        margin-left: 8px;
+        position: absolute;
+        left: 74px;
+        .inviteText {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 10px;
+          line-height: 12px;
+          color: rgba(255, 255, 255, 0.5);
         }
-        .navLinks{
-                height: 247px;
-                background: #25232F;
-                border-radius: 0px;
-                display: flex;
-                flex-direction: column;
-                grid-gap:29px;
-                .navLink:first-child{
-                    margin-top: 23px;
-                }
-                .navLink{
-                    text-decoration: none;
-                    display: flex;
-                    align-items: center;
-                    position: relative;
-                    .linkIcon{
-                        width: 17px;
-                        height: 17px;
-                        margin-left: 24px;
-                        img{
-                            width: 12px;
-                            height: 12px;
-                        }
-                    }
-                    p{
-                        font-style: normal;
-                        font-weight: normal;
-                        font-size: 14px;
-                        line-height: 17px;
-                        color: #FFFFFF;
-                        opacity: 0.6;
-                        position: absolute;
-                        left: 44px;
-                        width: 110px;
-                    }
-                }
+        .accountName {
+          min-width: 150px;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 19px;
+          color: #ffffff;
+          margin: 0;
         }
-        .exit{
-            height: 46px;
-            background: #302E3A;
-            border-radius: 0px 0px 10px 10px ;
-            display: flex;
-            align-items: center;
-            .exitNav{
-                display: flex;
-                align-items: center;
-                text-decoration: none;
-                position: relative;
-                .navIcon{
-                    width: 17px;
-                    height: 17px;
-                    margin-left: 24px;
-                    img{
-                        width: 12px;
-                        height: 12px;
-                    }
-                }
-                p{
-                    font-style: normal;
-                    font-weight: normal;
-                    font-size: 14px;
-                    line-height: 17px;
-                    color: #FFFFFF;
-                    opacity: 0.6;
-                    position: absolute;
-                    left: 44px;
-                    width: 122px;
-                }
-            }
-        }
+      }
     }
+    .navLinks {
+      height: 247px;
+      background: #25232f;
+      border-radius: 0;
+      display: flex;
+      flex-direction: column;
+      grid-gap: 29px;
+      .navLink:first-child {
+        margin-top: 23px;
+      }
+      .navLink {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        position: relative;
+        .linkIcon {
+          width: 17px;
+          height: 17px;
+          margin-left: 24px;
+          img {
+            width: 12px;
+            height: 12px;
+          }
+        }
+        p {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 17px;
+          color: #ffffff;
+          opacity: 0.6;
+          position: absolute;
+          left: 44px;
+          width: 110px;
+        }
+      }
+    }
+    .exit {
+      height: 46px;
+      background: #302e3a;
+      border-radius: 0 0 10px 10px;
+      display: flex;
+      align-items: center;
+      .exitNav {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        position: relative;
+        .navIcon {
+          width: 17px;
+          height: 17px;
+          margin-left: 24px;
+          img {
+            width: 12px;
+            height: 12px;
+          }
+        }
+        p {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 17px;
+          color: #ffffff;
+          opacity: 0.6;
+          position: absolute;
+          left: 44px;
+          width: 122px;
+        }
+      }
+    }
+  }
 }
-.navbarMob{
-    display: none;
+.navbarMob {
+  display: none;
 }

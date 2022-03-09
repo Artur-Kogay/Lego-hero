@@ -1,13 +1,13 @@
 import React from 'react'
 import MainLayout from '../../components/MainLayout/MainLayout'
-import Study from '../../components/Study/Study'
+import LoginPage from '../../components/LoginPage'
 
-const Training = () => {
+const Login = () => {
   return (
     <MainLayout>
-      <Study />
+      <LoginPage />
     </MainLayout>
   )
 }
 
-export default Training
+export default Login

@@ -1,11 +1,11 @@
-import React  from "react";
-import cl from "./learn.module.scss";
-import { CircularProgressbar } from "react-circular-progressbar";
-import "react-circular-progressbar/dist/styles.css";
+import React from 'react'
+import cl from './learn.module.scss'
+import { CircularProgressbar } from 'react-circular-progressbar'
+import 'react-circular-progressbar/dist/styles.css'
 
 const Learn = () => {
-  const percentage = 90;
-  const progress = 85;
+  const percentage = 90
+  const progress = 85
   return (
     <div className={cl.learn_content}>
       <h1>ОБУЧЕНИЕ</h1>
@@ -17,7 +17,7 @@ const Learn = () => {
               text={`${percentage}%`}
               styles={{
                 root: {
-                  color: "black",
+                  color: 'black',
                 },
               }}
             />
@@ -41,7 +41,7 @@ const Learn = () => {
               text={`${progress}%`}
               styles={{
                 root: {
-                  color: "black",
+                  color: 'black',
                 },
               }}
             />
@@ -60,7 +60,7 @@ const Learn = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Learn;
+export default Learn

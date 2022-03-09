@@ -52,7 +52,7 @@
           line-height: 17px;
           color: #ffffff;
           margin-bottom: 80px;
-          font-family: "Gilroy-regular";
+          font-family: "Gilroy-regular", sans-serif;
 
           @media (max-width: 758px) {
             margin-bottom: 7px;
@@ -63,7 +63,7 @@
         h1 {
           letter-spacing: 0.01em;
           color: #ffffff;
-          font-family: 'DIN Pro';
+          font-family: 'DIN Pro', sans-serif;
           font-style: normal;
           font-weight: bold;
           font-size: 4vw;
@@ -76,7 +76,7 @@
         }
 
         p {
-          font-family: "Gilroy-regular";
+          font-family: "Gilroy-regular", sans-serif;
           font-style: normal;
           font-weight: normal;
           font-size: 14px;

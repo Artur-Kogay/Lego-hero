@@ -1,361 +1,392 @@
-.learn{
+.learn {
+  margin: 0;
+  padding: 0;
+}
+
+.accordion {
+  border-radius: 4px;
+
+  .accordSum {
+    background: #25232f;
+    border-radius: 4px;
+
+    .icon {
+      color: #ffffff;
+      background: #4b4d5f;
+      border-radius: 3px;
+    }
+
+    .top {
+      display: flex;
+      align-items: center;
+      margin: 0;
+
+      h2 {
+        margin: 0;
+        font-style: normal;
+        font-weight: 900;
+        color: #ffffff;
+        font-family: 'DIN Pro', sans-serif;
+      }
+
+      .line {
+        width: 2px;
+        height: 56px;
+        background: #4b4d5f;
+      }
+
+      p {
+        margin: 0;
+        font-style: normal;
+        font-weight: 500;
+        color: rgba(174, 183, 193, 0.5);
+        font-family: 'Gilroy-regular', sans-serif;
+      }
+    }
+  }
+
+  .accordDetail {
     margin: 0;
     padding: 0;
-}
-.accordion{  
+    background: #4b4d5f;
     border-radius: 4px;
-    .accordSum{
-        background: #25232F;
-        border-radius: 4px;
-        .icon{
-            color: #FFFFFF;
-            background: #4B4D5F;
-            border-radius: 3px;
-        }
-        .top{
-            display: flex;
-            align-items: center;
-            margin: 0;
-            h2{
-                margin: 0;
-                font-style: normal;
-                font-weight: 900;
-                color: #FFFFFF;
-                font-family: 'DIN Pro';
-            }
-            .line{
-                width: 2px;
-                height: 56px;
-                background: #4B4D5F;
-            }
-            p{
-                margin: 0;
-                font-style: normal;
-                font-weight: 500;
-                color: rgba(174, 183, 193, 0.5);
-                font-family: "Gilroy-Medium";
-            }
+
+    .bottom {
+      .details {
+        border-radius: 10px;
+
+        .detailImg {
+          border-radius: 10px 10px 0 0;
+
+          p {
+            font-family: 'DIN Pro', sans-serif;
+            font-style: normal;
+            font-weight: 900;
+            color: #ffffff;
+          }
         }
 
-    }
-    .accordDetail{
-        margin:  0;
-        padding: 0;
-        background: #4B4D5F;
-        border-radius: 4px; 
-        .bottom{
-            .details{
-                border-radius: 10px;
-                .detailImg{
-                    border-radius: 10px 10px 0 0 ;
-                    p{
-                        font-family: 'DIN Pro';
-                        font-style: normal;
-                        font-weight: 900;
-                        color: #FFFFFF;
-                    }
-                }
-                .detailInfo{
-                    background: #27262F;
-                    border-radius: 0 0 10px 10px;
-                    .days{
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        h3{
-                            font-family: "Gilroy-regular";
-                            font-style: normal;
-                            font-weight: normal;
-                            color: #FFFFFF;
-                        }
-                        p{
-                            font-family: "Gilroy-semibold";
-                            font-style: normal;
-                            font-weight: bold;
-                            color: #FFFFFF;
-                        }
-                    }
-                    .detailLine{
-                        background: #4B4B4B;
-                    }
-                    .btns{
-                        .btn1{
-                            background: #465A82;
-                            border-radius: 30px;
-                            border: none;
-                            font-family: "Gilroy-Medium";
-                            font-style: normal;
-                            font-weight: 500;
-                            color: #FFFFFF;
-                        }
-                        .btn2{
-                            background: linear-gradient(267.53deg, #ED1C24 -0.27%, #8820B9 100%), linear-gradient(267.53deg, #982EEB -0.27%, #359AD2 100%), #C7252B;
-                            border-radius: 30px;
-                            border: none;
-                            font-family: "Gilroy-Medium";
-                            font-style: normal;
-                            font-weight: 500;
-                            color: #FFFFFF;
-                        }
-                    }
-                }
+        .detailInfo {
+          background: #27262f;
+          border-radius: 0 0 10px 10px;
+          padding: 25px 20px;
+          display: flex;
+          flex-direction: column;
+          grid-row-gap: 20px;
+
+          .days {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h3 {
+              font-family: 'Gilroy-regular', sans-serif;
+              font-style: normal;
+              font-weight: normal;
+              color: #ffffff;
             }
+
+            p {
+              font-family: 'Gilroy-semibold', sans-serif;
+              font-style: normal;
+              font-weight: bold;
+              color: #ffffff;
+            }
+          }
+
+          .detailLine {
+            background: #4b4b4b;
+          }
+
+          .btns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+            grid-column-gap: 20px;
+
+            .btn1,
+            .btn2 {
+              padding: 9px 10px;
+              font-size: 12px;
+              line-height: 15px;
+              border-radius: 30px;
+              border: none;
+              font-family: 'Gilroy-regular', sans-serif, sans-serif;
+              font-style: normal;
+              font-weight: 500;
+              color: #ffffff;
+            }
+
+            .btn1 {
+              background: #465a82;
+            }
+
+            .btn2 {
+              background: linear-gradient(
+                  267.53deg,
+                  #ed1c24 -0.27%,
+                  #8820b9 100%
+                ),
+                linear-gradient(267.53deg, #982eeb -0.27%, #359ad2 100%),
+                #c7252b;
+            }
+          }
         }
+      }
     }
+  }
 }
-@media(min-width:1200px){
-    .study{
-        width: 85vw;
-    }
-    .StudyAccord{
-        margin-top: 110px;
-        .accordion{  
-            
-            .accordSum{
-                height: 88px;
-                .top{
-                    h2{
-                        font-size: 24px;
-                        line-height: 29px;
-                        margin-right: 73px;
-                    }
-                    .line{
-                        margin-right: 32px;
-                    }
-                    p{
-                        font-size: 16px;
-                        line-height: 18px;
-                    }
-                }
-            }
-            .accordDetail{
-                min-height: 600px;
-                .bottom{
-                    height: 600px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    .details{
-                        height: 405px;
-                        width: 313px;
-                        margin-right: 20px;
-                        .details:last-child{
-                            margin-right: 0px;
-                        }
-                        .detailImg{
-                            width: 313px;
-                            height: 253px;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            p{
-                                font-size: 30px;
-                                line-height: 36px;
-                            }
-                        }
-                        .detailInfo{
-                            padding-bottom: 20px;
-                            .days{
-                                display: flex;
-                                padding: 27px 20px 0px 20px;
-                                h3{
-                                    font-size: 12px;
-                                    line-height: 14px;
-                                    margin: 0;
-                                }
-                                p{
-                                    margin: 0;
-                                    font-size: 12px;
-                                    line-height: 15px;
-                                }
-                            }
-                            .detailLine{
-                                width: 273px;
-                                height: 1px;
-                                margin: 18px 0 26px 20px;
-                            }
-                            .btns{
-                                display: flex;
-                                margin-left: 20px;
-                                .btn1,.btn2{
-                                    padding: 9px 29px 10px 30px ;
-                                    font-size: 12px;
-                                    line-height: 15px;
-                                }
-                                .btn1{
-                                    margin-right: 13px;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+
+@media (min-width: 1200px) {
+  .study {
+    width: 85vw;
+  }
+  .StudyAccord {
+    margin-top: 110px;
+
+    .accordion {
+      .accordSum {
+        height: 88px;
+
+        .top {
+          h2 {
+            font-size: 24px;
+            line-height: 29px;
+            margin-right: 73px;
+          }
+
+          .line {
+            margin-right: 32px;
+          }
+
+          p {
+            font-size: 16px;
+            line-height: 18px;
+          }
         }
+      }
+
+      .accordDetail {
+        .bottom {
+          display: grid;
+          grid-template: 1fr / repeat(4, 1fr);
+          align-items: center;
+          grid-gap: 24px;
+          padding: 50px 20px;
+
+          .details {
+            .detailImg {
+              height: 253px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              p {
+                font-size: 30px;
+                line-height: 36px;
+                padding: 0 20px;
+              }
+            }
+
+            .detailInfo {
+              .days {
+                display: flex;
+
+                h3 {
+                  font-size: 12px;
+                  line-height: 14px;
+                  margin: 0;
+                }
+
+                p {
+                  margin: 0;
+                  font-size: 12px;
+                  line-height: 15px;
+                }
+              }
+
+              .detailLine {
+                height: 1px;
+              }
+            }
+          }
+        }
+      }
     }
+  }
 }
-@media(max-width:1200px){
-    .StudyAccord{
-        margin-top: 50px;
-        .accordion{  
-            .accordSum{
-                height: 88px;
-                .top{
-                    h2{
-                        font-size: 24px;
-                        line-height: 29px;
-                        margin-right: 73px;
-                    }
-                    .line{
-                        margin-right: 32px;
-                    }
-                    p{
-                        font-size: 16px;
-                        line-height: 18px;
-                    }
-                }
-            }
-            .accordDetail{
-                min-height: 780px;
-                .bottom{
-                    min-height: 780px;
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                    padding-top: 38px;
-                    .details{
-                        height: 324px;
-                        width: 271px;
-                        margin-right: 15px;
-                        .detailImg{
-                            width: 271px;
-                            height: 198px;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            p{
-                                font-size: 30px;
-                                line-height: 36px;
-                            }
-                        }
-                        .detailInfo{
-                            padding-bottom: 20px;
-                            .days{
-                                display: flex;
-                                padding: 24px 18px 0px 20px;
-                                h3{
-                                    font-size: 12px;
-                                    line-height: 14px;
-                                    margin: 0;
-                                }
-                                p{
-                                    margin: 0;
-                                    font-size: 12px;
-                                    line-height: 15px;
-                                }
-                            }
-                            .detailLine{
-                                display: none;
-                            }
-                            .btns{
-                                display: flex;
-                                margin-left: 20px;
-                                margin-top: 25px;
-                                .btn1,.btn2{
-                                    padding: 9px 21px 10px 22px ;
-                                    font-size: 12px;
-                                    line-height: 15px;
-                                }
-                                .btn1{
-                                    margin-right: 5px;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+
+@media (max-width: 1200px) {
+  .StudyAccord {
+    margin-top: 50px;
+
+    .accordion {
+      .accordSum {
+        height: 88px;
+
+        .top {
+          h2 {
+            font-size: 24px;
+            line-height: 29px;
+            margin-right: 73px;
+          }
+
+          .line {
+            margin-right: 32px;
+          }
+
+          p {
+            font-size: 16px;
+            line-height: 18px;
+          }
         }
+      }
+
+      .accordDetail {
+        .bottom {
+          display: grid;
+          grid-template: 1fr 1fr / 1fr 1fr;
+          grid-gap: 18px;
+          padding: 38px;
+
+          .details {
+            justify-self: center;
+            max-width: 313px;
+
+            .detailImg {
+              height: 198px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              p {
+                font-size: 30px;
+                line-height: 36px;
+                padding: 0 20px;
+              }
+            }
+
+            .detailInfo {
+              .days {
+                display: flex;
+
+                h3 {
+                  font-size: 12px;
+                  line-height: 14px;
+                  margin: 0;
+                }
+
+                p {
+                  margin: 0;
+                  font-size: 12px;
+                  line-height: 15px;
+                }
+              }
+
+              .detailLine {
+                display: none;
+              }
+
+              .btns {
+                .btn1,
+                .btn2 {
+                  font-size: 12px;
+                  line-height: 15px;
+                }
+              }
+            }
+          }
+        }
+      }
     }
+  }
 }
-@media(max-width:767.9px){
-    .StudyAccord{
-        margin-top: 30px;
-        .accordion{  
-            .accordSum{
-                height: 63px;
-                .top{
-                    h2{
-                        font-size: 20px;
-                        line-height: 24px;
-                        margin-right: 24px;
-                    }
-                    .line{
-                        margin-right: 17px;
-                    }
-                    p{
-                        font-size: 15px;
-                        line-height: 18px;
-                    }
-                }
-            }
-            .accordDetail{
-                min-height: 780px;
-                .bottom{
-                    min-height: 780px;
-                    display: flex;
-                    flex-wrap: wrap;
-                    padding-top: 26px;
-                    .details{
-                        height: 324px;
-                        width: 271px;
-                        margin-right: 15px;
-                        margin-bottom: 19px;
-                        .detailImg{
-                            width: 271px;
-                            height: 198px;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            p{
-                                font-size: 30px;
-                                line-height: 36px;
-                            }
-                        }
-                        .detailInfo{
-                            padding-bottom: 28px;
-                            .days{
-                                display: flex;
-                                padding: 24px 18px 0px 20px;
-                                h3{
-                                    font-size: 12px;
-                                    line-height: 14px;
-                                    margin: 0;
-                                }
-                                p{
-                                    margin: 0;
-                                    font-size: 12px;
-                                    line-height: 15px;
-                                }
-                            }
-                            .detailLine{
-                                display: none;
-                            }
-                            .btns{
-                                display: flex;
-                                margin-left: 20px;
-                                margin-top: 25px;
-                                .btn1,.btn2{
-                                    padding: 9px 21px 10px 22px ;
-                                    font-size: 12px;
-                                    line-height: 15px;
-                                }
-                                .btn1{
-                                    margin-right: 5px;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+
+@media (max-width: 865.9px) {
+  .StudyAccord {
+    margin-top: 30px;
+
+    .accordion {
+      .accordSum {
+        height: 63px;
+
+        .top {
+          h2 {
+            font-size: 20px;
+            line-height: 24px;
+            margin-right: 24px;
+          }
+
+          .line {
+            margin-right: 17px;
+          }
+
+          p {
+            font-size: 15px;
+            line-height: 18px;
+          }
         }
+      }
+
+      .accordDetail {
+        min-height: 780px;
+
+        .bottom {
+          min-height: 780px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          padding: 26px 5px 0;
+
+          .details {
+            height: 324px;
+            width: 271px;
+
+            .detailImg {
+              width: 271px;
+              height: 198px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              p {
+                font-size: 30px;
+                line-height: 36px;
+              }
+            }
+
+            .detailInfo {
+              .days {
+                display: flex;
+
+                h3 {
+                  font-size: 12px;
+                  line-height: 14px;
+                  margin: 0;
+                }
+
+                p {
+                  margin: 0;
+                  font-size: 12px;
+                  line-height: 15px;
+                }
+              }
+
+              .detailLine {
+                display: none;
+              }
+
+              .btns {
+                .btn1,
+                .btn2 {
+                  font-size: 12px;
+                  line-height: 15px;
+                }
+              }
+            }
+          }
+        }
+      }
     }
+  }
 }

@@ -1,12 +1,12 @@
 input {
-    font-family: "Gilroy-regular" !important;
-    color: rgba(255, 255, 255, 0.6) !important;
+  font-family: 'Gilroy-regular', sans-serif, sans-serif !important;
+  color: rgba(255, 255, 255, 0.6) !important;
 }
 
-.makeStyles-root-1{
-    padding: 8px 16px !important;
+.makeStyles-root-1 {
+  padding: 8px 16px !important;
 }
-span{
-    font-family: "Gilroy-regular";
-    font-weight: normal;
+span {
+  font-family: 'Gilroy-regular', sans-serif;
+  font-weight: normal;
 }

@@ -1,26 +1,21 @@
 .container {
-    .title {
-        font-family: "Gilroy-regular";
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        color: white;
-        margin: 0px;
-        
-        margin-bottom: 14px;
-    }
+  .title {
+    font-family: 'Gilroy-regular', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: white;
+    margin: 0 0 14px;
+  }
 
-    .input {
-        height: 50px;
-        width: 100%;
-        box-sizing: border-box;
-        border: 1px solid #323232;
-        box-sizing: border-box;
-        border-radius: 15px;
-    }
-    .input div{
-        height: 50px;
-    }
-
-
+  .input {
+    height: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #323232;
+    border-radius: 15px;
+  }
+  .input div {
+    height: 50px;
+  }
 }
