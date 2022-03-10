@@ -11,6 +11,7 @@ import { ReactComponent as PhoneIcon } from '../../static/img/phoneIcon.svg'
 import { ReactComponent as MessageIcon } from '../../static/img/MessageIcon.svg'
 import InputHelpPage from '../../components/InputHelpPage/InputHelpPage'
 import CustomizedCheckbox from '../../components/HelpCheckbox/HelpCheckbox'
+import {DOMAIN} from "../../utils/constants";
 const radios = [
   'Запрос информации',
   'Жалобы и предложения',
@@ -89,7 +90,7 @@ const Help = () => {
                 <p className={styles.label}>
                   {' '}
                   Я согласен на обработку{' '}
-                  <a href="#" className={styles.label__link}>
+                  <a href={DOMAIN} className={styles.label__link}>
                     персональных данных
                   </a>{' '}
                 </p>

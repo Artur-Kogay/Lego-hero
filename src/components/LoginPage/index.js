@@ -1,7 +1,7 @@
 import React from 'react'
 import Title from '../_components/Title'
 import Input from '../_components/Input'
-import { Formik, Form } from 'formik'
+import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import PrimaryButton from '../_components/PrimaryButton'
 import SecondaryButton from '../_components/SecondaryButton'
@@ -9,80 +9,87 @@ import SecondaryButton from '../_components/SecondaryButton'
 import classes from './Login.module.scss'
 import './style.css'
 import Link from '@mui/material/Link'
+import { $api } from '../../services/api'
 
 const initialValues = {
-  username: '',
+  email: '',
   password: '',
 }
 
 const SignupSchema = Yup.object().shape({
-  username: Yup.string()
-    .min(2, 'Too Short!')
-    .required('Введите номер телефона корректно!'),
-  password: Yup.string()
-    .min(2, 'Too Short!')
-    .max(50, 'Too Long!')
-    .required('Введите пароль!'),
-  first_name: Yup.string().required('Введите Имя корректно!'),
-  last_name: Yup.string().required('Введите Фамилию корректно!'),
+  email: Yup.string()
+    .email('Введите электронный адрес корректно!')
+    .required('Введите электронный адрес'),
+  password: Yup.string().required('Введите пароль!'),
 })
 
-function LoginPage() {
-  const handleSubmit = async () => {
-    console.log('HandleSubmit')
+const submit = async (_data) => {
+  try {
+    const { data } = await $api.post('/accounts/auth/jwt/create/', _data)
+    return data
+  } catch (e) {
+    // console.log(e.response)
   }
+}
+
+function LoginPage() {
+  const { values, errors, touched, handleChange, handleSubmit } = useFormik({
+    initialValues,
+    validationSchema: SignupSchema,
+    onSubmit: (values) => {
+      submit(values).then(({ access, refresh }) => {
+        window.localStorage.setItem('access', access)
+        window.localStorage.setItem('refresh', refresh)
+      })
+    },
+  })
+
   return (
     <div className={classes.LoginBlock}>
       <Title>Авторизация</Title>
-      <Formik
-        initialValues={initialValues}
-        validationSchema={SignupSchema}
-        onSubmit={(values) => handleSubmit(values)}
-      >
-        {({ values, errors, touched, handleChange }) => (
-          <Form className={classes.form_inputs}>
-            <div>
-              <Input
-                label="Ваш e-mail"
-                name="email"
-                type="email"
-                value={values.username}
-                onChange={handleChange}
-              />
-              {errors.last_name && touched.last_name && (
-                <p className={classes.text_danger}>{errors.last_name}</p>
-              )}
-            </div>
-            <div className={classes.FormInput}>
-              <Input
-                label="Пароль"
-                name="password"
-                type="password"
-                value={values.password}
-                onChange={handleChange}
-              />
-              {errors.password && touched.password && (
-                <p className={classes.text_danger}>{errors.password}</p>
-              )}
-              <div className="linkblock">
-                <span className="LinkSelf">
-                  <Link className={classes.lll} href="#">
-                    Отправить СМС повторно.
-                  </Link>
-                  Отправить СМС повторном можно будет через 144 сек.
-                </span>
-              </div>
-              <div className={classes.ButtonContainer}>
-                <PrimaryButton>Войти</PrimaryButton>
-                <SecondaryButton>Зарегистрироваться</SecondaryButton>
-              </div>
-              <Link href="#" className="forgotpassword">
-                Забыли пароль?
-              </Link>
-            </div>
-          </Form>
-        )}
-      </Formik>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <Input
+            label="Ваш e-mail"
+            name="email"
+            type="email"
+            onChange={handleChange}
+            value={values.email}
+          />
+          {errors.email && touched.email && (
+            <p className={classes.text_danger}>{errors.email}</p>
+          )}
+        </div>
+        <div className={classes.FormInput}>
+          <Input
+            label="Пароль"
+            name="password"
+            type="password"
+            onChange={handleChange}
+            value={values.password}
+          />
+          {errors.password && touched.password && (
+            <p className={classes.text_danger}>{errors.password}</p>
+          )}
+          <div className="linkblock">
+            {/*<span className="LinkSelf">*/}
+            {/*  <Link className={classes.lll} href="#">*/}
+            {/*    Отправить СМС повторно.*/}
+            {/*  </Link>*/}
+            {/*  Отправить СМС повторном можно будет через 144 сек.*/}
+            {/*</span>*/}
+          </div>
+          <div className={classes.ButtonContainer}>
+            <PrimaryButton type="submit">Войти</PrimaryButton>
+            <Link href="/register">
+              <SecondaryButton>Зарегистрироваться</SecondaryButton>
+            </Link>
+          </div>
+          <Link href="/password-reset" className="forgotpassword">
+            Забыли пароль?
+          </Link>
+        </div>
+      </form>
     </div>
   )
 }

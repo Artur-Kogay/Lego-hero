@@ -8,6 +8,13 @@
   form {
     display: flex;
     flex-direction: column;
+
+    .text_danger {
+      font-family: 'Gilroy-regular', sans-serif;
+      font-size: 12px;
+      color: #c94f4f;
+      margin: 5px 0 0;
+    }
   }
 }
 
