@@ -17,7 +17,7 @@ const style = {
   minHeight: '46px',
 }
 
-function PrimaryButton({ children }, { ...props }) {
+function PrimaryButton({ children, ...props }) {
   return (
     <Button {...props} variant="text" style={style}>
       {children}

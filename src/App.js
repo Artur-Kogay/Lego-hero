@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { Router, Route, Switch } from 'react-router-dom'
 import Events from './page/events/Events'
 import Help from './page/help/Help'
 import Profile from './page/profile/Profile'
@@ -13,26 +13,28 @@ import Tests from './page/tests/Test'
 import { StylesProvider } from '@mui/styles'
 import './styles/global.scss'
 import './App.css'
+import { history } from './helpers/history'
+import RouteGuard from './components/RouteGuard'
 
 function App() {
   return (
     <StylesProvider>
-      <BrowserRouter>
+      <Router history={history}>
         <Switch>
           <Route path="/" component={MainPage} exact />
-          <Route path="/profile" component={Profile} exact />
-          <Route path="/events" component={Events} exact />
-          <Route path="/training" component={Training} exact />
-          <Route path="/help" component={Help} exact />
-          <Route path="/courses" component={Courses} exact />
-          <Route path="/tests" component={Tests} exact />
+          <RouteGuard path="/profile" component={Profile} exact />
+          <RouteGuard path="/events" component={Events} exact />
+          <RouteGuard path="/training" component={Training} exact />
+          <RouteGuard path="/help" component={Help} exact />
+          <RouteGuard path="/courses" component={Courses} exact />
+          <RouteGuard path="/tests" component={Tests} exact />
 
-          <Route exact path="/welcome" component={Welcome} />
+          <RouteGuard exact path="/welcome" component={Welcome} />
           <Route exact path="/register" component={RegisterPage} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/password-reset" component={ResetPage} />
         </Switch>
-      </BrowserRouter>
+      </Router>
     </StylesProvider>
   )
 }
