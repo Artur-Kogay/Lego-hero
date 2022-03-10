@@ -19,7 +19,7 @@ const style = {
 
 function PrimaryButton({ children, ...props }) {
   return (
-    <Button {...props} variant="text" style={style}>
+    <Button type="submit" {...props} variant="text" style={style}>
       {children}
     </Button>
   )

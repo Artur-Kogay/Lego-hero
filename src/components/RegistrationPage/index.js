@@ -22,43 +22,58 @@ import classes from './Registration.module.scss'
 import FormGroup from '@mui/material/FormGroup'
 import Checkbox from '@mui/material/Checkbox'
 import './style.css'
+import { $api } from '../../services/api'
+
 
 const initialValues = {
-  username: '',
-  password: '',
+  email: '',
+  password: 'Daniel20',
   first_name: '',
   last_name: '',
   vk: '',
+  date_birthday:'',
+  city:'',
+  role:'',
+  phone_number:''
 }
 
 const SignupSchema = Yup.object().shape({
-  username: Yup.string()
-    .min(2, 'Too Short!')
-    .required('Введите номер телефона корректно!'),
-  password: Yup.string()
-    .min(2, 'Too Short!')
-    .max(50, 'Too Long!')
-    .required('Введите пароль!'),
-  first_name: Yup.string().required('Введите Имя корректно!'),
-  last_name: Yup.string().required('Введите Фамилию корректно!'),
+  // username: Yup.string()
+  //   .min(2, 'Too Short!')
+  //   .required('Введите номер телефона корректно!'),
+  // password: Yup.string()
+  //   .min(2, 'Too Short!')
+  //   .max(50, 'Too Long!')
+  //   .required('Введите пароль!'),
+  // first_name: Yup.string().required('Введите Имя корректно!'),
+  // last_name: Yup.string().required('Введите Фамилию корректно!'),
 })
+
+const handleSubmit = async ( values) => {
+  console.log(values)
+ try {
+  return await $api.post("/accounts/auth/users/", values)
+ } catch (e) {
+    console.log(e.response)
+ }
+}
 
 function RegistrationPage() {
   const [value, setValue] = React.useState(null)
-  const handleSubmit = async () => {
-    console.log('HandleSubmit')
-  }
 
+
+  
   return (
     <div className={classes.registration_block}>
       <Title>Регистрация героя</Title>
       <Formik
         initialValues={initialValues}
         validationSchema={SignupSchema}
-        onSubmit={(values) => handleSubmit(values)}
+        onSubmit={handleSubmit}
       >
-        {({ values, errors, touched, handleChange }) => (
-          <Form className={classes.form_inputs}>
+        {({ values, errors, touched, handleChange,setFieldValue }) => (
+          <Form className={classes.form_inputs} 
+          >
             <Input
               label="Фамилия"
               name="last_name"
@@ -82,10 +97,11 @@ function RegistrationPage() {
 
             <LocalizationProvider dateAdapter={AdapterDateFns}>
               <DatePicker
+                name="date_birthday"
                 label="Дата рождения"
-                value={value}
-                onChange={(newValue) => {
-                  setValue(newValue)
+                value={values.date_birthday}
+                onChange={(value) => {
+                  setFieldValue("date_birthday", value)
                 }}
                 renderInput={(params) => (
                   <TextField
@@ -108,16 +124,17 @@ function RegistrationPage() {
               value={values.city}
               onChange={handleChange}
             />
-            {errors.first_name && touched.first_name && (
-              <p className={classes.text_danger}>{errors.first_name}</p>
+            {errors.city && touched.city && (
+              <p className={classes.text_danger}>{errors.city}</p>
             )}
 
-            <FormControl className={classes.FormControl}>
+            <FormControl className={classes.FormControl} value={values.role}>
               <RadioGroup
                 row
                 aria-labelledby="demo-row-radio-buttons-group-label"
                 name="row-radio-buttons-group"
                 className={classes.RadioGroup}
+                
               >
                 <FormControlLabel
                   value="judge"
@@ -188,26 +205,26 @@ function RegistrationPage() {
 
             <Input
               label="Почта"
-              name="mail"
+              name="email"
               type="email"
               variant="outlined"
-              value={values.mail}
+              value={values.email}
               onChange={handleChange}
             />
-            {errors.first_name && touched.first_name && (
-              <p className={classes.text_danger}>{errors.first_name}</p>
+            {errors.email && touched.email && (
+              <p className={classes.text_danger}>{errors.email}</p>
             )}
 
             <Input
               label="Номер"
-              name="number"
+              name="phone_number"
               type="phone"
               variant="outlined"
-              value={values.number}
+              value={values.phone_number}
               onChange={handleChange}
             />
-            {errors.first_name && touched.first_name && (
-              <p className={classes.text_danger}>{errors.first_name}</p>
+            {errors.phone_number && touched.phone_number && (
+              <p className={classes.text_danger}>{errors.phone_number}</p>
             )}
 
             <Input
@@ -219,8 +236,8 @@ function RegistrationPage() {
               onChange={handleChange}
               placeholder="Вставьте ссылку на Ваш профиль"
             />
-            {errors.first_name && touched.first_name && (
-              <p className={classes.text_danger}>{errors.first_name}</p>
+            {errors.vk && touched.vk && (
+              <p className={classes.text_danger}>{errors.vk}</p>
             )}
 
             <FormGroup className={classes.FormGroup}>
@@ -261,7 +278,7 @@ function RegistrationPage() {
               />
             </FormGroup>
             <div className={classes.ButtonContainer}>
-              <PrimaryButton>Зарегистрироваться</PrimaryButton>
+              <PrimaryButton type="submit">Зарегистрироваться</PrimaryButton>
               <SecondaryButton>Уже есть аккаунт?</SecondaryButton>
             </div>
           </Form>
