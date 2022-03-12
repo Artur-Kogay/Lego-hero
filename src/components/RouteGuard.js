@@ -6,10 +6,12 @@ const RouteGuard = ({ component: Component, ...rest }) => {
     let flag;
 
     //check user has JWT token
-    localStorage.getItem('token') ? (flag = true) : (flag = false)
+    localStorage.getItem('access') ? (flag = true) : (flag = false)
 
     return flag
   }
+
+
 
   return (
     <Route

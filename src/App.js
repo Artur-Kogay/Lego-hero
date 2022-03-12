@@ -15,6 +15,7 @@ import './styles/global.scss'
 import './App.css'
 import { history } from './helpers/history'
 import RouteGuard from './components/RouteGuard'
+import ActivatePage from "./page/AuthPages/ActivatePage";
 
 function App() {
   return (
@@ -29,10 +30,13 @@ function App() {
           <RouteGuard path="/courses" component={Courses} exact />
           <RouteGuard path="/tests" component={Tests} exact />
 
-          <RouteGuard exact path="/welcome" component={Welcome} />
+          <Route exact path="/welcome" component={Welcome} />
           <Route exact path="/register" component={RegisterPage} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/password-reset" component={ResetPage} />
+          <Route  path='/auth/activate'>
+            <ActivatePage/>
+          </Route>
         </Switch>
       </Router>
     </StylesProvider>
