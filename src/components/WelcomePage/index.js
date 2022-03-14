@@ -2,7 +2,8 @@ import React from 'react'
 import cls from './Welcome.module.scss'
 import Title from '../_components/Title'
 import SecondaryButton from '../_components/SecondaryButton'
-import {DOMAIN} from "../../utils/constants";
+import { DOMAIN } from '../../utils/constants'
+import { Link } from 'react-router-dom'
 
 function WelcomePage() {
   return (
@@ -12,11 +13,13 @@ function WelcomePage() {
       <div className={cls.SubText}>
         <p>Спасибо тебе за регистрацию на нашей площадке</p>
         <p>
-          Проверь <a href={DOMAIN}>свою почту</a>, на нее мы выслали твой пароль от
-          личного кабинета.
+          Проверь <a href={DOMAIN}>свою почту</a>, на нее мы выслали твой пароль
+          от личного кабинета.
         </p>
       </div>
-      <SecondaryButton>Войдите в личный кабинет</SecondaryButton>
+      <Link to={'/login'}>
+        <SecondaryButton>Войдите в личный кабинет</SecondaryButton>
+      </Link>
       <p className={cls.MailCheck}>
         Перед входом проверьте <a href={DOMAIN}> почту!</a>
       </p>

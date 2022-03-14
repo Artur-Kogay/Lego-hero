@@ -5,12 +5,14 @@ import cl from './profile.module.scss'
 import account from '../../static/img/loll.png'
 import fotka from '../../static/img/lolll.png'
 import Learn from '../../components/Learn/Learn'
+import { useSelector } from 'react-redux'
 
 const Profile = () => {
   const isTabletMin = useMediaQuery('(min-width:768px)')
   const isTabletMax = useMediaQuery('(max-width:1200px)')
   const isMobileMax = useMediaQuery('(max-width: 700px)')
-
+  const { user } = useSelector((state) => state.user)
+  console.log(user)
   useEffect(() => {}, [])
 
   return (
@@ -24,13 +26,19 @@ const Profile = () => {
         </div>
         <div className={cl.prof_block}>
           <div className={cl.photo}>
-            <img className={cl.pho} src={account} alt="lol" />
+            <img
+              className={cl.pho}
+              src={user.avatar ? user.avatar : account}
+              alt="lol"
+            />
           </div>
           {isMobileMax && (
             <div className={cl.ok}>
               <div className={cl.min_block}>
                 <p>Ваше имя и фамилия</p>
-                <h5>Александр Иванов</h5>
+                <h5>
+                  {user.first_name} {user.last_name}
+                </h5>
               </div>
               <div className={cl.min_block}>
                 <p>Тип профиля</p>
@@ -44,7 +52,9 @@ const Profile = () => {
                 <div className={cl.ok}>
                   <div className={cl.min_block}>
                     <p>Ваше имя и фамилия</p>
-                    <h5>Александр Иванов</h5>
+                    <h5>
+                      {user.first_name} {user.last_name}
+                    </h5>
                   </div>
                   <div className={cl.min_block}>
                     <p>Тип профиля</p>
@@ -55,22 +65,22 @@ const Profile = () => {
               <div className={cl.ok}>
                 <div className={cl.min_block}>
                   <p>Город</p>
-                  <h5>Липецк</h5>
+                  <h5>{user.city}</h5>
                 </div>
                 <div className={cl.min_block}>
                   <p>E-mail</p>
-                  <h5>ivanov@yandex.ru</h5>
+                  <h5>{user.email}</h5>
                 </div>
               </div>
 
               <div className="ok">
                 <div className={cl.min_block}>
                   <p>Дата рождения</p>
-                  <h5>9 мая 1990</h5>
+                  <h5>{user.date_birthday}</h5>
                 </div>
                 <div className={cl.min_block}>
                   <p>Телефон</p>
-                  <h5>+7 985 778 88 77</h5>
+                  <h5>{user.phone_number}</h5>
                 </div>
               </div>
             </div>

@@ -37,6 +37,7 @@ const Learn = () => {
         <div className={cl.inner_right}>
           <div className={cl.circle}>
             <CircularProgressbar
+              className={cl.tests}
               value={progress}
               text={`${progress}%`}
               styles={{

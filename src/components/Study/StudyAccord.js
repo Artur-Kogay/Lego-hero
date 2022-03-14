@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Accordion from '@mui/material/Accordion'
 import AccordionSummary from '@mui/material/AccordionSummary'
 import AccordionDetails from '@mui/material/AccordionDetails'
@@ -6,6 +6,8 @@ import Typography from '@mui/material/Typography'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import cls from './study.module.scss'
 import kurs from '../../img/kurs.svg'
+import { Link } from 'react-router-dom'
+import { $api } from '../../services/api'
 
 const accordName = [
   { id: 1, title: 'КАТЕГОРИЯ 1', desc: 'Курсы + тесты' },
@@ -20,6 +22,11 @@ const accordDetails = [
       'linear-gradient(269.65deg, #F77676 -18.16%, rgba(210, 53, 53, 0) 100%)',
     name: 'НАЗВАНИЕ КУРСА #1',
     days: '25',
+    exams: [
+      {
+        id: 11,
+      },
+    ],
   },
   {
     id: 2,
@@ -47,6 +54,11 @@ const accordDetails = [
   },
 ]
 const StudyAccord = () => {
+  const [categories, setCategories] = useState([])
+  useEffect(async () => {
+    const { data } = await $api.get('categories/')
+    setCategories(data)
+  }, [])
   return (
     <div className={cls.StudyAccord}>
       {accordName.map((accord) => {
@@ -66,31 +78,33 @@ const StudyAccord = () => {
             </AccordionSummary>
             <AccordionDetails className={cls.accordDetail}>
               <div className={cls.bottom}>
-                {accordDetails.map((detail) => {
-                  return (
-                    <div className={cls.details}>
-                      <div
-                        className={cls.detailImg}
-                        style={{
-                          background: `${detail.linear} ,url(${detail.img})`,
-                        }}
-                      >
-                        <p>{detail.name}</p>
-                      </div>
-                      <div className={cls.detailInfo}>
-                        <div className={cls.days}>
-                          <h3>СТАЛОСЬ КОЛИЧЕСТВО ДНЕЙ</h3>
-                          <p>{detail.days}</p>
-                        </div>
-                        <div className={cls.detailLine} />
-                        <div className={cls.btns}>
-                          <button className={cls.btn1}>Пройти курс</button>
-                          <button className={cls.btn2}>Пройти курс</button>
-                        </div>
-                      </div>
-                    </div>
-                  )
-                })}
+                {/*{exams.map(({ id, title }) => {*/}
+                {/*  return (*/}
+                {/*    <div className={cls.details}>*/}
+                {/*      <div*/}
+                {/*        className={cls.detailImg}*/}
+                {/*        style={{*/}
+                {/*          background: `linear-gradient(269.65deg, #F77676 -18.16%, rgba(210, 53, 53, 0) 100%)'`,*/}
+                {/*        }}*/}
+                {/*      >*/}
+                {/*        <p>{title}</p>*/}
+                {/*      </div>*/}
+                {/*      <div className={cls.detailInfo}>*/}
+                {/*        <div className={cls.days}>*/}
+                {/*          <h3>СТАЛОСЬ КОЛИЧЕСТВО ДНЕЙ</h3>*/}
+                {/*          <p>{15}</p>*/}
+                {/*        </div>*/}
+                {/*        <div className={cls.detailLine} />*/}
+                {/*        <div className={cls.btns}>*/}
+                {/*          <button className={cls.btn1}>Пройти курс</button>*/}
+                {/*          <Link to={`/tests/${id}`}>*/}
+                {/*            <button className={cls.btn2}>Пройти тест</button>*/}
+                {/*          </Link>*/}
+                {/*        </div>*/}
+                {/*      </div>*/}
+                {/*    </div>*/}
+                {/*  )*/}
+                {/*})}*/}
               </div>
             </AccordionDetails>
           </Accordion>
