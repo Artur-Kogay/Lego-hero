@@ -11,7 +11,7 @@ import help from '../../static/img/help.svg'
 import exit from '../../static/img/exit.svg'
 import { motion } from 'framer-motion'
 import { useMediaQuery } from '@mui/material'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { getUser } from '../../Redux/reducers/userReducer'
 
 const Navs = [
@@ -24,6 +24,7 @@ const Navs = [
 
 export default function Menu() {
   const dispatch = useDispatch()
+  const { user } = useSelector((state) => state.user)
   const [showFullMenu, setShowFullMenu] = useState(false)
   const isMob = useMediaQuery('(max-width:767.9px)')
   const isLaptop = useMediaQuery('(max-width: 1200px)')
@@ -67,7 +68,7 @@ export default function Menu() {
         <div className={cls.navbarAccount}>
           <div>
             <img
-              src={account}
+              src={user.avatar ? user.avatar : account}
               alt="account"
               style={showFullMenu ? { marginLeft: 24 } : { marginLeft: 11 }}
             />
@@ -77,7 +78,7 @@ export default function Menu() {
               {showFullMenu ? 'Вы вошли как:' : ''}
             </p>
             <p className={cls.accountName}>
-              {showFullMenu ? 'Рубернштерн Грев' : ''}
+              {showFullMenu ? `${user.first_name} ${user.last_name}` : ''}
             </p>
           </div>
         </div>
