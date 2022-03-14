@@ -78,7 +78,7 @@ export default function Menu() {
               {showFullMenu ? 'Вы вошли как:' : ''}
             </p>
             <p className={cls.accountName}>
-              {showFullMenu ? `${user.first_name} ${user.last_name}` : ''}
+              {showFullMenu ? `${user?.first_name} ${user?.last_name}` : ''}
             </p>
           </div>
         </div>
