@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import cls from './test.module.scss'
 import { Formik } from 'formik'
 import Radio from '@mui/material/Radio'
@@ -12,13 +12,16 @@ import third from '../../img/3.jpg'
 import fourth from '../../img/4.jpg'
 import fifth from '../../img/5.jpg'
 import * as Yup from 'yup'
+import { $api } from '../../services/api'
+import { useParams } from 'react-router-dom'
 
 const Tests = () => {
-  // const { values ,errors,touched, setFieldValue, onSubmit } = useFormik({
-  //     initialValues,
-  //     validateSchema,
-  //     onSubmit: (values) => {console.log(values)},
-  //   });
+  const [data, setData] = useState([])
+  const { id } = useParams()
+  useEffect(async () => {
+    const { data } = await $api.get(`/exams/exams/${id}/`)
+    setData(data)
+  }, [])
   const validateSchema = Yup.object().shape(
     tests.reduce((state, { id }) => {
       return {
@@ -32,11 +35,11 @@ const Tests = () => {
     }, {})
   )
 
-  return (
+  return data.map(({ id, title, questions }) => (
     <div className={cls.Test}>
       <p className={cls.direction}>Главная Тест</p>
       <h2 className={cls.pageName}>ТЕСТ</h2>
-      <h1 className={cls.pageDesc}>ВОЛОНТЕРСКИЙ МАТЕРИАЛ</h1>
+      <h1 className={cls.pageDesc}>{title}</h1>
       <Formik
         onSubmit={(values) => alert(JSON.stringify(values, null, 2))}
         validationSchema={validateSchema}
@@ -44,7 +47,7 @@ const Tests = () => {
         style={{ display: 'flex', flexDirection: 'column', gridGap: 100 }}
       >
         {({ values, touched, errors, setFieldValue, handleSubmit }) => {
-          console.log(values)
+          console.log(data)
 
           const handleChange = (type, questionId, answerId) => {
             // проверка на тип вопроса
@@ -85,7 +88,7 @@ const Tests = () => {
                       <div className={cls.testQues}>
                         <div>
                           <h2 className={cls.count}>{count}</h2>
-                          <div className={cls.line}/>
+                          <div className={cls.line} />
                           <p className={cls.question}>
                             {label}{' '}
                             <span className={cls.attention}>{helpText}</span>{' '}
@@ -141,7 +144,7 @@ const Tests = () => {
         }}
       </Formik>
     </div>
-  )
+  ))
 }
 
 export default Tests

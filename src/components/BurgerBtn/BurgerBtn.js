@@ -31,18 +31,18 @@ const BurgerBtn = () => {
           {Navs.map((nav) => (
             <NavLink key={nav.id} to={nav.link} className={cls.navLink}>
               <div className={cls.linkIcon}>
-                <img src={nav.img} alt="navImg"/>
+                <img src={nav.img} alt="navImg" />
               </div>
               <p>{isOpen ? nav.text : ''}</p>
             </NavLink>
           ))}
         </nav>
         <div className={cls.exit}>
-          <NavLink to="/cabinet" className={cls.exitNav}>
+          <div className={cls.exitNav}>
             <div className={cls.navIcon}>
               <img src={exit} alt="exit" />
             </div>
-          </NavLink>
+          </div>
         </div>
       </motion.div>
     </div>

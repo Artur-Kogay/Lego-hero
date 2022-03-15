@@ -1,0 +1,8 @@
+<svg>
+    <defs>
+        <linearGradient id="MyGradient">
+            <stop offset="5%" stop-color="#FFF" stop-opacity="5%" />
+            <stop offset="95%" stop-color="#FFF" stop-opacity="100%" />
+        </linearGradient>
+    </defs>
+</svg>

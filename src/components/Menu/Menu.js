@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import logo from '../../static/img/logo.svg'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useHistory } from 'react-router-dom'
 import account from '../../static/img/account.png'
 import cls from './menu.module.scss'
 import home from '../../static/img/home.svg'
@@ -11,6 +11,8 @@ import help from '../../static/img/help.svg'
 import exit from '../../static/img/exit.svg'
 import { motion } from 'framer-motion'
 import { useMediaQuery } from '@mui/material'
+import { useDispatch, useSelector } from 'react-redux'
+import { getUser } from '../../Redux/reducers/userReducer'
 
 const Navs = [
   { id: 1, text: 'Главная', img: home, link: '/' },
@@ -21,10 +23,20 @@ const Navs = [
 ]
 
 export default function Menu() {
+  const dispatch = useDispatch()
+  const { user } = useSelector((state) => state.user)
   const [showFullMenu, setShowFullMenu] = useState(false)
   const isMob = useMediaQuery('(max-width:767.9px)')
   const isLaptop = useMediaQuery('(max-width: 1200px)')
-
+  const router = useHistory()
+  const exitFunc = () => {
+    window.localStorage.removeItem('access')
+    window.localStorage.removeItem('refresh')
+    router.push('/login')
+  }
+  useEffect(() => {
+    dispatch(getUser())
+  }, [])
   return (
     <div className={`${cls.Menu} main-menu`}>
       <motion.div
@@ -56,7 +68,7 @@ export default function Menu() {
         <div className={cls.navbarAccount}>
           <div>
             <img
-              src={account}
+              src={user.avatar ? user.avatar : account}
               alt="account"
               style={showFullMenu ? { marginLeft: 24 } : { marginLeft: 11 }}
             />
@@ -66,7 +78,7 @@ export default function Menu() {
               {showFullMenu ? 'Вы вошли как:' : ''}
             </p>
             <p className={cls.accountName}>
-              {showFullMenu ? 'Рубернштерн Грев' : ''}
+              {showFullMenu ? `${user?.first_name} ${user?.last_name}` : ''}
             </p>
           </div>
         </div>
@@ -80,13 +92,13 @@ export default function Menu() {
             </NavLink>
           ))}
         </nav>
-        <div className={cls.exit}>
-          <NavLink to="/cabinet" className={cls.exitNav}>
+        <div onClick={() => exitFunc()} className={cls.exit}>
+          <div className={cls.exitNav}>
             <div className={cls.navIcon}>
-              <img src={exit} alt="exit" />
+              <img src={exit } alt="exit" />
             </div>
-            <p>{showFullMenu ? 'Выйти из аккаунта' : ''}</p>
-          </NavLink>
+            <p>{showFullMenu ? `${user.first_name ? 'Выйти из аккаунта' : ''}` : ''}</p>
+          </div>
         </div>
       </motion.div>
     </div>
