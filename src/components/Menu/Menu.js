@@ -103,9 +103,13 @@ export default function Menu() {
         <div onClick={() => exitFunc()} className={cls.exit}>
           <div className={cls.exitNav}>
             <div className={cls.navIcon}>
-              <img src={exit } alt="exit" />
+              <img src={exit} alt="exit" />
             </div>
-            <p>{showFullMenu ? `${user.first_name ? 'Выйти из аккаунта' : ''}` : ''}</p>
+            <p>
+              {showFullMenu
+                ? `${user.first_name ? 'Выйти из аккаунта' : ''}`
+                : ''}
+            </p>
           </div>
         </div>
       </motion.div>
