@@ -73,14 +73,22 @@ export default function Menu() {
               style={showFullMenu ? { marginLeft: 24 } : { marginLeft: 11 }}
             />
           </div>
-          <div className={cls.navbarText}>
-            <p className={cls.inviteText}>
-              {showFullMenu ? 'Вы вошли как:' : ''}
+          {window.localStorage.getItem('access') ? (
+            <div className={cls.navbarText}>
+              <p className={cls.inviteText}>
+                {showFullMenu ? 'Вы вошли как:' : ''}
+              </p>
+              <p className={cls.accountName}>
+                {user.first_name || (user.last_name && showFullMenu)
+                  ? `${user.first_name} ${user.last_name}`
+                  : ''}
+              </p>
+            </div>
+          ) : (
+            <p className={cls.errorMessage}>
+              {showFullMenu ? 'Вы еще не авторизованы' : ''}
             </p>
-            <p className={cls.accountName}>
-              {showFullMenu ? `${user?.first_name} ${user?.last_name}` : ''}
-            </p>
-          </div>
+          )}
         </div>
         <nav className={cls.navLinks}>
           {Navs.map((nav) => (

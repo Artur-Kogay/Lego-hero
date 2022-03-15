@@ -12,10 +12,7 @@ const Profile = () => {
   const isTabletMax = useMediaQuery('(max-width:1200px)')
   const isMobileMax = useMediaQuery('(max-width: 700px)')
   const { user } = useSelector((state) => state.user)
-  console.log(user)
-  useEffect(() => {}, [])
-  
-  
+
   return (
     <MainLayout>
       <div className={cl.profile}>

@@ -106,24 +106,30 @@ const monthName = [
   'Ноябрь',
   'Декабрь',
 ]
+const getEvents = async () => {
+  try {
+    const { data } = await axios.get('https://heroleague.ru/api/event/list')
+    return data
+  } catch (e) {
+    console.log(e.response)
+  }
+}
 const Event = () => {
-  const [events, setEvents] = useState([])
+  const [events, setEvents] = useState(null)
   const getEventDate = (unixDate) => {
     const date = new Date(unixDate * 1000)
     return `${date.getDate()} ${monthName[date.getMonth()]}`
   }
 
   useEffect(async () => {
-    const { data } = await axios.get('https://heroleague.ru/api/event/list')
-    setEvents(data.values)
-    console.log(data.values)
+    getEvents().then((res) => setEvents(res.values))
   }, [])
   return (
     <div className={cls.event}>
       <h1 className={cls.h1}>МЕРОПРИЯТИЯ</h1>
       <div className={cls.eventsList}>
         {events &&
-          events.map(({ event_type, cities, banners, event_city }) => {
+          events?.map(({ event_type, cities, banners, event_city }) => {
             return (
               <div
                 key={event_type._id}
