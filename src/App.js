@@ -1,4 +1,5 @@
 import { Router, Route, Switch } from 'react-router-dom'
+import React from 'react'
 import Events from './page/events/Events'
 import Help from './page/help/Help'
 import Profile from './page/profile/Profile'
@@ -16,30 +17,43 @@ import './App.css'
 import { history } from './helpers/history'
 import RouteGuard from './components/RouteGuard'
 import ActivatePage from "./page/AuthPages/ActivatePage";
+import { $api } from './services/api'
 
+const Context = React.createContext()
+
+// const getUser = async(email) =>{
+//   try{
+//     await $api.get('/accounts/auth/users/me/').then(response=>console.log(response))
+//   }catch(e){
+//     console.log(e);
+//   }
+// }
+// getUser()
 function App() {
   return (
-    <StylesProvider>
-      <Router history={history}>
-        <Switch>
-          <Route path="/" component={MainPage} exact />
-          <RouteGuard path="/profile" component={Profile} exact />
-          <RouteGuard path="/events" component={Events} exact />
-          <RouteGuard path="/training" component={Training} exact />
-          <RouteGuard path="/help" component={Help} exact />
-          <RouteGuard path="/courses" component={Courses} exact />
-          <RouteGuard path="/tests" component={Tests} exact />
+    <Context.Provider >
+      <StylesProvider>
+        <Router history={history}>
+          <Switch>
+            <Route path="/" component={MainPage} exact />
+            <RouteGuard path="/profile" component={Profile} exact />
+            <RouteGuard path="/events" component={Events} exact />
+            <RouteGuard path="/training" component={Training} exact />
+            <RouteGuard path="/help" component={Help} exact />
+            <RouteGuard path="/courses" component={Courses} exact />
+            <RouteGuard path="/tests" component={Tests} exact />
 
-          <Route exact path="/welcome" component={Welcome} />
-          <Route exact path="/register" component={RegisterPage} />
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/password-reset" component={ResetPage} />
-          <Route  path='/auth/activate'>
-            <ActivatePage/>
-          </Route>
-        </Switch>
-      </Router>
-    </StylesProvider>
+            <Route exact path="/welcome" component={Welcome} />
+            <Route exact path="/register" component={RegisterPage} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/password-reset" component={ResetPage} />
+            <Route  path='/auth/activate'>
+              <ActivatePage/>
+            </Route>
+          </Switch>
+        </Router>
+      </StylesProvider>
+    </Context.Provider>
   )
 }
 

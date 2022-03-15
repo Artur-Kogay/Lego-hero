@@ -3,6 +3,7 @@ import cls from './Welcome.module.scss'
 import Title from '../_components/Title'
 import SecondaryButton from '../_components/SecondaryButton'
 import {DOMAIN} from "../../utils/constants";
+import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
 
 function WelcomePage() {
   return (
@@ -16,7 +17,7 @@ function WelcomePage() {
           личного кабинета.
         </p>
       </div>
-      <SecondaryButton>Войдите в личный кабинет</SecondaryButton>
+      <NavLink to='/profile'><SecondaryButton>Войдите в личный кабинет</SecondaryButton></NavLink>
       <p className={cls.MailCheck}>
         Перед входом проверьте <a href={DOMAIN}> почту!</a>
       </p>

@@ -5,7 +5,7 @@ import 'react-circular-progressbar/dist/styles.css'
 
 const Learn = () => {
   const percentage = 90
-  const progress = 85
+  const progress = 50
   return (
     <div className={cl.learn_content}>
       <h1>ОБУЧЕНИЕ</h1>
