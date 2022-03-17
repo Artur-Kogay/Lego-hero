@@ -6,11 +6,13 @@
   }
 
   .child {
+    max-width: calc(100vw - 175px);
     grid-area: children;
     padding: 105px 0 0;
 
     @media (max-width: 768px) {
       padding: 0;
+      max-width: 100vw;
     }
   }
 

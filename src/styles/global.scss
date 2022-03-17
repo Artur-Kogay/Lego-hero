@@ -23,3 +23,18 @@ body {
 .MuiAccordion-root {
   background: none !important;
 }
+
+.MuiMobileStepper-dot {
+  background-color: grey !important;
+  width: 20px !important;
+  height: 8px !important;
+  border-radius: 2px !important;
+}
+.MuiMobileStepper-dotActive {
+  background-color: white !important;
+  width: 20px !important;
+  height: 8px !important;
+  border-radius: 2px !important;
+}
+
+

@@ -4,27 +4,32 @@ import { CircularProgressbar } from 'react-circular-progressbar'
 import 'react-circular-progressbar/dist/styles.css'
 import { $api } from '../../services/api'
 
+const getExams = async () => {
+  try{
+    const {data} = await $api.get('/exams/exams')
+    return data
+  }catch(e){
+    console.log(e)
+  }
+}
+
 const Learn = () => {
   const [exams, setExams] = useState()
-  const [progress, setProgress] = useState(0)
-  const [progressPer, setProgressPer] = useState()
+  const [progressPer, setProgressPer] = useState(1)
+  const passNum = 5;
   useEffect(async() => {
-    try{
-      const {data} = await $api.get('/exams/exams')
-      setExams(data)
-      getProgress(data)
-    }catch(e){
-      console.log(e)
-    }
+    getExams().then(res => {
+    setExams(res)
+    getProgress(res)
+    })
   },[])
 
   const getProgress = (tests) => {
-    const progressNum = Math.round((progress*100) / +tests.length)
+    const progressNum = Math.round((passNum * 100) / +tests.length)
     setProgressPer(progressNum)
   }
 
   let percentage = Math.round((105*100)/125)
-  let progress1 = Math.round((69*100)/80)
   return (
     <div className={cl.learn_content}>
       <h1>ОБУЧЕНИЕ</h1>
@@ -68,7 +73,7 @@ const Learn = () => {
           </div>
           <div className={cl.left_inner}>
             <h4>
-              {progress}<span> ИЗ {exams?.length}</span>
+              {passNum}<span> ИЗ {exams?.length}</span>
             </h4>
             <h5>Пройдено тестов</h5>
             <p>
