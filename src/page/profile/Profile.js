@@ -40,7 +40,7 @@ const Profile = () => {
               </div>
               <div className={cl.min_block}>
                 <p>Тип профиля</p>
-                <h5>Начальный</h5>
+                <h5>{user.role}</h5>
               </div>
             </div>
           )}
@@ -56,7 +56,7 @@ const Profile = () => {
                   </div>
                   <div className={cl.min_block}>
                     <p>Тип профиля</p>
-                    <h5>Начальный</h5>
+                    <h5>{user.role}</h5>
                   </div>
                 </div>
               )}
