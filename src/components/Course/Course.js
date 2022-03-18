@@ -18,7 +18,7 @@ import team from '../../img/team.jpg'
 const Course = () => {
   return (
     <div className={cls.course}>
-      <p className={cls.direction}>Главная > Курс</p>
+      <p className={cls.direction}>Главная {'>'} Курс</p>
       <h1 className={cls.pageName}>КУРС</h1>
       <div className={cls.firstBlock}>
         <h3 className={cls.greetings}>ПРИВЕТСТВУЕМ, ДОРОГОЙ ДРУГ!</h3>
