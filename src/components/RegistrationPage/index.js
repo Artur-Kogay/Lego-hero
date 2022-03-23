@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import Input from '../_components/Input'
 import Title from '../_components/Title'
@@ -17,6 +17,7 @@ import FormControl from '@mui/material/FormControl'
 import PrimaryButton from '../_components/PrimaryButton'
 import SecondaryButton from '../_components/SecondaryButton'
 import { Link, useHistory } from 'react-router-dom'
+import AdapterJalali from '@date-io/date-fns-jalali'
 
 import classes from './Registration.module.scss'
 
@@ -83,6 +84,16 @@ const formatDate = (value, setFieldValue) => {
 }
 
 function RegistrationPage() {
+  const [passwordMessage, setPasswordMessage] = useState(null)
+  const [dateMessage, setDateMessage] = useState(null)
+  const errorHandler = (errors) => {
+    if (errors.data.password)
+      setPasswordMessage(errors.data.password.map((item) => `${item} `))
+    else if (errors.data.date_birthday) {
+      setDateMessage('Не корректная дата')
+    }
+  }
+
   const handleSubmit = async ({
     email,
     password,
@@ -107,13 +118,20 @@ function RegistrationPage() {
         phone_number,
       }
       await $api.post('/accounts/auth/users/', data)
-      toast.success('На вашу почту выслана ссылка на активацию аккаунта', {
-        position: toast.POSITION.BOTTOM_CENTER,
-        closeOnClick: true,
-        hideProgressBar: true,
-      })
+      toast.success(
+        'На вашу почту выслана ссылка на активацию аккаунта. Вы можете закрыть эту вкладку',
+        {
+          position: toast.POSITION.TOP_RIGHT,
+          closeOnClick: false,
+          hideProgressBar: true,
+          autoClose: false,
+          draggable: false,
+        }
+      )
+      setDateMessage(null)
+      setPasswordMessage(null)
     } catch (e) {
-      console.log(e.response)
+      errorHandler(e.response)
     }
   }
 
@@ -136,7 +154,6 @@ function RegistrationPage() {
             {errors.last_name && touched.last_name && (
               <p className={classes.text_danger}>{errors.last_name}</p>
             )}
-
             <Input
               label="Имя"
               name="first_name"
@@ -147,13 +164,11 @@ function RegistrationPage() {
             {errors.first_name && touched.first_name && (
               <p className={classes.text_danger}>{errors.first_name}</p>
             )}
-
             <LocalizationProvider dateAdapter={AdapterDateFns}>
+              <p className={classes.labelInfo}>Дата рождения</p>
               <DatePicker
                 name="date_birthday"
-                label="Дата рождения"
                 value={values.date_birthday}
-                format="YYYY-MM-DD"
                 onChange={(value) => {
                   formatDate(value, setFieldValue)
                 }}
@@ -162,7 +177,6 @@ function RegistrationPage() {
                     color="secondary"
                     style={{
                       width: '100%',
-                      marginTop: 18,
                       height: 50,
                     }}
                     {...params}
@@ -170,7 +184,7 @@ function RegistrationPage() {
                 )}
               />
             </LocalizationProvider>
-
+            <p className={classes.text_danger}>{dateMessage}</p>
             <Input
               label="Город"
               name="city"
@@ -181,7 +195,6 @@ function RegistrationPage() {
             {errors.city && touched.city && (
               <p className={classes.text_danger}>{errors.city}</p>
             )}
-
             <FormControl
               name={'role'}
               className={classes.FormControl}
@@ -260,7 +273,6 @@ function RegistrationPage() {
                 />
               </RadioGroup>
             </FormControl>
-
             <Input
               label="Почта"
               name="email"
@@ -272,7 +284,6 @@ function RegistrationPage() {
             {errors.email && touched.email && (
               <p className={classes.text_danger}>{errors.email}</p>
             )}
-
             <Input
               label="Пароль"
               name="password"
@@ -284,7 +295,7 @@ function RegistrationPage() {
             {errors.password && touched.password && (
               <p className={classes.text_danger}>{errors.password}</p>
             )}
-
+            <p className={classes.text_danger}>{passwordMessage}</p>
             <Input
               label="Подтвердите пароль"
               name="confirmPassword"
@@ -296,7 +307,6 @@ function RegistrationPage() {
             {errors.confirmPassword && touched.confirmPassword && (
               <p className={classes.text_danger}>{errors.confirmPassword}</p>
             )}
-
             <Input
               label="Номер"
               name="phone_number"
@@ -308,7 +318,6 @@ function RegistrationPage() {
             {errors.phone_number && touched.phone_number && (
               <p className={classes.text_danger}>{errors.phone_number}</p>
             )}
-
             <Input
               label="VKontakte"
               name="vk"
@@ -321,7 +330,6 @@ function RegistrationPage() {
             {errors.vk && touched.vk && (
               <p className={classes.text_danger}>{errors.vk}</p>
             )}
-
             <FormGroup className={classes.FormGroup}>
               <FormControlLabel
                 className={classes.FormControl}
@@ -361,7 +369,7 @@ function RegistrationPage() {
             </FormGroup>
             <div className={classes.ButtonContainer}>
               <PrimaryButton type="submit">Зарегистрироваться</PrimaryButton>
-              <Link to={'/login'}>
+              <Link sx={{ textDecoration: 'none' }} to={'/login'}>
                 <SecondaryButton>Уже есть аккаунт?</SecondaryButton>
               </Link>
             </div>

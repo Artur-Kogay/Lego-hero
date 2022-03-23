@@ -10,7 +10,7 @@ const useStyles = makeStyles(() => ({
     boxSizing: 'border-box',
     borderRadius: '5px',
     fontSize: 16,
-    padding: 16,
+    padding: 10,
   },
   label: {
     fontSize: '12px',

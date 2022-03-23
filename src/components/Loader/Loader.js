@@ -1,11 +1,9 @@
 import React from 'react'
-import style from "./Loader.module.css"
+import style from './Loader.module.scss'
 
-const Loader = () => {
+const Loader = ({ size }) => {
   return (
-    <div>
-
-    </div>
+    <div className={style.loader} style={{ width: size, height: size }}></div>
   )
 }
 

@@ -33,7 +33,7 @@ function App() {
     <StylesProvider>
       <Router history={history}>
         <Switch>
-          <Route path="/" component={MainPage} exact />
+          <RouteGuard path="/" component={MainPage} exact />
           <RouteGuard path="/profile" component={Profile} exact />
           <RouteGuard path="/events" component={Events} exact />
           <RouteGuard path="/training" component={Training} exact />

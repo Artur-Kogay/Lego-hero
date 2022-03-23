@@ -16,6 +16,7 @@ const style = {
   minWidth: '185px',
   minHeight: '46px',
   border: '1px solid #fff',
+  textDecoration: 'none',
 }
 
 function SecondaryButton({ children }, { ...props }) {

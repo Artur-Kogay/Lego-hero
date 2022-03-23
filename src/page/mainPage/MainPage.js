@@ -18,19 +18,19 @@ const banners = [
     img: card,
     title: 'Оформите карту',
     mainTitle: 'ТВОЙ ЧЕМПИОНСКИЙ КЭШБЕК',
-    description: 'Получайте повышенный кэшбэк на расходы в категории спортивные\n' +
+    description:
+      'Получайте повышенный кэшбэк на расходы в категории спортивные\n' +
       '                товары! Кэшбэк начисляется на карту ежемесячно, что позволяет\n' +
       '                заработать до 36 000 рублей в год!',
-
   },
   {
     img: card,
     title: 'Оформите карту',
     mainTitle: 'ТВОЙ ЧЕМПИОНСКИЙ КЭШБЕК',
-    description: 'Получайте повышенный кэшбэк на расходы в категории спортивные\n' +
+    description:
+      'Получайте повышенный кэшбэк на расходы в категории спортивные\n' +
       '                товары! Кэшбэк начисляется на карту ежемесячно, что позволяет\n' +
       '                заработать до 36 000 рублей в год!',
-
   },
 ]
 const MainPage = () => {
@@ -54,9 +54,7 @@ const MainPage = () => {
     <MainLayout>
       <div className={sty.main_container}>
         <div className={sty.first}>
-
           <div className={sty.sliderBlock}>
-
             <AutoPlaySwipeableViews
               autoplay={false}
               style={{ maxWidth: '100%', flexGrow: 1 }}
@@ -70,12 +68,10 @@ const MainPage = () => {
                   <div className={sty.slider_left}>
                     <h3>{step.title}</h3>
                     <h1>«{step.mainTitle}»</h1>
-                    <p>
-                      {step.description}
-                    </p>
+                    <p>{step.description}</p>
                     <button>Узнать подробнее</button>
                   </div>
-                  <img className={sty.cardImg} src={step.img} alt='carImg' />
+                  <img className={sty.cardImg} src={step.img} alt="carImg" />
                 </div>
               ))}
             </AutoPlaySwipeableViews>
@@ -84,9 +80,9 @@ const MainPage = () => {
           <div className={sty.cont}>
             <MobileStepper
               style={{ background: 'none' }}
-              variant='dots'
+              variant="dots"
               steps={banners.length}
-              position='static'
+              position="static"
               activeStep={activeStep}
               sx={{
                 color: 'white',
@@ -120,7 +116,6 @@ const MainPage = () => {
               </button>
             </div>
           </div>
-
         </div>
 
         <Learn />
