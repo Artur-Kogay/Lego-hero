@@ -40,7 +40,7 @@ export default function Menu() {
   return (
     <div className={`${cls.Menu} main-menu`}>
       <motion.div
-        transition={{ duration: 0.3, ease: 'easeOut' }}
+        transition={{ duration: 1, type: 'spring' }}
         className={cls.logo}
         animate={
           showFullMenu && !isMob
