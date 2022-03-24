@@ -1,6 +1,12 @@
 import stuffAva from '../../static/img/heroPhotoPng.png'
-import mask from '../../static/img/Mask Group.png'
+import mask from '../../img/Mask-4.jpg'
 import styles from './stuff.module.scss'
+import sudya from '../../img/sudya.png'
+import inst from '../../img/instruktor.png'
+import trener from '../../img/trener.png'
+import mask1 from '../../img/Mask-1.jpg'
+import mask2 from '../../img/Mask-2.jpg'
+import mask3 from '../../img/Mask-3.jpg'
 import { useMediaQuery } from '@mui/material'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -12,8 +18,8 @@ const stuffs = [
     id: 'stuff-1',
     title: 'СУДЬЯ',
     description: 'Честность, профессионализм, внимательность',
-    stuffAva: stuffAva,
-    mask: mask,
+    stuffAva: sudya,
+    mask: mask1,
     color: '#FEEC4F',
     skills: [
       'Четко следует регламентам',
@@ -23,11 +29,11 @@ const stuffs = [
   },
   {
     id: 'stuff-2',
-    title: 'СУДЬЯ',
+    title: 'ИНСТРУКТОР',
     description: 'Честность, профессионализм, внимательность',
-    stuffAva: stuffAva,
-    mask: mask,
-    color: '#FEEC4F',
+    stuffAva: inst,
+    mask: mask2,
+    color: '#80E396',
     skills: [
       'Четко следует регламентам',
       'Оценивает прохождение препятствий\n',
@@ -36,11 +42,11 @@ const stuffs = [
   },
   {
     id: 'stuff-3',
-    title: 'СУДЬЯ',
+    title: 'ТРЕНЕР',
     description: 'Честность, профессионализм, внимательность',
-    stuffAva: stuffAva,
-    mask: mask,
-    color: '#FEEC4F',
+    stuffAva: trener,
+    mask: mask3,
+    color: '#359AD2',
     skills: [
       'Четко следует регламентам',
       'Оценивает прохождение препятствий\n',
@@ -49,7 +55,7 @@ const stuffs = [
   },
   {
     id: 'stuff-4',
-    title: 'СУДЬЯ',
+    title: 'ВОЛОНТЕР',
     description: 'Честность, профессионализм, внимательность',
     stuffAva: stuffAva,
     mask: mask,
@@ -91,7 +97,7 @@ export default function Stuff() {
                         className={styles.mask}
                         style={{ backgroundImage: `url('${mask}')` }}
                       />
-                      <img src={stuffAva} alt="" />
+                      <img src={stuffAva} alt=""/>
                     </div>
                     <div className={styles.contentWrapper}>
                       <p className={styles.stuffSkillTitle}>{title}</p>
