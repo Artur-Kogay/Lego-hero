@@ -60,7 +60,6 @@ const Tests = () => {
 
   return (
     <div className={cls.Test}>
-      <Loader size={'30px'} />
       <p className={cls.direction}>Главная Тест</p>
       <h2 className={cls.pageName}>ТЕСТ</h2>
       <h1 className={cls.pageDesc}>{data?.title}</h1>
@@ -124,9 +123,11 @@ const Tests = () => {
                             <h2 className={cls.count}>{++index}</h2>
                             <div className={cls.line} />
                             <p className={cls.question}>
-                              {title}{' '}
+                              {title + '⠀'}
                               <span className={cls.attention}>
-                                {'helpText'}
+                                {question_type === 'R'
+                                  ? ' (выберите 1 вариант ответа)'
+                                  : ' (несколько вариантов ответа)'}
                               </span>{' '}
                             </p>{' '}
                             <br />

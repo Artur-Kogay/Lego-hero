@@ -12,7 +12,8 @@ body {
     padding: 0;
   }
 }
-.css-i4bv87-MuiSvgIcon-root {
+.css-MuiSvgIcon-root,
+.MuiSvgIcon-root {
   color: #fff !important;
 }
 .CircularProgressbar-text {
@@ -41,5 +42,5 @@ input:-webkit-autofill,
 textarea:-webkit-autofill,
 select:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 1000px #1a191f inset !important;
-  -webkit-text-fill-color: white !important;
+  -webkit-text-fill-color: black !important;
 }

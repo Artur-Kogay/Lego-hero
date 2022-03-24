@@ -79,19 +79,19 @@ const formatDate = (value, setFieldValue) => {
     y = date.getFullYear(),
     m = date.getMonth(),
     d = date.getDate()
-  console.log()
   setFieldValue('date_birthday', `${y}-${m + 1}-${d}`)
 }
 
 function RegistrationPage() {
   const [passwordMessage, setPasswordMessage] = useState(null)
   const [dateMessage, setDateMessage] = useState(null)
+  const [emailMessage, setEmailMessage] = useState(null)
   const errorHandler = (errors) => {
     if (errors.data.password)
       setPasswordMessage(errors.data.password.map((item) => `${item} `))
-    else if (errors.data.date_birthday) {
-      setDateMessage('Не корректная дата')
-    }
+    else if (errors.data.date_birthday) setDateMessage('Не корректная дата')
+    else if (errors.data.email)
+      setEmailMessage(errors.data.email.map((item) => `${item} `))
   }
 
   const handleSubmit = async ({
@@ -130,6 +130,7 @@ function RegistrationPage() {
       )
       setDateMessage(null)
       setPasswordMessage(null)
+      setEmailMessage(null)
     } catch (e) {
       errorHandler(e.response)
     }
@@ -167,6 +168,7 @@ function RegistrationPage() {
             <LocalizationProvider dateAdapter={AdapterDateFns}>
               <p className={classes.labelInfo}>Дата рождения</p>
               <DatePicker
+                inputFormat="dd/MM/yyyy"
                 name="date_birthday"
                 value={values.date_birthday}
                 onChange={(value) => {
@@ -178,6 +180,9 @@ function RegistrationPage() {
                     style={{
                       width: '100%',
                       height: 50,
+                    }}
+                    sx={{
+                      svg: { color: '#fff' },
                     }}
                     {...params}
                   />
@@ -284,6 +289,7 @@ function RegistrationPage() {
             {errors.email && touched.email && (
               <p className={classes.text_danger}>{errors.email}</p>
             )}
+            <p className={classes.text_danger}>{emailMessage}</p>
             <Input
               label="Пароль"
               name="password"
