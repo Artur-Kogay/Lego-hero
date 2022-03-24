@@ -86,6 +86,7 @@ function RegistrationPage() {
   const [passwordMessage, setPasswordMessage] = useState(null)
   const [dateMessage, setDateMessage] = useState(null)
   const [emailMessage, setEmailMessage] = useState(null)
+  const history = useHistory()
   const errorHandler = (errors) => {
     if (errors.data.password)
       setPasswordMessage(errors.data.password.map((item) => `${item} `))
@@ -118,19 +119,10 @@ function RegistrationPage() {
         phone_number,
       }
       await $api.post('/accounts/auth/users/', data)
-      toast.success(
-        'На вашу почту выслана ссылка на активацию аккаунта. Вы можете закрыть эту вкладку',
-        {
-          position: toast.POSITION.TOP_RIGHT,
-          closeOnClick: false,
-          hideProgressBar: true,
-          autoClose: false,
-          draggable: false,
-        }
-      )
       setDateMessage(null)
       setPasswordMessage(null)
       setEmailMessage(null)
+      history.push('/complete')
     } catch (e) {
       errorHandler(e.response)
     }

@@ -25,8 +25,10 @@ export default function MainLayout({ children }) {
       <div className={cls.child}>{children}</div>
 
       <footer className={cls.footer}>
-        Copyright © АНО “Гонка Героев” 2015 - 2020. ООО “Лига Героев Спорт
-        Проджектс”
+        <p>
+          Copyright © АНО “Гонка Героев” 2015 - {new Date().getFullYear()}. ООО
+          “Лига Героев Спорт Проджектс”
+        </p>
       </footer>
     </div>
   )

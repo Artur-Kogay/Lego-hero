@@ -17,6 +17,7 @@ import './App.css'
 import { history } from './helpers/history'
 import RouteGuard from './components/RouteGuard'
 import ActivatePage from './page/AuthPages/ActivatePage'
+import CompletePage from './page/AuthPages/CompletePage'
 
 const Context = React.createContext()
 
@@ -45,6 +46,7 @@ function App() {
           <Route exact path="/register" component={RegisterPage} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/password-reset" component={ResetPage} />
+          <Route exact path="/complete" component={CompletePage} />
           <Route path="/auth/activate">
             <ActivatePage />
           </Route>

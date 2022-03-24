@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import logo from '../../static/img/logo.svg'
-import { NavLink, useHistory } from 'react-router-dom'
+import { Link, NavLink, useHistory } from 'react-router-dom'
 import account from '../../static/img/account.png'
 import cls from './menu.module.scss'
 import home from '../../static/img/home.svg'
@@ -40,6 +40,7 @@ export default function Menu() {
   return (
     <div className={`${cls.Menu} main-menu`}>
       <motion.div
+        transition={{ duration: 0.3, ease: 'easeOut' }}
         className={cls.logo}
         animate={
           showFullMenu && !isMob
@@ -49,21 +50,24 @@ export default function Menu() {
             : { marginLeft: 30 }
         }
       >
-        <img
-          src={logo}
-          alt="logo"
-          style={
-            showFullMenu
-              ? { width: 92.4, height: 59, marginBottom: 32 }
-              : { width: 64, height: 41, marginBottom: 50 }
-          }
-        />
+        <Link to="/">
+          <img
+            src={logo}
+            alt="logo"
+            style={
+              showFullMenu
+                ? { width: 92.4, height: 59, marginBottom: 32 }
+                : { width: 64, height: 41, marginBottom: 50 }
+            }
+          />
+        </Link>
       </motion.div>
       <motion.div
         onMouseEnter={() => !isLaptop && setShowFullMenu(true)}
         onMouseLeave={() => setShowFullMenu(false)}
         className={`${cls.navbar} ${isMob ? `${cls.navbarMob}` : ''}`}
         animate={showFullMenu ? { width: 255 } : { width: 64 }}
+        transition={{ duration: 1, type: 'spring' }}
       >
         <div className={cls.navbarAccount}>
           <div>
