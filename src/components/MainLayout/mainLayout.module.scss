@@ -22,14 +22,21 @@
 
   .footer {
     grid-area: footer;
-    font-style: normal;
-    font-weight: normal;
-    font-family: 'Gilroy-regular', sans-serif;
-    font-size: 14px;
-    line-height: 14px;
-    color: rgba(255, 255, 255, 0.5);
-    letter-spacing: -0.5px;
-    text-align: center;
+    p {
+      width: calc(100% - 100px);
+      margin-left: auto;
+      font-style: normal;
+      font-weight: normal;
+      font-family: 'Gilroy-regular', sans-serif;
+      font-size: 14px;
+      line-height: 14px;
+      color: rgba(255, 255, 255, 0.5);
+      letter-spacing: -0.5px;
+      text-align: center;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -40,6 +47,7 @@
     / min-content auto;
   grid-gap: 30px;
   grid-template-areas: 'menu children' 'footer footer';
+  row-gap: 30vh;
 
   .MenuMob {
     padding-top: 24px;
@@ -59,6 +67,7 @@
   display: flex;
   flex-direction: column;
   grid-gap: 30px;
+  row-gap: 30vh;
   .MenuMob {
     display: flex;
     grid-gap: 30px;

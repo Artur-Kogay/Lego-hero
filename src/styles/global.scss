@@ -12,7 +12,8 @@ body {
     padding: 0;
   }
 }
-.css-i4bv87-MuiSvgIcon-root {
+.css-MuiSvgIcon-root,
+.MuiSvgIcon-root {
   color: #fff !important;
 }
 .CircularProgressbar-text {
@@ -37,4 +38,13 @@ body {
   border-radius: 2px !important;
 }
 
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #1a191f inset !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.6) !important;
+}
 
+.MuiCalendarPicker-root button svg {
+  fill: gray;
+}

@@ -14,6 +14,7 @@ import fifth from '../../img/5.jpg'
 import * as Yup from 'yup'
 import { $api } from '../../services/api'
 import { useParams } from 'react-router-dom'
+import Loader from '../Loader/Loader'
 
 const getQuestions = async (id) => {
   try {
@@ -60,7 +61,7 @@ const Tests = () => {
   return (
     <div className={cls.Test}>
       <p className={cls.direction}>Главная Тест</p>
-      <h2 className={cls.pageName}>ТЕСТ</h2>]
+      <h2 className={cls.pageName}>ТЕСТ</h2>
       <h1 className={cls.pageDesc}>{data?.title}</h1>
       {initialValues && data && (
         <Formik
@@ -108,19 +109,25 @@ const Tests = () => {
                         className={cls.testBlock}
                         key={id}
                       >
-                        <img
-                          src={attachment_file}
-                          alt="img"
-                          className={cls.Img}
-                        />
+                        {attachment_file ? (
+                          <img
+                            src={attachment_file}
+                            alt="img"
+                            className={cls.Img}
+                          />
+                        ) : (
+                          <Loader size={'35px'} />
+                        )}
                         <div className={cls.testQues}>
                           <div>
                             <h2 className={cls.count}>{++index}</h2>
                             <div className={cls.line} />
                             <p className={cls.question}>
-                              {title}{' '}
+                              {title + '⠀'}
                               <span className={cls.attention}>
-                                {'helpText'}
+                                {question_type === 'R'
+                                  ? ' (выберите 1 вариант ответа)'
+                                  : ' (несколько вариантов ответа)'}
                               </span>{' '}
                             </p>{' '}
                             <br />

@@ -1,0 +1,23 @@
+.loader {
+  border-radius: 50%;
+  background: linear-gradient(266.95deg, #982eeb -20.2%, #359ad2);
+  animation: loader 1s ease infinite;
+}
+
+@keyframes loader {
+  0% {
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.03);
+  }
+  25% {
+    box-shadow: 0 0 3px 10px rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 3px 20px rgba(0, 0, 0, 0.9);
+  }
+  75% {
+    box-shadow: 0 0 3px 25px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 3px 30px rgba(0, 0, 0, 0.3);
+  }
+}
