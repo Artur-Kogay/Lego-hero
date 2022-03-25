@@ -55,6 +55,7 @@
 
   .MenuDesktop {
     padding-top: 25px;
+    row-gap: 30vh;
   }
 
   .child {
@@ -67,7 +68,6 @@
   display: flex;
   flex-direction: column;
   grid-gap: 30px;
-  row-gap: 30vh;
   .MenuMob {
     display: flex;
     grid-gap: 30px;
