@@ -106,6 +106,7 @@ const monthName = [
   'Ноябрь',
   'Декабрь',
 ]
+
 const getEvents = async () => {
   try {
     const { data } = await axios.get('https://heroleague.ru/api/event/list')
@@ -114,41 +115,80 @@ const getEvents = async () => {
     console.log(e.response)
   }
 }
+const getEventDate = (unixDate) => {
+  const date = new Date(unixDate * 1000)
+  return `${date.getDate()} ${monthName[date.getMonth()]}`
+}
+// --------------------------------------------------
 const Event = () => {
+  const [readyEvents, setReadyEvents] = useState(null)
   const [events, setEvents] = useState(null)
-  const getEventDate = (unixDate) => {
-    const date = new Date(unixDate * 1000)
-    return `${date.getDate()} ${monthName[date.getMonth()]}`
-  }
+  const [currentDate, setCurrentDate] = useState(new Date().getTime() / 1000)
+  const memo = React.useMemo(() => {
+    let current = []
+
+    !!events &&
+      events.map(({ title, event_city, title_above, external_url }) => {
+        event_city.forEach((item) => {
+          if (item.start_time >= currentDate)
+            current.push({
+              data: item.start_time,
+              title,
+              description: title_above,
+              address: item.address,
+              external_url,
+              id: item.id,
+            })
+        })
+      })
+    let readyData = current.sort((a, b) => a.data - b.data).splice(0, 10)
+    setReadyEvents(readyData)
+  }, [events])
 
   useEffect(async () => {
-    getEvents().then((res) => setEvents(res.values))
+    getEvents().then((res) => {
+      setEvents(res.values)
+      // console.log(res.values)
+    })
   }, [])
   return (
     <div className={cls.event}>
       <h1 className={cls.h1}>МЕРОПРИЯТИЯ</h1>
       <div className={cls.eventsList}>
-        {events &&
-          events?.map(({ event_type, cities, banners, event_city }) => {
-            return (
-              <div
-                key={event_type._id}
-                className={cls.eventItem}
-                style={{
-                  background: `url(${banners?.home_page?.desktop_picture})`,
-                  backgroundSize: `cover`,
-                }}
-              >
-                <img className={cls.name} alt="name" src={eventCard[0].h1} />
-                <h2 className={cls.date}>
-                  {getEventDate(event_city[0].start_time)}
-                </h2>
-                <p className={cls.desc}>{event_type.description}</p>
-                <p className={cls.city}>{cities[0].address}</p>
-                <button className={cls.participate}>Принять участие</button>
-              </div>
-            )
-          })}
+        {readyEvents &&
+          readyEvents?.map(
+            ({
+              id,
+              data,
+              title,
+              description,
+              address,
+              external_url,
+              banners,
+            }) => {
+              return (
+                <div
+                  key={id}
+                  className={cls.eventItem}
+                  style={{
+                    background: `url(${banners?.home_page?.desktop_picture})`,
+                    backgroundSize: `cover`,
+                  }}
+                >
+                  <img className={cls.name} alt="name" src={eventCard[0].h1} />
+                  <h2 className={cls.date}>{getEventDate(data)}</h2>
+                  <p className={cls.desc}>{description}</p>
+                  <p className={cls.city}>{address}</p>
+                  <a
+                    href={`https://heroleague.ru${external_url}`}
+                    target={'_blank'}
+                  >
+                    <button className={cls.participate}>Принять участие</button>
+                  </a>
+                </div>
+              )
+            }
+          )}
       </div>
     </div>
   )

@@ -6,12 +6,31 @@
     font-weight: 900;
     font-size: 64px;
     line-height: 78px;
-    margin-bottom: 40px;
     font-family: 'DIN Pro', sans-serif, sans-serif;
 
     @media (max-width: 768px) {
       font-size: 32px;
       line-height: 39px;
+    }
+  }
+  .learn_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    a {
+      text-decoration: none;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+    button {
+      padding: 15px 32px;
+      background: none;
+      border: 1px solid #ffffff;
+      box-sizing: border-box;
+      border-radius: 4px;
+      color: #ffffff;
     }
   }
 
@@ -21,7 +40,7 @@
     display: grid;
     grid-template: 1fr / 1fr 1fr;
     grid-gap: 11px;
-    @media (max-width: 768px) {
+    @media (max-width: 878px) {
       grid-template: 1fr 1fr / 1fr;
     }
 
@@ -145,6 +164,4 @@
   .CircularProgressbar .CircularProgressbar-trail {
     stroke: #6883eb !important;
   }
-
-
 }

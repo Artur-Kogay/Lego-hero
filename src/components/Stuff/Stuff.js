@@ -12,6 +12,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 
 // Import Swiper styles
 import 'swiper/css'
+import SecondaryButton from '../_components/SecondaryButton'
 
 const stuffs = [
   {
@@ -97,7 +98,7 @@ export default function Stuff() {
                         className={styles.mask}
                         style={{ backgroundImage: `url('${mask}')` }}
                       />
-                      <img src={stuffAva} alt=""/>
+                      <img src={stuffAva} alt="" />
                     </div>
                     <div className={styles.contentWrapper}>
                       <p className={styles.stuffSkillTitle}>{title}</p>
@@ -116,7 +117,9 @@ export default function Stuff() {
                           </li>
                         ))}
                       </ul>
-                      <button className={styles.moreBtn}>Подробнее</button>
+                      <SecondaryButton className={styles.moreBtn}>
+                        Подробнее
+                      </SecondaryButton>
                     </div>
                   </div>
                 </SwiperSlide>

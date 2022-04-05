@@ -3,12 +3,14 @@ import cl from './learn.module.scss'
 import { CircularProgressbar } from 'react-circular-progressbar'
 import 'react-circular-progressbar/dist/styles.css'
 import { $api } from '../../services/api'
+import SecondaryButton from '../_components/SecondaryButton'
+import { Link } from 'react-router-dom'
 
 const getExams = async () => {
-  try{
-    const {data} = await $api.get('/exams/exams')
+  try {
+    const { data } = await $api.get('/exams/exams')
     return data
-  }catch(e){
+  } catch (e) {
     console.log(e)
   }
 }
@@ -16,23 +18,28 @@ const getExams = async () => {
 const Learn = () => {
   const [exams, setExams] = useState()
   const [progressPer, setProgressPer] = useState(1)
-  const passNum = 5;
-  useEffect(async() => {
-    getExams().then(res => {
-    setExams(res)
-    getProgress(res)
+  const passNum = 5
+  useEffect(async () => {
+    getExams().then((res) => {
+      setExams(res)
+      getProgress(res)
     })
-  },[])
+  }, [])
 
   const getProgress = (tests) => {
     const progressNum = Math.round((passNum * 100) / +tests.length)
     setProgressPer(progressNum)
   }
 
-  let percentage = Math.round((105*100)/125)
+  let percentage = Math.round((105 * 100) / 125)
   return (
     <div className={cl.learn_content}>
-      <h1>ОБУЧЕНИЕ</h1>
+      <div className={cl.learn_header}>
+        <h1>ОБУЧЕНИЕ</h1>
+        <Link to={'/training'}>
+          <SecondaryButton>Перейти</SecondaryButton>
+        </Link>
+      </div>
       <div className={cl.inner}>
         <div className={cl.inner_left}>
           <div className={cl.circle}>
@@ -73,7 +80,8 @@ const Learn = () => {
           </div>
           <div className={cl.left_inner}>
             <h4>
-              {passNum}<span> ИЗ {exams?.length}</span>
+              {passNum}
+              <span> ИЗ {exams?.length}</span>
             </h4>
             <h5>Пройдено тестов</h5>
             <p>

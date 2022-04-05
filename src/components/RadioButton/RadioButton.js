@@ -12,7 +12,7 @@ function RadioButton({ text, onchange, value }) {
         sx={{
           color: 'white',
           '&.Mui-checked span svg:last-of-type': {
-            color: '#32EE72',
+            color: '#32EE72 !important',
           },
           '&.Mui-checked span svg:first-of-type': {
             color: 'white',

@@ -67,12 +67,16 @@ export default function Menu() {
         onMouseLeave={() => setShowFullMenu(false)}
         className={`${cls.navbar} ${isMob ? `${cls.navbarMob}` : ''}`}
         animate={showFullMenu ? { width: 255 } : { width: 64 }}
-        transition={{ duration: 1, type: 'spring' }}
+        transition={{ duration: 1, type: 'spring', stiffness: 50 }}
       >
         <div className={cls.navbarAccount}>
           <div>
             <img
-              src={user.avatar ? user.avatar : account}
+              src={
+                !!user.avatar && window.localStorage.getItem('access')
+                  ? `https://relaxout.ru${user.avatar}`
+                  : account
+              }
               alt="account"
               style={showFullMenu ? { marginLeft: 24 } : { marginLeft: 11 }}
             />

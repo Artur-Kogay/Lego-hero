@@ -7,27 +7,29 @@ import Input from '../_components/Input'
 
 import PrimaryButton from '../_components/PrimaryButton'
 import SecondaryButton from '../_components/SecondaryButton'
+import { $api } from '../../services/api'
+import { toast, ToastContainer } from 'react-toastify'
+import { Link } from 'react-router-dom'
+import classes from '../LoginPage/Login.module.scss'
 
 const initialValues = {
-  username: '',
-  password: '',
+  email: '',
 }
 
 const SignupSchema = Yup.object().shape({
-  username: Yup.string()
-    .min(2, 'Too Short!')
-    .required('Введите номер телефона корректно!'),
-  password: Yup.string()
-    .min(2, 'Too Short!')
-    .max(50, 'Too Long!')
-    .required('Введите пароль!'),
-  first_name: Yup.string().required('Введите Имя корректно!'),
-  last_name: Yup.string().required('Введите Фамилию корректно!'),
+  email: Yup.string()
+    .email('Введите электронный адрес корректно!')
+    .required('Введите электронный адрес'),
 })
 
 function PasswordResetPage() {
-  const handleSubmit = async () => {
-    console.log('HandleSubmit')
+  const handleSubmit = async (values) => {
+    try {
+      await $api.post('/accounts/auth/users/reset_password/', values)
+      toast.success('На почту выслан новый пароль!')
+    } catch (e) {
+      toast.error(`${e.response.data.map((item) => item)}`)
+    }
   }
   return (
     <div className={cls.PasswordResetBlock}>
@@ -37,23 +39,29 @@ function PasswordResetPage() {
         validationSchema={SignupSchema}
         onSubmit={(values) => handleSubmit(values)}
       >
-        {({ values, handleChange }) => (
+        {({ values, handleChange, errors, touched }) => (
           <Form>
             <Input
               label="Ваш e-mail"
               name="email"
               type="email"
-              value={values.username}
+              value={values.email}
               onChange={handleChange}
               className={cls.EmailInput}
             />
+            {errors.email && touched.email && (
+              <p className={cls.text_danger}>{errors.email}</p>
+            )}
             <div className={cls.ButtonContainer}>
-              <PrimaryButton>Выслать пароль</PrimaryButton>
-              <SecondaryButton>Зарегистрироваться</SecondaryButton>
+              <PrimaryButton type="submit">Выслать пароль</PrimaryButton>
+              <Link to={'/register'}>
+                <SecondaryButton>Зарегистрироваться</SecondaryButton>
+              </Link>
             </div>
           </Form>
         )}
       </Formik>
+      <ToastContainer />
     </div>
   )
 }

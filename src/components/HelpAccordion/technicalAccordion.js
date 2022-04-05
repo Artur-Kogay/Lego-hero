@@ -8,18 +8,20 @@ import React from 'react'
 import styles from './HelpAccordion.module.scss'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 
-function HelpAccordion({
+function TechnicalAccordion({
   img,
   title,
   backgroundColor,
   children,
-  expanded,
-  setExpanded,
+  technicalQuestionExpanded,
+  setTechnicalQuestionExpanded,
 }) {
   return (
     <div className={styles.container}>
       <Accordion
-        onChange={() => setExpanded(!expanded)}
+        onChange={() =>
+          setTechnicalQuestionExpanded(!technicalQuestionExpanded)
+        }
         className={styles.accordion}
       >
         <AccordionSummary
@@ -52,4 +54,4 @@ function HelpAccordion({
   )
 }
 
-export default HelpAccordion
+export default TechnicalAccordion

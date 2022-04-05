@@ -100,7 +100,7 @@ function LoginPage() {
               <SecondaryButton>Зарегистрироваться</SecondaryButton>
             </Link>
           </div>
-          <Link href="/password-reset" className="forgotpassword">
+          <Link to="/password-reset" className="forgotpassword">
             Забыли пароль?
           </Link>
         </div>

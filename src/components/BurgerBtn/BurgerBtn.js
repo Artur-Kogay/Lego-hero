@@ -54,7 +54,9 @@ const BurgerBtn = () => {
             <div className={cls.navbarAccount}>
               <div>
                 <img
-                  src={user.avatar ? user.avatar : account}
+                  src={
+                    user.avatar ? `https://relaxout.ru${user.avatar}` : account
+                  }
                   alt="account"
                   style={isOpen ? { marginLeft: 24 } : { marginLeft: 11 }}
                 />

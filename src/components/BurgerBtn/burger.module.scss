@@ -1,136 +1,157 @@
-.navbarOpen {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: fixed;
-  z-index: 1000;
-  left: 0 !important;
-  opacity: 1;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(26, 25, 31, 1);
-  padding: 20px 0;
-  .navLinks {
-    padding-left: 24px;
-    height: 247px;
-    background: #25232f;
-    border-radius: 0;
+.burger {
+  font-family: 'Gilroy-regular', sans-serif;
+  .navbarOpen {
     display: flex;
     flex-direction: column;
-    grid-gap: 29px;
-    .navLink:first-child {
-      margin-top: 23px;
-    }
-    .navLink {
-      text-decoration: none;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    left: 0 !important;
+    opacity: 1;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(26, 25, 31, 1);
+    padding: 20px 0;
+
+    .navLinks {
+      padding-left: 24px;
+      height: 247px;
+      background: #25232f;
+      border-radius: 0;
       display: flex;
-      align-items: center;
-      position: relative;
-      .linkIcon {
-        width: 17px;
-        height: 17px;
-        img {
-          width: 12px;
-          height: 12px;
+      flex-direction: column;
+      grid-gap: 29px;
+
+      .navLink:first-child {
+        margin-top: 23px;
+      }
+
+      .navLink {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        .linkIcon {
+          width: 17px;
+          height: 17px;
+
+          img {
+            width: 12px;
+            height: 12px;
+          }
+        }
+
+        p {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 17px;
+          color: #ffffff;
+          opacity: 0.6;
+          position: absolute;
+          left: 44px;
+          width: 110px;
         }
       }
-      p {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 17px;
-        color: #ffffff;
-        opacity: 0.6;
-        position: absolute;
-        left: 44px;
-        width: 110px;
+    }
+
+    .exit {
+      cursor: pointer;
+      height: 46px;
+      background: #302e3a;
+      border-radius: 0 0 10px 10px;
+      display: flex;
+      align-items: center;
+
+      .exitNav {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        position: relative;
+
+        .navIcon {
+          width: 17px;
+          height: 17px;
+          margin-left: 24px;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        p {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 17px;
+          color: #ffffff;
+          opacity: 0.6;
+          position: absolute;
+          left: 44px;
+          width: 122px;
+        }
       }
     }
   }
-  .exit {
-    cursor: pointer;
-    height: 46px;
-    background: #302e3a;
-    border-radius: 0 0 10px 10px;
-    display: flex;
-    align-items: center;
-    .exitNav {
+
+  .navbarClose {
+    position: fixed;
+    left: 0 !important;
+    opacity: 0;
+  }
+
+  .menu {
+    min-width: 95%;
+    position: relative;
+
+    .navbarAccount {
       display: flex;
       align-items: center;
-      text-decoration: none;
-      position: relative;
-      .navIcon {
-        width: 17px;
-        height: 17px;
-        margin-left: 24px;
-        img {
-          width: 100%;
-          height: 100%;
+      background: #302e3a;
+      border-radius: 10px 10px 0 0;
+      height: 74px;
+
+      img {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+      }
+
+      .navbarText {
+        margin-left: 8px;
+        position: absolute;
+        left: 74px;
+
+        .inviteText {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 10px;
+          line-height: 12px;
+          color: rgba(255, 255, 255, 0.5);
+        }
+
+        .accountName {
+          min-width: 150px;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 19px;
+          color: #ffffff;
+          margin: 0;
         }
       }
-      p {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 17px;
-        color: #ffffff;
-        opacity: 0.6;
-        position: absolute;
-        left: 44px;
-        width: 122px;
-      }
-    }
-  }
-}
 
-.navbarClose {
-  position: fixed;
-  left: 0 !important;
-  opacity: 0;
-}
-
-.menu {
-  min-width: 95%;
-  position: relative;
-  .navbarAccount {
-    display: flex;
-    align-items: center;
-    background: #302e3a;
-    border-radius: 10px 10px 0 0;
-    height: 74px;
-    img {
-      width: 42px;
-      height: 42px;
-    }
-    .navbarText {
-      margin-left: 8px;
-      position: absolute;
-      left: 74px;
-      .inviteText {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 10px;
-        line-height: 12px;
-        color: rgba(255, 255, 255, 0.5);
-      }
-      .accountName {
+      .errorMessage {
         min-width: 150px;
         font-style: normal;
         font-weight: bold;
         font-size: 16px;
         line-height: 19px;
         color: #ffffff;
-        margin: 0;
+        margin: 5px;
       }
-    }
-    .errorMessage {
-      min-width: 150px;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 16px;
-      line-height: 19px;
-      color: #ffffff;
-      margin: 5px;
     }
   }
 }

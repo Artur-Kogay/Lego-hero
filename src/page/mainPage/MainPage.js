@@ -10,10 +10,29 @@ import Stuff from '../../components/Stuff/Stuff'
 import card from '../../static/img/bankCard.svg'
 import SwipeableViews from 'react-swipeable-views'
 import { autoPlay } from 'react-swipeable-views-utils'
+import { Box } from '@mui/material'
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews)
 
 const banners = [
+  {
+    img: card,
+    title: 'Оформите карту',
+    mainTitle: 'ТВОЙ ЧЕМПИОНСКИЙ КЭШБЕК',
+    description:
+      'Получайте повышенный кэшбэк на расходы в категории спортивные\n' +
+      '                товары! Кэшбэк начисляется на карту ежемесячно, что позволяет\n' +
+      '                заработать до 36 000 рублей в год!',
+  },
+  {
+    img: card,
+    title: 'Оформите карту',
+    mainTitle: 'ТВОЙ ЧЕМПИОНСКИЙ КЭШБЕК',
+    description:
+      'Получайте повышенный кэшбэк на расходы в категории спортивные\n' +
+      '                товары! Кэшбэк начисляется на карту ежемесячно, что позволяет\n' +
+      '                заработать до 36 000 рублей в год!',
+  },
   {
     img: card,
     title: 'Оформите карту',
@@ -78,19 +97,32 @@ const MainPage = () => {
           </div>
 
           <div className={sty.cont}>
-            <MobileStepper
-              style={{ background: 'none' }}
-              variant="dots"
-              steps={banners.length}
-              position="static"
-              activeStep={activeStep}
-              sx={{
+            <div
+              style={{
                 color: 'white',
                 position: 'relative',
                 maxWidth: 800,
                 flexGrow: 1,
+                display: 'flex',
               }}
-            />
+            >
+              {banners.map((item, index) => (
+                <Box
+                  onClick={() => setActiveStep(index)}
+                  sx={{
+                    width: '26px',
+                    height: '4px',
+                    borderRadius: '2px',
+                    margin: '2px',
+                    background: activeStep === index ? 'white' : '#27262F',
+                    transition: '0.8s',
+                    cursor: 'pointer',
+                  }}
+                >
+                  {''}
+                </Box>
+              ))}
+            </div>
             <div className={sty.buttons_cont}>
               <button
                 className={sty.buttonss}

@@ -5,10 +5,12 @@ export const getUser = createAsyncThunk('user/fetchUser', async () => {
   const { data } = await $api.get('/accounts/me/')
   return data
 })
+
 const userSlice = createSlice({
   name: 'user',
   initialState: {
     user: [],
+    loading: false,
   },
   reducers: {
     setUser(state, action) {
@@ -18,6 +20,7 @@ const userSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(getUser.fulfilled, (state, action) => {
       state.user = action.payload
+      state.loading = true
     })
   },
 })
